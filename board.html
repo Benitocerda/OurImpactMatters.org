@@ -6,10 +6,22 @@
   <title>Our Board – Our Impact Matters</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    /* RESET & VARIABLES */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    :root {
+      --clr-primary: #5cbf7b;
+      --clr-secondary: #2f855a;
+      --clr-light-bg: #f4fdf7;
+      --clr-card-bg: #ffffff;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 3rem;
+      --shadow-light: 0 2px 8px rgba(0,0,0,0.05);
+      --shadow-strong: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     body {
@@ -19,172 +31,182 @@
       line-height: 1.6;
     }
 
+    /* HEADER */
     header {
-      background: #5cbf7b;
+      background: var(--clr-primary);
       color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      border-bottom: 4px solid #45a56a;
       position: sticky;
       top: 0;
       z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--spacing-md) var(--spacing-lg);
+      border-bottom: 4px solid #45a56a;
+      flex-wrap: wrap;
     }
-
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: var(--spacing-sm);
     }
-
     .logo-container img {
       height: 50px;
-      width: auto;
     }
-
     .logo-text {
       font-size: 1.8rem;
       font-weight: 700;
     }
-
     nav ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
     }
-
     nav a {
       text-decoration: none;
       color: white;
       font-weight: 500;
+      position: relative;
+    }
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: white;
     }
 
-    nav a.active {
-      border-bottom: 2px solid white;
-    }
-
+    /* MAIN WRAPPER */
     main {
       max-width: 1200px;
       margin: auto;
-      padding: 40px 20px;
+      padding: var(--spacing-lg) var(--spacing-md);
     }
 
+    /* BOARD INTRO */
     .board-intro {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
+      align-items: start;
     }
-
-    .video-container {
-      flex: 1 1 45%;
-    }
-
     .video-container video {
       width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
       border-radius: 10px;
+      box-shadow: var(--shadow-light);
     }
-
     .bio-container {
-      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .bio-container h2 {
+      color: var(--clr-primary);
+      margin-bottom: 0.5rem;
     }
     .bio-background {
-  background-color: #f0f0f0;
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  margin-top: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-    .bio-container h2 {
-      color: #5cbf7b;
-      margin-bottom: 0.5rem;
+      background: var(--clr-light-bg);
+      padding: var(--spacing-md);
+      border-radius: 10px;
+      box-shadow: var(--shadow-light);
     }
 
+    /* BOARD MEMBERS */
+    .board-members {
+      margin-top: var(--spacing-lg);
+    }
     .board-members h2 {
       text-align: center;
-      margin-bottom: 2rem;
-      color: #333;
+      margin-bottom: var(--spacing-lg);
       font-size: 2rem;
+      color: #333;
     }
-
     .member-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  justify-items: center;
-  align-items: start;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);    /* exactly 2 columns */
+      grid-auto-rows: auto;                     /* rows flow automatically */
+      gap: var(--spacing-md);
+      justify-items: center;
     }
-
-@media (max-width: 900px) {
-  .member-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-   }
-
-@media (max-width: 600px) {
-  .member-grid {
-    grid-template-columns: 1fr;
-  }
-   }
-
+    @media (max-width: 600px) {
+      .member-grid {
+      grid-template-columns: 1fr;
+      }
+    }
 
     .member-card {
+      background: var(--clr-card-bg);
+      border-radius: 10px;
+      padding: var(--spacing-sm);
+      box-shadow: var(--shadow-light);
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .member-card:hover {
       transform: translateY(-5px);
+      box-shadow: var(--shadow-strong);
     }
-
     .member-card img {
-      width: 180px;
-      height: 180px;
+      width: 100%;
+      max-width: 180px;
+      aspect-ratio: 1;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
+      border-radius: 50%;
+      margin-bottom: var(--spacing-sm);
     }
-
     .member-name-box {
-      background-color: #f5f5f5;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      background: var(--clr-light-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
     }
-
-    .member-card h3 {
-      margin: 0;
-      font-size: 1rem;
-      color: #333;
-      display: inline;
-    }
-
     .badge {
-      display: inline-block;
-      background-color: #5cbf7b;
+      margin-left: var(--spacing-sm);
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      background: var(--clr-secondary);
       color: white;
-      font-size: 12px;
-      padding: 2px 8px;
-      margin-left: 8px;
-      border-radius: 12px;
-      vertical-align: middle;
-      font-weight: 600;
+      border-radius: 4px;
     }
 
+    /* RESPONSIVE TWEAKS */
+    @media (max-width: 900px) {
+      .logo-text { font-size: 1.5rem; }
+      nav ul { gap: var(--spacing-sm); }
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-sm);
+      }
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-sm);
+      }
+    }
+
+    /* FOOTER */
     footer {
-      background: #5cbf7b;
+      background: var(--clr-primary);
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: var(--spacing-md) 0;
       font-size: 0.9rem;
-      margin-top: 40px;
+      margin-top: var(--spacing-lg);
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <div class="logo-container">
       <img src="OIM_logo.png" alt="OIM Logo">
@@ -193,27 +215,35 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="board.html" class="active">Our Board</a></li>  
+        <li><a href="board.html" class="active">Our Board</a></li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <!-- Board Intro -->
     <section class="board-intro">
       <div class="video-container">
         <video controls poster="graduation_video.mov">
           <source src="graduation_video.mov" type="video/mp4">
+          
         </video>
       </div>
-     <div class="bio-container">
-  <h2>Dr. Nate Oquendo</h2>
-  <div class="bio-background">
-    <p>Dr. Oquendo, founder of Our Impact Matters, started this organization with the vision of building a more balanced and equitable Chicago. His leadership and commitment to service stem from years of community advocacy and educational equity. His graduation symbolizes the resilience and excellence that guides our mission today.</p>
-  </div>
-</div>
+      <div class="bio-container">
+        <h2>Dr. Nate Oquendo</h2>
+        <div class="bio-background">
+          <p>
+            Dr. Oquendo, founder of Our Impact Matters, started this organization with the vision of building
+            a more balanced and equitable Chicago. His leadership and commitment to service stem from years
+            of community advocacy and educational equity. His graduation symbolizes the resilience and
+            excellence that guides our mission today.
+          </p>
+        </div>
+      </div>
+    </section>
 
-
+    <!-- Meet Our Board -->
     <section class="board-members">
       <h2>Meet Our Board</h2>
       <div class="member-grid">
