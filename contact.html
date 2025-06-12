@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Our Impact Matters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #5cbf7b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 4px solid #45a56a;
+      flex-wrap: wrap;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      height: 90px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .contact-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      position: relative;
+    }
+
+    .contact-form h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #5cbf7b;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 25px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      background: none;
+    }
+
+    .form-group label {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      background: #fff;
+      padding: 0 5px;
+      color: #999;
+      font-size: 14px;
+      pointer-events: none;
+      transition: 0.2s;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 10px;
+      font-size: 13px;
+      color: #5cbf7b;
+    }
+
+    .contact-form button {
+      background: #5cbf7b;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #4aad6d;
+    }
+
+    .spinner {
+      display: none;
+      width: 24px;
+      height: 24px;
+      border: 3px solid #ccc;
+      border-top: 3px solid #5cbf7b;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+
+    .success-message {
+      display: none;
+      margin-top: 20px;
+      color: #388e3c;
+      font-weight: 600;
+    }
+
+    .char-count {
+      font-size: 13px;
+      color: #777;
+      text-align: right;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .privacy-note {
+      font-size: 13px;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 80px;
+    }
+
+    .button-row a {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+
+    .button-row a:hover {
+      transform: scale(1.03);
+    }
+
+    .btn-volunteer {
+      background-color: #5cbf7b;
+      color: white;
+    }
+
+    .btn-donate {
+      background-color: #ffd54f;
+      color: #333;
+    }
+
+    .mission {
+      flex: 1;
+      padding: 20px;
+      min-width: 300px;
+    }
+
+    .mission h3 {
+      color: #5cbf7b;
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .mission p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .mission-photo {
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-height: 610px;
+    }
+
+    .mission-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .mission-photo img:hover {
+      transform: scale(1.01);
+    }
+
+    footer {
+      background: #5cbf7b;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="photos/OIM_logo.png" alt="Our Impact Matters Logo">
+      <span class="logo-text">Our Impact Matters</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="board.html">Our Board</a></li>
+      
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="contact-section">
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xyzjygve" method="POST">
+        <h2>Contact Us</h2>
+
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder=" " required />
+          <label for="name">Full Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder=" " required />
+          <label for="email">Email</label>
+        </div>
+
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder=" " rows="5" maxlength="300" required></textarea>
+          <label for="message">Message</label>
+          <div class="char-count"><span id="charCount">0</span>/300 characters</div>
+        </div>
+
+        <button type="submit">
+          Send Message
+          <span class="spinner" id="spinner"></span>
+        </button>
+
+        <p class="privacy-note">🔒 We respect your privacy. Your information will not be shared.</p>
+        <p class="success-message" id="successMsg">Thank you! We will reach back to you within 1–2 business days!</p>
+      </form>
+
+      <div class="button-row">
+        <a href="volunteer.html" class="btn-volunteer">Volunteer</a>
+        <a href="donate.html" class="btn-donate">Donate</a>
+      </div>
+    </div>
+
+    <div class="mission">
+      <h3>Our Mission</h3>
+      <p>
+        We are a dedicated nonprofit organization committed to uplifting underserved communities by providing access to resources, support, and opportunity.
+        Our goal is to create lasting impact through compassion, action, and unity.
+      </p>
+      <div class="mission-photo">
+        <img src="photos/contact_page_picture.jpeg" alt="Our Impact Matters volunteer cleanup effort">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Our Impact Matters | Together We Can Change the World ❤️
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const spinner = document.getElementById('spinner');
+    const successMsg = document.getElementById('successMsg');
+    const charCount = document.getElementById('charCount');
+    const messageInput = document.getElementById('message');
+
+    messageInput.addEventListener('input', () => {
+      charCount.textContent = messageInput.value.length;
+    });
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      spinner.style.display = 'inline-block';
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: { Accept: "application/json" }
+        });
+
+        spinner.style.display = 'none';
+
+        if (response.ok) {
+          successMsg.style.display = 'block';
+          form.reset();
+          charCount.textContent = 0;
+        } else {
+          successMsg.textContent = "Oops! Something went wrong.";
+          successMsg.style.display = 'block';
+        }
+      } catch (err) {
+        spinner.style.display = 'none';
+        successMsg.textContent = "Submission failed. Please try again.";
+        successMsg.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
