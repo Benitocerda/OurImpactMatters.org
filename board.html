@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Board – Our Impact Matters</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #5cbf7b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 4px solid #45a56a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      height: 50px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    nav a.active {
+      border-bottom: 2px solid white;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .board-intro {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .video-container {
+      flex: 1 1 45%;
+    }
+
+    .video-container video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .bio-container {
+      flex: 1 1 45%;
+    }
+    .bio-background {
+  background-color: #f0f0f0;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+    .bio-container h2 {
+      color: #5cbf7b;
+      margin-bottom: 0.5rem;
+    }
+
+    .board-members h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+      font-size: 2rem;
+    }
+
+    .member-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+    }
+
+@media (max-width: 900px) {
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+   }
+
+@media (max-width: 600px) {
+  .member-grid {
+    grid-template-columns: 1fr;
+  }
+   }
+
+
+    .member-card {
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .member-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .member-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .member-name-box {
+      background-color: #f5f5f5;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    .member-card h3 {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+      display: inline;
+    }
+
+    .badge {
+      display: inline-block;
+      background-color: #5cbf7b;
+      color: white;
+      font-size: 12px;
+      padding: 2px 8px;
+      margin-left: 8px;
+      border-radius: 12px;
+      vertical-align: middle;
+      font-weight: 600;
+    }
+
+    footer {
+      background: #5cbf7b;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <img src="photos/OIM_logo.png" alt="OIM Logo">
+      <div class="logo-text">Our Impact Matters</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="board.html" class="active">Our Board</a></li>  
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="board-intro">
+      <div class="video-container">
+        <video controls poster="photos/graduation_video.mov">
+          <source src="photos/graduation_video.mov" type="video/mp4">
+        </video>
+      </div>
+     <div class="bio-container">
+  <h2>Dr. Nate Oquendo</h2>
+  <div class="bio-background">
+    <p>Dr. Oquendo, founder of Our Impact Matters, started this organization with the vision of building a more balanced and equitable Chicago. His leadership and commitment to service stem from years of community advocacy and educational equity. His graduation symbolizes the resilience and excellence that guides our mission today.</p>
+  </div>
+</div>
+
+
+    <section class="board-members">
+      <h2>Meet Our Board</h2>
+      <div class="member-grid">
+        <div class="member-card">
+          <img src="photos/member1.jpg" alt="Daniel Zarco">
+          <div class="member-name-box">
+            <h3>DANIEL ZARCO</h3>
+            <span class="badge">Board Member</span>
+          </div>
+        </div>
+        <div class="member-card">
+          <img src="photos/member2.jpg" alt="Jemal King">
+          <div class="member-name-box">
+            <h3>JEMAL KING</h3>
+            <span class="badge">Board Member</span>
+          </div>
+        </div>
+        <div class="member-card">
+          <img src="photos/member3.jpg" alt="Kelly Spencer">
+          <div class="member-name-box">
+            <h3>KELLY SPENCER</h3>
+            <span class="badge">Board Member</span>
+          </div>
+        </div>
+        <div class="member-card">
+          <img src="photos/member4.jpg" alt="Frank Di Leo">
+          <div class="member-name-box">
+            <h3>FRANK DI LEO</h3>
+            <span class="badge">Board Member</span>
+          </div>
+        </div>
+        <div class="member-card">
+          <img src="photos/member5.jpg" alt="Nick Turner">
+          <div class="member-name-box">
+            <h3>NICK TURNER</h3>
+            <span class="badge">Board Member</span>
+          </div>
+        </div>
+        <div class="member-card">
+          <img src="photos/member6.jpeg" alt="Kevin Cerda">
+          <div class="member-name-box">
+            <h3>KEVIN CERDA</h3>
+            <span class="badge">Board Member</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Our Impact Matters | Together We Can Change the World ❤️
+  </footer>
+</body>
+</html>
