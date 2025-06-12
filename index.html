@@ -6,354 +6,304 @@
   <title>Our Impact Matters</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: #ffffff;
-      color: #333;
-      scroll-behavior: smooth;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #333;
+  scroll-behavior: smooth;
+}
 
-    header {
-      background: #5cbf7b;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      border-bottom: 4px solid #45a56a;
-      flex-wrap: wrap;
-    }
+/* Header */
+header {
+  background: #5cbf7b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 4px solid #45a56a;
+  flex-wrap: wrap;
+}
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo-container img {
+  height: 90px;
+  width: auto;
+}
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
 
-    .logo-container img {
-      height: 90px;
-      width: auto;
-    }
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+}
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
-    .logo-text {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: white;
-    }
+/* About Section */
+.about-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f4fdf7;
+}
+.about-section h1 {
+  font-size: 2rem;
+  color: #2f855a;
+  margin-bottom: 1rem;
+}
+.about-section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+.about-icon {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-left: 10px;
+  animation: pulse 1.6s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.95; }
+}
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.2rem;
-      margin: 0;
-      padding: 0;
-    }
+/* Programs Section */
+.programs-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.programs-text {
+  flex: 1 1 50%;
+}
+.programs-text h2 {
+  font-size: 2rem;
+  color: #2f855a;
+  margin-bottom: 1rem;
+}
+.program-cards-alt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.program-card {
+  flex: 1 1 45%;
+  background-color: #f0fdf5;
+  border: 1px solid #c0e8d8;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2f855a;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.program-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1rem;
-      position: relative;
-    }
+/* Poverty Fact Card */
+.poverty-fact {
+  flex: 1 1 45%;
+  position: relative;
+  background-image: url('Chicago-CTA-USA-Resize.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 300px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+.poverty-fact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(50,50,50,0.55);
+  z-index: 1;
+}
+.counter-container {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d9dee6;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.2rem;
+  margin-top: 25px;
+}
+.percent-sign {
+  font-size: 2.5rem;
+  color: #e61c0e;
+}
+.poverty-fact p {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #f0ebea;
+  font-weight: 500;
+  margin: 1rem auto 0;
+  padding: 0 1rem;
+  max-width: 90%;
+}
 
-    nav ul li a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 100%;
-      height: 2px;
-      background-color: white;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease-in-out;
-    }
+/* Blog Post Cards */
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+.blog-posts {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.post {
+  flex: 1 1 30%;
+  padding: 1rem;
+  background: #f0fdf5;
+  border: 1px solid #c0e8d8;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+.post-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+.post-content h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #2f855a;
+}
+.post-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #5cbf7b;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.read-more:hover {
+  background-color: #48a96b;
+}
 
-    nav ul li a:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
+/* Forms & Buttons */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input, textarea, button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+button {
+  background: #5cbf7b;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #48a96b;
+}
 
-    .about-section {
-      padding: 3rem 2rem;
-      text-align: center;
-      background-color: #f4fdf7;
-    }
+/* Footer */
+footer {
+  background: #5cbf7b;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
 
-    .about-section h1 {
-      font-size: 2rem;
-      color: #2f855a;
-      margin-bottom: 1rem;
-    }
-
-    .about-section p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .about-icon {
-      width: 40px;
-      height: 40px;
-      vertical-align: middle;
-      margin-left: 10px;
-      animation: pulse 1.6s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.95; }
-      50% { transform: scale(1.15); opacity: 1; }
-      100% { transform: scale(1); opacity: 0.95; }
-    }
-
-    .programs-info {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 2rem;
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .programs-text {
-      flex: 1 1 50%;
-    }
-
-    .programs-text h2 {
-      font-size: 2rem;
-      color: #2f855a;
-      margin-bottom: 1rem;
-    }
-
-    .program-cards-alt {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .program-card {
-      flex: 1 1 45%;
-      background-color: #f0fdf5;
-      border: 1px solid #c0e8d8;
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #2f855a;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-    }
-
-    .program-card:hover {
-      transform: translateY(-5px) scale(1.03);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .poverty-fact {
-      flex: 1 1 45%;
-      position: relative;
-      background-image: url('Chicago-CTA-USA-Resize.jpg');
-      background-size: cover;
-      background-position: center;
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      min-height: 300px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    .poverty-fact::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-color: rgba(50, 50, 50, 0.55);
-      z-index: 1;
-    }
-
-    .counter-container {
-      position: relative;
-      z-index: 2;
-      font-size: 3rem;
-      font-weight: bold;
-      color: #d9dee6;
-      display: flex;
-      align-items: baseline;
-      justify-content: center;
-      gap: 0.2rem;
-      margin-top: 25px;
-    }
-
-    .percent-sign {
-      font-size: 2.5rem;
-      color: #e61c0e;
-    }
-
-    .poverty-fact p {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      color: #f0ebea;
-      font-weight: 500;
-      margin: 1rem auto 0;
-      padding: 0 1rem;
-      max-width: 90%;
-    }
-
-    .impact-blog {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .impact-blog h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #2f855a;
-      margin-bottom: 2.5rem;
-    }
-
-    .impact-post {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.5rem;
-      background-color: #f0fdf5;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    }
-
-    .impact-post img {
-      width: 200px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 8px 0 0 8px;
-    }
-
-    .post-content {
-      padding: 1.5rem;
-      flex: 1;
-    }
-
-    .post-content h3 {
-      margin-top: 0;
-      font-size: 1.3rem;
-      color: #2f855a;
-    }
-
-    .post-content p {
-      font-size: 1rem;
-      color: #444;
-      margin-top: 0.5rem;
-    }
-
-    .read-more {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.5rem 1rem;
-      background-color: #5cbf7b;
-      color: white;
-      border-radius: 6px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    .read-more:hover {
-      background-color: #48a96b;
-    }
-
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .blog-posts {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .post {
-      flex: 1 1 30%;
-      padding: 1rem;
-      background: #f0fdf5;
-      border: 1px solid #c0e8d8;
-      border-radius: 10px;
-      text-align: center;
-      font-weight: 500;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    input, textarea, button {
-      padding: 0.8rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    button {
-      background: #5cbf7b;
-      color: white;
-      font-weight: bold;
-      border: none;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #48a96b;
-    }
-
-    footer {
-      background: #5cbf7b;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    .interested-section {
+/* Interested Section */
+.interested-section {
   background: #f4fdf7;
   padding: 3rem 2rem;
   text-align: center;
 }
-
 .interested-section h2 {
   font-size: 2rem;
-  color: #2f855a; /* themed green */
+  color: #2f855a;
   margin-bottom: 2rem;
-  font-family: 'Poppins', sans-serif;
 }
-
 .interested-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
-
 .interest-box {
-  background: #ffffff;
+  background: #fff;
   border: 1px solid #c0e8d8;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -362,19 +312,16 @@
   padding: 2rem;
   text-align: left;
 }
-
 .interest-box h3 {
   color: #2f855a;
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
-
 .interest-box p {
   font-size: 1rem;
   color: #555;
   margin-bottom: 1.5rem;
 }
-
 .interest-box a {
   display: inline-block;
   padding: 0.8rem 1.5rem;
@@ -384,44 +331,27 @@
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
+
+/* Partnerships Carousel */
 .logo-icon {
   height: 70px;
   vertical-align: middle;
   margin-right: 10px;
 }
-
-.volunteer-link {
-  background-color: #5cbf7b;
-  color: white;
-}
-
-.volunteer-link:hover {
-  background-color: #48a96b;
-}
-
-.donate-link {
-  background-color: #ffd700;
-  color: #333;
-}
-
-.donate-link:hover {
-  background-color: #e6c200;
-
-}
-
 .partnerships-carousel {
   padding: 3rem 2rem;
   background-color: #f4fdf7;
   text-align: center;
 }
-
 .partnerships-carousel h2 {
   font-size: 2rem;
   color: #2f855a;
   margin-bottom: 1.5rem;
-  font-family: 'Poppins', sans-serif;
 }
-
+.carousel-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
 .carousel-track {
   display: flex;
   gap: 2rem;
@@ -430,129 +360,84 @@
   width: max-content;
   padding: 1rem 0;
 }
-
 @keyframes scrollLoop {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-
-.carousel-track img {
-  height: 80px;
-  width: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  transition: transform 0.3s ease-in-out;
-}
-
-.carousel-track img:hover {
-  transform: scale(1.1);
-}
-
-@keyframes scroll {
-  0%   { transform: translateX(0); }
+  0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
+/* Media posts grid */
+.impact-blog .posts-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.impact-post img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Responsive Breakpoints */
 @media (max-width: 768px) {
-  .carousel-track img {
-    height: 60px;
-  }
-}
-.carousel-wrapper {
-  max-width: 1000px;
-  margin: auto;
-  overflow: hidden;
-  border: 2px solid #c0e8d8;
-  border-radius: 10px;
-  padding: 1rem;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-
-    @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
   }
-
   nav ul {
     flex-direction: column;
-    align-items: flex-start;
     gap: 0.75rem;
     margin-top: 1rem;
   }
-
   .logo-text {
     font-size: 1.2rem;
   }
-
   .programs-info {
     flex-direction: column;
     gap: 2rem;
   }
-
-  .program-card {
-    flex: 1 1 100%;
-  }
-
-  .poverty-fact {
+  .program-card, .poverty-fact {
     flex: 1 1 100%;
     min-height: 250px;
   }
-
   .impact-post {
     flex-direction: column;
     text-align: center;
   }
-
   .impact-post img {
     width: 100%;
-    height: auto;
     border-radius: 8px 8px 0 0;
   }
-
-  .post-content {
-    padding: 1rem;
-  }
-
   .blog-posts {
     flex-direction: column;
     align-items: center;
   }
-
   .post {
     flex: 1 1 100%;
     max-width: 90%;
   }
-
   .interested-container {
     flex-direction: column;
     align-items: center;
   }
-
   .interest-box {
     max-width: 90%;
   }
 }
+
 @media (max-width: 480px) {
   .about-section p {
     font-size: 1rem;
   }
-
   .logo-container img {
     height: 60px;
   }
-
   .logo-text {
     font-size: 1rem;
   }
 }
+
+/* Styled Blog Title */
 .styled-blog-title {
   font-size: 2.5rem;
   color: #2f855a;
@@ -567,14 +452,193 @@
   padding-bottom: 0.5rem;
   animation: popIn 1s ease;
 }
-
 @keyframes popIn {
   0% { transform: scale(0.9); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
+/* Our Mission Section */
+.mission {
+  display: flex;
+  flex-wrap: nowrap;          /* keep photo/text side by side */
+  align-items: flex-start;    /* top-align the two columns */
+  gap: 2rem;
 
-  </style>
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 3rem 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.mission-photo {
+  flex: 0 0 300px;    /* fixed 300px column */
+  max-width: 300px;
+  text-align: center;
+}
+
+.mission-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.mission-text {
+  flex: 1 1 auto;    /* fill remaining space */
+  text-align: left;  /* ensure left‐aligned text */
+}
+
+.mission-text h3 {
+  font-size: 2rem;
+  color: #2f855a;
+  margin-bottom: 1rem;
+
+.mission-text p {
+  font-size: 0.95rem;    /* smaller body copy */
+  line-height: 1.6;
+  color: #333;
+}
+}
+/* Buttons under Our Mission */
+.mission-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.mission-buttons a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+/* Instagram-colored “Follow” button */
+.btn-follow {
+  background-color: #E1306C;
+  color: white;
+}
+.btn-follow:hover {
+  background-color: #c1275b;
+}
+
+/* Yellow “Contact Us” button */
+.btn-contact {
+  background-color: #FFD700;
+  color: #333;
+}
+.btn-contact:hover {
+  background-color: #E6C200;
+}
+
+/* On very small screens, stack them full-width */
+@media (max-width: 500px) {
+  .mission-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mission-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+/* Stack vertically on narrow screens */
+@media (max-width: 600px) {
+  .mission {
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .mission-photo,
+  .mission-text {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .mission-text {
+    text-align: center;
+  }
+}
+/* Buttons under Our Mission */
+.mission-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;  /* left-align on desktop */
+}
+
+.mission-buttons a {
+  display: inline-block;        /* so width:100% works on mobile */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+/* Instagram-colored “Follow” button */
+.btn-follow {
+  background-color: #E1306C;
+  color: white;
+}
+.btn-follow:hover {
+  background-color: #c1275b;
+}
+
+/* Yellow “Contact Us” button */
+.btn-contact {
+  background-color: #FFD700;
+  color: #333;
+}
+.btn-contact:hover {
+  background-color: #E6C200;
+}
+
+/* On very small screens, stack them full-width */
+@media (max-width: 500px) {
+  .mission-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .mission-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ─── Partnerships Carousel: constrain partner logos ─── */
+.partnerships-carousel .carousel-track img {
+  max-height: 80px;    /* logos no taller than 80px */
+  width: auto;
+  object-fit: contain; /* preserve aspect ratio */
+}
+
+/* ─── Restore Volunteer & Donate button colors ─── */
+.volunteer-link {
+  background-color: #5cbf7b;  /* green */
+  color: white;
+}
+.volunteer-link:hover {
+  background-color: #48a96b;
+}
+
+.donate-link {
+  background-color: #FFD700;  /* gold/yellow */
+  color: #333;
+}
+.donate-link:hover {
+  background-color: #E6C200;
+}
+
+
+</style>
 </head>
 <body>
 
@@ -621,6 +685,32 @@
       <p>of Chicagoans live below the federal poverty line — roughly 1 in 6 residents struggled in 2023.</p>
     </div>
   </section>
+
+
+  <section class="mission">
+  <div class="mission-photo">
+    <img src="contact_page_picture.jpeg" alt="Our Impact Matters volunteer cleanup effort">
+  </div>
+  <div class="mission-text">
+    <h3>Our Mission</h3>
+    <p>
+      We are a dedicated nonprofit organization committed to uplifting underserved communities by providing access to resources, support, and opportunity.
+      Our goal is to create lasting impact through compassion, action, and unity.
+    </p>
+
+    <!-- Buttons -->
+    <div class="mission-buttons">
+      <a href="https://www.instagram.com/our_impact_matters" target="_blank" class="btn-follow">
+        Follow on Instagram
+      </a>
+      <a href="contact.html" class="btn-contact">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
   
 
