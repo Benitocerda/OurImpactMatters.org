@@ -1,33 +1,21 @@
 @media (max-width: 768px) {
-  /* === General Layout === */
-  body, html {
-    overflow-x: hidden;
-  }
-
-  main, section {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-
   /* === Header === */
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    background-color: #5cbf7b;
+    color: white;
     padding: 1rem;
-    position: relative;
-    z-index: 1001;
-    text-align: center;
+    z-index: 1000;
   }
 
   .logo-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     width: 100%;
+    justify-content: center;
     margin-bottom: 0.5rem;
   }
 
@@ -36,53 +24,50 @@
   }
 
   .logo-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
   }
 
   /* === Navigation === */
   .nav-links {
     display: flex;
-    flex-direction: row; /* Horizontal links */
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    position: static;
-    background: none;
-    transform: none;
-    opacity: 1;
-    pointer-events: auto;
-    padding: 0;
-    margin-top: 1rem;
     width: 100%;
-    list-style: none;
     gap: 1rem;
+    background: none;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto;
+    position: static;
+    margin-top: 0.5rem;
   }
 
-  .nav-links li a {
+  .nav-links li {
+    list-style: none;
+  }
+
+  .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
+    padding: 0.5rem;
     display: block;
-    padding: 0.5rem 0.75rem;
-    position: relative;
   }
 
-  .nav-links li a::after {
+  .nav-links a::after {
     content: '';
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
+    display: block;
     height: 2px;
-    background-color: white;
+    background: white;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-in-out;
   }
 
-  .nav-links li a:hover::after {
+  .nav-links a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
   }
@@ -90,46 +75,33 @@
   /* === Tooltip Adjustments === */
   .program-card::after {
     white-space: normal;
-    max-width: 90vw;
+    max-width: 200px;
     word-wrap: break-word;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 0.5rem;
     z-index: 9999;
-    text-align: center;
   }
 
-  /* === Programs & Poverty Section === */
+  /* === Layout Fixes === */
   .programs-poverty-container {
     flex-direction: column;
     padding: 2rem 1rem;
     gap: 2rem;
-    align-items: center;
   }
 
   .programs-info,
   .poverty-fact {
     width: 100%;
-    text-align: center;
   }
 
-  .poverty-fact p {
-    font-size: 1rem;
-    padding: 1rem;
-  }
-
-  /* === Impact Blog === */
   .impact-post {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
   }
 
   .impact-post img {
     width: 100%;
-    height: auto;
   }
 
   .post-content {
@@ -144,7 +116,9 @@
   .read-more {
     font-size: 0.95rem;
     padding: 0.6rem 1rem;
-    margin: 0.5rem 0;
+    margin-top: 0.75rem;
+    display: inline-block;
+    width: auto;
   }
 
   /* === Fade-in Animation === */
@@ -157,14 +131,5 @@
   .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-  }
-
-  /* === Board Grid Fix === */
-  .member-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .member-card img {
-    max-width: 150px;
   }
 }
