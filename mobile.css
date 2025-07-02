@@ -1,15 +1,32 @@
 @media (max-width: 768px) {
+  /* === General Layout === */
+  body, html {
+    overflow-x: hidden;
+  }
+
+  main, section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
   /* === Header === */
   header {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
     position: relative;
     z-index: 1001;
+    text-align: center;
   }
 
   .logo-container {
+    display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-bottom: 0.5rem;
   }
@@ -20,54 +37,26 @@
 
   .logo-text {
     font-size: 1.2rem;
-  }
-
-  /* === Toggle Button === */
-  .nav-toggle {
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    align-self: flex-end;
-    margin-bottom: 0.5rem;
-    transition: transform 0.3s ease;
-    z-index: 1002;
-  }
-
-  .nav-toggle.open {
-    transform: rotate(90deg);
+    font-weight: bold;
   }
 
   /* === Navigation === */
   .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(92, 191, 123, 0.9);
-    backdrop-filter: blur(8px);
-    width: 100%;
-    padding: 1rem 2rem;
-    list-style: none;
-    margin: 0;
-    transform: translateY(-20px);
-    opacity: 0;
-    pointer-events: none;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    border-bottom: 3px solid #45a56a;
-    z-index: 1000;
-  }
-
-  .nav-links.show {
-    transform: translateY(0);
+    display: flex;
+    flex-direction: row; /* Horizontal links */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: static;
+    background: none;
+    transform: none;
     opacity: 1;
     pointer-events: auto;
-  }
-
-  .nav-links li {
-    margin: 0.5rem 0;
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%;
+    list-style: none;
+    gap: 1rem;
   }
 
   .nav-links li a {
@@ -76,7 +65,7 @@
     font-weight: 500;
     font-size: 1rem;
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
     position: relative;
   }
 
@@ -101,21 +90,50 @@
   /* === Tooltip Adjustments === */
   .program-card::after {
     white-space: normal;
-    max-width: 200px;
+    max-width: 90vw;
     word-wrap: break-word;
-    bottom: auto;
     top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 0.5rem;
     z-index: 9999;
+    text-align: center;
   }
 
-  .programs-info {
-    width: 100%;
+  /* === Programs & Poverty Section === */
+  .programs-poverty-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+    align-items: center;
   }
 
+  .programs-info,
   .poverty-fact {
     width: 100%;
-    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .poverty-fact p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  /* === Impact Blog === */
+  .impact-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .impact-post img {
+    width: 100%;
+    height: auto;
+  }
+
+  .post-content {
+    padding: 1rem;
   }
 
   /* === Buttons === */
@@ -126,6 +144,7 @@
   .read-more {
     font-size: 0.95rem;
     padding: 0.6rem 1rem;
+    margin: 0.5rem 0;
   }
 
   /* === Fade-in Animation === */
@@ -140,22 +159,12 @@
     transform: translateY(0);
   }
 
-  /* === Layout Padding Fixes === */
-  .programs-poverty-container {
-    flex-direction: column;
-    padding: 2rem 1rem;
-    gap: 2rem;
+  /* === Board Grid Fix === */
+  .member-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  .impact-post {
-    flex-direction: column;
-  }
-
-  .impact-post img {
-    width: 100%;
-  }
-
-  .post-content {
-    padding: 1rem;
+  .member-card img {
+    max-width: 150px;
   }
 }
