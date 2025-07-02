@@ -35,39 +35,44 @@
     header {
       background: var(--clr-primary);
       color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: var(--spacing-md) var(--spacing-lg);
-      border-bottom: 4px solid #45a56a;
       flex-wrap: wrap;
+      border-bottom: 4px solid #45a56a;
     }
+
     .logo-container {
       display: flex;
       align-items: center;
       gap: var(--spacing-sm);
     }
+
     .logo-container img {
       height: 50px;
     }
+
     .logo-text {
       font-size: 1.8rem;
       font-weight: 700;
     }
+
     nav ul {
       list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
+      padding-left: 0;
+      margin: 0;
     }
+
     nav a {
       text-decoration: none;
       color: white;
       font-weight: 500;
       position: relative;
     }
+
     nav a.active::after {
       content: '';
       position: absolute;
@@ -76,6 +81,18 @@
       width: 100%;
       height: 2px;
       background: white;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 1rem;
+      }
+
+      .logo-text {
+        font-size: 1.4rem;
+      }
     }
 
     /* MAIN WRAPPER */
@@ -93,6 +110,7 @@
       margin-bottom: var(--spacing-lg);
       align-items: start;
     }
+
     .video-container video {
       width: 100%;
       aspect-ratio: 16/9;
@@ -100,15 +118,18 @@
       border-radius: 10px;
       box-shadow: var(--shadow-light);
     }
+
     .bio-container {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     .bio-container h2 {
       color: var(--clr-primary);
       margin-bottom: 0.5rem;
     }
+
     .bio-background {
       background: var(--clr-light-bg);
       padding: var(--spacing-md);
@@ -120,23 +141,19 @@
     .board-members {
       margin-top: var(--spacing-lg);
     }
+
     .board-members h2 {
       text-align: center;
       margin-bottom: var(--spacing-lg);
       font-size: 2rem;
       color: #333;
     }
+
     .member-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);    /* exactly 2 columns */
-      grid-auto-rows: auto;                     /* rows flow automatically */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: var(--spacing-md);
       justify-items: center;
-    }
-    @media (max-width: 600px) {
-      .member-grid {
-      grid-template-columns: 1fr;
-      }
     }
 
     .member-card {
@@ -147,10 +164,12 @@
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .member-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-strong);
     }
+
     .member-card img {
       width: 100%;
       max-width: 180px;
@@ -159,6 +178,7 @@
       border-radius: 50%;
       margin-bottom: var(--spacing-sm);
     }
+
     .member-name-box {
       display: inline-flex;
       align-items: center;
@@ -166,6 +186,7 @@
       padding: 0.5rem 1rem;
       border-radius: 20px;
     }
+
     .badge {
       margin-left: var(--spacing-sm);
       padding: 0.2rem 0.6rem;
@@ -173,25 +194,6 @@
       background: var(--clr-secondary);
       color: white;
       border-radius: 4px;
-    }
-
-    /* RESPONSIVE TWEAKS */
-    @media (max-width: 900px) {
-      .logo-text { font-size: 1.5rem; }
-      nav ul { gap: var(--spacing-sm); }
-    }
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: var(--spacing-sm);
-      }
-      nav ul {
-        flex-direction: column;
-        width: 100%;
-        gap: var(--spacing-sm);
-        margin-top: var(--spacing-sm);
-      }
     }
 
     /* FOOTER */
@@ -209,11 +211,11 @@
 <body>
   <header>
     <div class="logo-container">
-      <img src="OIM_logo.png" alt="OIM Logo">
+      <img src="OIM_logo.png" alt="OIM Logo" />
       <div class="logo-text">Our Impact Matters</div>
     </div>
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="board.html" class="active">Our Board</a></li>
         <li><a href="contact.html">Contact Us</a></li>
@@ -222,12 +224,11 @@
   </header>
 
   <main>
-    <!-- Board Intro -->
     <section class="board-intro">
       <div class="video-container">
         <video controls poster="graduation_video.mov">
           <source src="graduation_video.mov" type="video/mp4">
-          
+          Your browser does not support the video tag.
         </video>
       </div>
       <div class="bio-container">
@@ -243,52 +244,15 @@
       </div>
     </section>
 
-    <!-- Meet Our Board -->
     <section class="board-members">
       <h2>Meet Our Board</h2>
       <div class="member-grid">
-        <div class="member-card">
-          <img src="member1.jpg" alt="Daniel Zarco">
-          <div class="member-name-box">
-            <h3>DANIEL ZARCO</h3>
-            <span class="badge">Board Member</span>
-          </div>
-        </div>
-        <div class="member-card">
-          <img src="member2.jpg" alt="Jemal King">
-          <div class="member-name-box">
-            <h3>JEMAL KING</h3>
-            <span class="badge">Board Member</span>
-          </div>
-        </div>
-        <div class="member-card">
-          <img src="member3.jpg" alt="Kelly Spencer">
-          <div class="member-name-box">
-            <h3>KELLY SPENCER</h3>
-            <span class="badge">Board Member</span>
-          </div>
-        </div>
-        <div class="member-card">
-          <img src="member4.jpg" alt="Frank Di Leo">
-          <div class="member-name-box">
-            <h3>FRANK DI LEO</h3>
-            <span class="badge">Board Member</span>
-          </div>
-        </div>
-        <div class="member-card">
-          <img src="member5.jpg" alt="Nick Turner">
-          <div class="member-name-box">
-            <h3>NICK TURNER</h3>
-            <span class="badge">Board Member</span>
-          </div>
-        </div>
-        <div class="member-card">
-          <img src="member6.jpeg" alt="Kevin Cerda">
-          <div class="member-name-box">
-            <h3>KEVIN CERDA</h3>
-            <span class="badge">Board Member</span>
-          </div>
-        </div>
+        <div class="member-card"><img src="member1.jpg" alt="Daniel Zarco"><div class="member-name-box"><h3>DANIEL ZARCO</h3><span class="badge">Board Member</span></div></div>
+        <div class="member-card"><img src="member2.jpg" alt="Jemal King"><div class="member-name-box"><h3>JEMAL KING</h3><span class="badge">Board Member</span></div></div>
+        <div class="member-card"><img src="member3.jpg" alt="Kelly Spencer"><div class="member-name-box"><h3>KELLY SPENCER</h3><span class="badge">Board Member</span></div></div>
+        <div class="member-card"><img src="member4.jpg" alt="Frank Di Leo"><div class="member-name-box"><h3>FRANK DI LEO</h3><span class="badge">Board Member</span></div></div>
+        <div class="member-card"><img src="member5.jpg" alt="Nick Turner"><div class="member-name-box"><h3>NICK TURNER</h3><span class="badge">Board Member</span></div></div>
+        <div class="member-card"><img src="member6.jpeg" alt="Kevin Cerda"><div class="member-name-box"><h3>KEVIN CERDA</h3><span class="badge">Board Member</span></div></div>
       </div>
     </section>
   </main>
