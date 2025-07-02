@@ -1,0 +1,124 @@
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .logo-container {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .logo-container img {
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  /* Toggle Button */
+  .nav-toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+    z-index: 1002;
+  }
+
+  .nav-toggle.open {
+    transform: rotate(90deg);
+  }
+
+  /* Mobile Navigation Overlay */
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(92, 191, 123, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    width: 100%;
+    padding: 1rem 2rem;
+    list-style: none;
+    margin: 0;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid #45a56a;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    display: block;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+
+  .nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .nav-links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Buttons */
+  .btn-follow,
+  .btn-contact,
+  .volunteer-link,
+  .donate-link,
+  .read-more {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Fade-In Animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
