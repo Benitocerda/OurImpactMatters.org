@@ -786,3 +786,7 @@ footer {
   animation: pulse 1.6s infinite;
 }
 
+.about-background {
+  background-attachment: fixed;
+}
+
