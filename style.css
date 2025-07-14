@@ -451,6 +451,7 @@ nav ul li a:hover::after {
 .mission-buttons a {
   margin-right: 1rem;
 }
+
 .donate {
   text-align: center;
   padding: 50px 20px;
@@ -483,6 +484,7 @@ nav ul li a:hover::after {
 .donate-button:hover {
   background-color: #4aa76b;
 }
+
 
 /* === Blog Section with Signup === */
 .impact-blog {
