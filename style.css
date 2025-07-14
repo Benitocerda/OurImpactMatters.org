@@ -727,5 +727,18 @@ footer {
 .donate-button:hover {
   background-color: #4aa76b;
 }
+.donate-header-button {
+  background-color: #FFD700;
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.donate-header-button:hover {
+  background-color: #e6c200;
+}
 
 
