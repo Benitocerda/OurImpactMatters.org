@@ -742,7 +742,7 @@ footer {
 }
 
 .about-background {
-  background: url('images/homepage_background_chi.png') no-repeat center center;
+  background: url('homepage_background_chi.png') no-repeat center center;
   background-size: cover;
   position: relative;
   overflow: hidden;
