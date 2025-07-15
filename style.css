@@ -794,4 +794,61 @@ footer {
 .btn-follow i {
   font-size: 1.2rem;
 }
+.blog-impact-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.blog-left {
+  flex: 1 1 300px;
+}
+
+.blog-right {
+  flex: 1 1 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.impact-stat {
+  background-color: #ffffff;
+  border: 2px solid #c0e8d8;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-stat h3 {
+  color: #2f855a;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.impact-stat p {
+  color: #444;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Scroll-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive stack on small screens */
+@media (max-width: 768px) {
+  .blog-impact-container {
+    flex-direction: column;
+  }
+}
 
