@@ -874,3 +874,11 @@ footer {
   display: block;
 }
 
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); opacity: 0.95; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+.featured-stat .stat-icon {
+  animation: pulseIcon 2s infinite;
+}
