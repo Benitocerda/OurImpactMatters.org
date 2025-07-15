@@ -888,3 +888,9 @@ footer {
   margin-bottom: 0.5rem;
   display: block;
 }
+
+.impact-stat h3 {
+  color: #1E4E79;
+  text-shadow: 0 0 8px rgba(30, 78, 121, 0.5); /* matching soft blue glow */
+}
+
