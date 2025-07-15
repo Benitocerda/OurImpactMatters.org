@@ -364,12 +364,7 @@ nav ul li a:hover::after {
 }
 
 
-/* === Responsive Adjustment === */
-@media (max-width: 768px) {
-  .programs-poverty-container {
-    flex-direction: column;
-  }
-}
+
 
 
 /* === Interested Section === */
@@ -534,23 +529,7 @@ nav ul li a:hover::after {
   font-size: 1rem;
   line-height: 1.6;
 }
-@media (min-width: 768px) {
-  .impact-post {
-    flex-direction: row;
-    align-items: center;
-  }
-  .impact-post img {
-    width: 40%;
-    height: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    border-radius: 0;
-  }
-  .post-content {
-    width: 60%;
-    padding: 2rem;
-  }
-}
+
 .blog-intro {
   text-align: center;
   margin: 2rem auto 1rem;
