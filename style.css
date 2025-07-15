@@ -854,3 +854,23 @@ footer {
   }
 }
 
+.featured-stat {
+  background-color: #fef6e4;
+  border: 2px solid #ffcc66;
+  box-shadow: 0 8px 20px rgba(255, 204, 102, 0.2);
+  transform: scale(1.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-stat:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 204, 102, 0.3);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #ffaa00;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
