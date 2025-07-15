@@ -882,3 +882,9 @@ footer {
 .featured-stat .stat-icon {
   animation: pulseIcon 2s infinite;
 }
+.stat-icon {
+  font-size: 2rem;
+  color: #2f855a;
+  margin-bottom: 0.5rem;
+  display: block;
+}
