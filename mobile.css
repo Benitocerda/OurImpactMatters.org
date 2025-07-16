@@ -1,5 +1,11 @@
-
 @media (max-width: 768px) {
+  /* === General Reset === */
+  body, html {
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+  }
+
   /* === Header === */
   header {
     display: flex;
@@ -9,14 +15,15 @@
     color: white;
     padding: 1rem;
     z-index: 1000;
+    text-align: center;
   }
 
   .logo-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 0.5rem;
     width: 100%;
-    justify-content: center;
     margin-bottom: 0.5rem;
   }
 
@@ -32,21 +39,20 @@
   /* === Navigation === */
   .nav-links {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    gap: 1rem;
+    gap: 0.5rem;
     background: none;
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-    pointer-events: auto;
-    position: static;
     margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    text-align: center;
   }
 
   .nav-links li {
     list-style: none;
+    width: 100%;
   }
 
   .nav-links a {
@@ -54,8 +60,8 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
-    padding: 0.5rem;
     display: block;
+    padding: 0.5rem 0;
   }
 
   .nav-links a::after {
@@ -73,19 +79,37 @@
     transform-origin: left;
   }
 
-  /* === Tooltip Adjustments === */
-  .program-card::after {
-    white-space: normal;
-    max-width: 200px;
-    word-wrap: break-word;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+  /* === Donate Button (Header) === */
+  .donate-header-button {
+    background-color: #FFD700;
+    color: #333;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
     margin-top: 0.5rem;
-    z-index: 9999;
   }
 
-  /* === Layout Fixes === */
+  /* === Impact Posts === */
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-post {
+    flex-direction: column;
+  }
+
+  .impact-post img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .post-content {
+    padding: 1rem;
+  }
+
+  /* === Programs Section === */
   .programs-poverty-container {
     flex-direction: column;
     padding: 2rem 1rem;
@@ -97,29 +121,60 @@
     width: 100%;
   }
 
-  .impact-post {
+  .program-card::after {
+    white-space: normal;
+    max-width: 200px;
+    word-wrap: break-word;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.5rem;
+    z-index: 9999;
+  }
+
+  /* === Mission Section === */
+  .mission {
     flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
   }
 
-  .impact-post img {
+  .mission-photo img {
     width: 100%;
+    max-width: 100%;
   }
 
-  .post-content {
-    padding: 1rem;
+  /* === About Background === */
+  .about-background {
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    padding: 2rem 1rem;
   }
 
   /* === Buttons === */
+  .donate-button,
   .btn-follow,
   .btn-contact,
   .volunteer-link,
-  .donate-link,
   .read-more {
-    font-size: 0.95rem;
-    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
     margin-top: 0.75rem;
     display: inline-block;
-    width: auto;
+    width: 90%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  /* === Blog & Stats === */
+  .blog-impact-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .impact-stat {
+    margin-bottom: 1.5rem;
   }
 
   /* === Fade-in Animation === */
