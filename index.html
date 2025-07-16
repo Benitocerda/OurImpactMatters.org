@@ -19,6 +19,14 @@
     <img src="OIM_logo.png" alt="Our Impact Matters Logo">
     <span class="logo-text">Our Impact Matters</span>
   </div>
+
+  <!-- Hamburger Icon -->
+  <div class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <nav class="main-nav">
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -34,9 +42,6 @@
     </ul>
   </nav>
 </header>
-
-
-
 
 
   <!-- Content sections -->
@@ -450,6 +455,16 @@
       successUrl: 'https://ourimpactmatters.org/success.html',
       cancelUrl: 'https://ourimpactmatters.org/index.html',
     });
+  });
+</script>
+<script>
+  const toggleBtn = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggleBtn.addEventListener('click', () => {
+    const isOpen = toggleBtn.classList.toggle('open');
+    navLinks.classList.toggle('show');
+    toggleBtn.setAttribute('aria-expanded', isOpen);
   });
 </script>
 
