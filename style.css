@@ -1,3 +1,4 @@
+.
 
 * {
   box-sizing: border-box;
@@ -728,15 +729,20 @@ footer {
 
 }
 .donate-header-button {
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #FFD700; /* Bright yellow */
+  color: #333;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-
 
 .donate-header-button:hover {
   background-color: #e6c200;
 }
+
 
 .about-background {
   background: url('homepage_background_chi.png') no-repeat center center;
