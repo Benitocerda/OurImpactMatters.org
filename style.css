@@ -969,3 +969,7 @@ footer {
   font-size: 1rem;
   line-height: 1.6;
 }
+nav ul li a.donate-header-button {
+  background-color: #FFD700 !important;
+  color: #333 !important;
+}
