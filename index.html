@@ -100,14 +100,17 @@
       </div>
     </div>
   </section>
-  <section class="donate">
+ <section class="donate">
   <h2>Support Our Mission</h2>
   <p>Your donation helps us expand our programs and reach more students.</p>
 
-  <a href="https://donate.stripe.com/5kQcN59Kl0x65aP7Jg2VG00" target="_blank" class="donate-button">
-    Donate Now
-  </a>
+  <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+    <button id="monthly" class="donate-button">Subscribe Monthly</button>
+    <button id="yearly" class="donate-button">Subscribe Yearly</button>
+    <button id="oneoff" class="donate-button">One-Time Donation</button>
+  </div>
 </section>
+
 
 
   <section class="impact-blog" id="blog">
@@ -387,6 +390,68 @@
   });
 </script>
 
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  const stripe = Stripe("pk_live_YOUR_PUBLISHABLE_KEY"); // Replace with your real key
+
+  document.getElementById("monthly").addEventListener("click", () => {
+    stripe.redirectToCheckout({
+      lineItems: [{ price: 'price_1MONTHLY_ID', quantity: 1 }],
+      mode: 'subscription',
+      successUrl: 'https://yourdomain.com/success',
+      cancelUrl: 'https://yourdomain.com/cancel',
+    });
+  });
+
+  document.getElementById("yearly").addEventListener("click", () => {
+    stripe.redirectToCheckout({
+      lineItems: [{ price: 'price_1YEARLY_ID', quantity: 1 }],
+      mode: 'subscription',
+      successUrl: 'https://yourdomain.com/success',
+      cancelUrl: 'https://yourdomain.com/cancel',
+    });
+  });
+
+  document.getElementById("oneoff").addEventListener("click", () => {
+    stripe.redirectToCheckout({
+      lineItems: [{ price: 'price_1ONEOFF_ID', quantity: 1 }],
+      mode: 'payment',
+      successUrl: 'https://yourdomain.com/success',
+      cancelUrl: 'https://yourdomain.com/cancel',
+    });
+  });
+</script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  const stripe = Stripe("pk_live_51Rkcd3DVfGGNr4pmAG7GTzsnpFYmTBmyQA6Mdcj7B4AtSsNAcPId2dAV5fSFjDWp5OtfHEsvQVC26lqvvrr7x1EN00CXjSaCLN");
+
+  document.getElementById("monthly").addEventListener("click", () => {
+    stripe.redirectToCheckout({
+      lineItems: [{ price: 'price_1RlE58DVfGGNr4pmHiGbjYxd', quantity: 1 }],
+      mode: 'subscription',
+      successUrl: 'https://ourimpactmatters.org/success.html',
+      cancelUrl: 'https://ourimpactmatters.org/index.html',
+    });
+  });
+
+  document.getElementById("yearly").addEventListener("click", () => {
+    stripe.redirectToCheckout({
+      lineItems: [{ price: 'price_1RlE6wDVfGGNr4pmpRhbqNDN', quantity: 1 }],
+      mode: 'subscription',
+      successUrl: 'https://ourimpactmatters.org/success.html',
+      cancelUrl: 'https://ourimpactmatters.org/index.html',
+    });
+  });
+
+  document.getElementById("oneoff").addEventListener("click", () => {
+    stripe.redirectToCheckout({
+      lineItems: [{ price: 'price_1RlE85DVfGGNr4pmJMnzByQD', quantity: 1 }],
+      mode: 'payment',
+      successUrl: 'https://ourimpactmatters.org/success.html',
+      cancelUrl: 'https://ourimpactmatters.org/index.html',
+    });
+  });
+</script>
 
   
 </body>
