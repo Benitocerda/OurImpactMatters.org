@@ -1,13 +1,14 @@
 @media (max-width: 768px) {
-  /* === General Reset === */
+  /* General Reset */
   body, html {
     overflow-x: hidden;
     padding: 0;
     margin: 0;
   }
 
-  /* === Header === */
+  /* Header */
   header {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,18 +37,51 @@
     font-weight: bold;
   }
 
-  /* === Navigation === */
+  /* Hamburger Menu Icon */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .nav-toggle span {
+    display: block;
+    height: 4px;
+    margin-bottom: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Navigation Links */
   .nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100%;
-    gap: 0.5rem;
-    background: none;
-    margin-top: 0.5rem;
+    background-color: #5cbf7b;
     padding: 0.5rem 0;
     text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   .nav-links li {
@@ -56,12 +90,14 @@
   }
 
   .nav-links a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    font-weight: 500;
     color: white;
     text-decoration: none;
-    font-weight: 500;
     font-size: 1rem;
-    display: block;
-    padding: 0.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .nav-links a::after {
@@ -79,7 +115,7 @@
     transform-origin: left;
   }
 
-  /* === Donate Button (Header) === */
+  /* Donate Button in Header */
   .donate-header-button {
     background-color: #FFD700;
     color: #333;
@@ -91,25 +127,7 @@
     margin-top: 0.5rem;
   }
 
-  /* === Impact Posts === */
-  .impact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .impact-post {
-    flex-direction: column;
-  }
-
-  .impact-post img {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .post-content {
-    padding: 1rem;
-  }
-
-  /* === Programs Section === */
+  /* Program Section */
   .programs-poverty-container {
     flex-direction: column;
     padding: 2rem 1rem;
@@ -132,7 +150,7 @@
     z-index: 9999;
   }
 
-  /* === Mission Section === */
+  /* Mission */
   .mission {
     flex-direction: column;
     padding: 2rem 1rem;
@@ -144,7 +162,7 @@
     max-width: 100%;
   }
 
-  /* === About Background === */
+  /* About */
   .about-background {
     background-size: cover;
     background-position: center;
@@ -152,7 +170,7 @@
     padding: 2rem 1rem;
   }
 
-  /* === Buttons === */
+  /* Buttons */
   .donate-button,
   .btn-follow,
   .btn-contact,
@@ -167,7 +185,25 @@
     text-align: center;
   }
 
-  /* === Blog & Stats === */
+  /* Impact Section */
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-post {
+    flex-direction: column;
+  }
+
+  .impact-post img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .post-content {
+    padding: 1rem;
+  }
+
+  /* Blog and Stats */
   .blog-impact-container {
     flex-direction: column;
     padding: 1rem;
@@ -177,7 +213,7 @@
     margin-bottom: 1.5rem;
   }
 
-  /* === Fade-in Animation === */
+  /* Fade-in Animations */
   .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -187,57 +223,5 @@
   .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-
-@media (max-width: 768px) {
-  /* Hamburger icon */
-  .nav-toggle {
-    display: block;
-    position: absolute;
-    top: 1.25rem;
-    right: 1.5rem;
-    width: 28px;
-    height: 22px;
-    cursor: pointer;
-    z-index: 1100;
-  }
-  .nav-toggle span {
-    display: block;
-    height: 4px;
-    margin-bottom: 4px;
-    background: white;
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-  .nav-toggle.open span:nth-child(2) { opacity: 0; }
-  .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-  /* Menu hidden by default */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    width: 100%;
-  }
-  .nav-links a {
-    display: block;
-    padding: 0.75rem 1.5rem;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.2);
-  }
-
-  /* Ensure header items are stacked */
-  header {
-    position: relative;
-    flex-direction: column;
   }
 }
