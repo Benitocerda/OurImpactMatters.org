@@ -223,28 +223,41 @@
 </head>
 
 <body>
+
   <header>
-  <link rel="stylesheet" href="style.css" />
   <div class="logo-container">
     <img src="OIM_logo.png" alt="Our Impact Matters Logo">
     <span class="logo-text">Our Impact Matters</span>
   </div>
+
+  <!-- Hamburger toggle for mobile -->
+  <div class="nav-toggle" onclick="toggleNav(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <nav class="main-nav">
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      
-      <li><a href="#partners">Our Partners</a></li>
       <li><a href="board.html">Our Board</a></li>
       <li><a href="contact.html">Contact Us</a></li>
       <li>
-        <a href="https://donate.stripe.com/5kQcN59Kl0x65aP7Jg2VG00" class="donate-header-button" target="_blank">
+        <a href="https://buy.stripe.com/aFa8wPg8J5Rq0Uz1kS2VG01" class="donate-header-button" target="_blank">
           Donate
         </a>
       </li>
     </ul>
   </nav>
-
 </header>
+
+<script>
+  function toggleNav(toggle) {
+    toggle.classList.toggle("open");
+    document.querySelector(".nav-links").classList.toggle("show");
+  }
+</script>
+
 
   <div class="container">
     <div class="contact-section">
