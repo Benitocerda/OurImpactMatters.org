@@ -6,16 +6,22 @@
   <title>Contact Us - Our Impact Matters</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* RESET & VARIABLES */
-    * { box-sizing: border-box; margin:0; padding:0 }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     :root {
       --clr-primary: #5cbf7b;
       --clr-light-bg: #f8f8f5;
       --clr-card-bg: #fff;
+      --clr-donate: #FFD700;
       --gap-md: 2rem;
       --gap-lg: 3rem;
       --shadow-light: 0 2px 8px rgba(0,0,0,0.05);
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background: var(--clr-light-bg);
@@ -23,7 +29,6 @@
       line-height: 1.6;
     }
 
-    /* HEADER */
     header {
       background: var(--clr-primary);
       color: white;
@@ -33,39 +38,96 @@
       padding: var(--gap-md) var(--gap-lg);
       border-bottom: 4px solid #45a56a;
       flex-wrap: wrap;
-    }
-    .logo-container {
-      display: flex; align-items: center; gap: 1rem;
-    }
-    .logo-container img { height: 90px; }
-    .logo-text {
-      font-size: 1.5rem; font-weight:700;
-    }
-    nav ul {
-      list-style: none; display:flex; gap:1.2rem;
-    }
-    nav a {
-      color: white; text-decoration:none; font-weight:500;
-      position:relative;
-    }
-    nav a::after {
-      content:''; position:absolute; left:0; bottom:-4px;
-      width:100%; height:2px; background:white;
-      transform:scaleX(0); transform-origin:right;
-      transition:transform .3s ease;
-    }
-    nav a:hover::after {
-      transform:scaleX(1); transform-origin:left;
+      position: relative;
     }
 
-    /* PAGE LAYOUT */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      height: 90px;
+    }
+
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background: white;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform .3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    .donate-header-button {
+      background-color: var(--clr-donate);
+      color: #333 !important;
+      font-weight: bold;
+      border-radius: 999px;
+      padding: 0.6rem 1.4rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 1rem;
+      display: inline-block;
+    }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      display: block;
+      border-radius: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+    }
+
+    /* Container & Contact Form */
     .container {
       max-width: 600px;
       margin: var(--gap-lg) auto;
       padding: 0 var(--gap-md);
     }
 
-    /* CONTACT FORM CARD */
     .contact-section {
       background: var(--clr-card-bg);
       border-radius: 12px;
@@ -75,162 +137,174 @@
       flex-direction: column;
       gap: var(--gap-md);
     }
+
     .contact-form h2 {
       color: var(--clr-primary);
       font-size: 1.75rem;
     }
+
     .form-group {
       position: relative;
     }
+
     .form-group input,
     .form-group textarea {
-      width:100%;
-      padding:12px;
-      border:1px solid #ccc;
-      border-radius:8px;
-      font-size:1rem;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
     }
+
     .form-group label {
-      position:absolute;
-      top:12px; left:12px;
+      position: absolute;
+      top: 12px;
+      left: 12px;
       background: var(--clr-card-bg);
-      padding:0 4px;
-      color:#999;
-      font-size:.85rem;
-      pointer-events:none;
-      transition:.2s;
+      padding: 0 4px;
+      color: #999;
+      font-size: .85rem;
+      pointer-events: none;
+      transition: .2s;
     }
+
     .form-group input:focus + label,
     .form-group input:not(:placeholder-shown)+label,
     .form-group textarea:focus + label,
     .form-group textarea:not(:placeholder-shown)+label {
-      top:-8px; left:8px;
-      color:var(--clr-primary);
-      font-size:.75rem;
+      top: -8px;
+      left: 8px;
+      color: var(--clr-primary);
+      font-size: .75rem;
     }
+
     .contact-form button {
       background: var(--clr-primary);
       color: white;
       padding: 12px;
-      border:none;
-      border-radius:8px;
-      cursor:pointer;
-      font-size:1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
     }
+
     .contact-form button:hover {
       background: #48a96b;
     }
+
     .privacy-note {
-      font-size:.85rem;
-      color:#666;
-    }
-    .success-message {
-      display:none;
-      color:#388e3c;
-      font-weight:600;
-    }
-    .char-count {
-      font-size:.75rem;
-      color:#777;
-      text-align:right;
+      font-size: .85rem;
+      color: #666;
     }
 
-    /* BUTTON ROW */
+    .success-message {
+      display: none;
+      color: #388e3c;
+      font-weight: 600;
+    }
+
+    .char-count {
+      font-size: .75rem;
+      color: #777;
+      text-align: right;
+    }
+
     .button-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
       gap: var(--gap-md);
     }
+
     .button-row a {
-      text-align:center;
-      padding:12px;
-      border-radius:8px;
-      font-weight:600;
-      text-decoration:none;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
       transition: transform .2s ease;
     }
+
     .button-row a:hover {
-      transform:scale(1.03);
+      transform: scale(1.03);
     }
+
     .btn-volunteer {
       background: var(--clr-primary);
       color: white;
     }
+
     .btn-donate {
-      background: #FFD700;
+      background: var(--clr-donate);
       color: #333;
     }
 
-    /* FOOTER */
     footer {
       background: var(--clr-primary);
       color: white;
       text-align: center;
       padding: var(--gap-md) 0;
-      font-size:.85rem;
+      font-size: .85rem;
       margin-top: var(--gap-lg);
     }
-    /* --- MOBILE HEADER FIX --- */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
 
-  .logo-container {
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 0.5rem;
-  }
+    /* MOBILE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+      }
 
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    padding-left: 0;
-  }
+      .nav-toggle {
+        display: flex;
+      }
 
-  nav ul li {
-    width: 100%;
-  }
+      .logo-container {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
 
-  nav ul li a {
-    display: block;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    color: white;
-    background-color: rgba(92, 191, 123, 0.9);
-    border-radius: 6px;
-  }
+      .logo-container img {
+        height: 60px;
+      }
 
-  nav ul li a:hover {
-    background-color: #48a96b;
-  }
+      .logo-text {
+        font-size: 1.25rem;
+      }
 
-  .logo-container img {
-    height: 60px;
-  }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--clr-primary);
+        margin-top: 10px;
+      }
 
-  .logo-text {
-    font-size: 1.25rem;
-  }
-}
+      .nav-links.show {
+        display: flex;
+      }
 
+      .nav-links li a {
+        padding: 0.75rem 1rem;
+        display: block;
+        font-size: 1rem;
+        background-color: rgba(92, 191, 123, 0.9);
+        border-radius: 6px;
+        margin: 4px 0;
+      }
+    }
   </style>
-
 </head>
 
 <body>
 
-  <header>
+<header>
   <div class="logo-container">
     <img src="OIM_logo.png" alt="Our Impact Matters Logo">
     <span class="logo-text">Our Impact Matters</span>
   </div>
 
-  <!-- Hamburger toggle for mobile -->
   <div class="nav-toggle" onclick="toggleNav(this)">
     <span></span>
     <span></span>
@@ -242,92 +316,86 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="board.html">Our Board</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li>
-        <a href="https://buy.stripe.com/aFa8wPg8J5Rq0Uz1kS2VG01" class="donate-header-button" target="_blank">
-          Donate
-        </a>
-      </li>
+      <li><a href="https://buy.stripe.com/aFa8wPg8J5Rq0Uz1kS2VG01" class="donate-header-button" target="_blank">Donate</a></li>
     </ul>
   </nav>
 </header>
+
+<div class="container">
+  <div class="contact-section">
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xyzjygve" method="POST">
+      <h2>Contact Us</h2>
+
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder=" " required />
+        <label for="name">Full Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder=" " required />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder=" " rows="5" maxlength="300" required></textarea>
+        <label for="message">Message</label>
+        <div class="char-count"><span id="charCount">0</span>/300</div>
+      </div>
+
+      <button type="submit">
+        Send Message <span class="spinner" id="spinner"></span>
+      </button>
+
+      <p class="privacy-note">🔒 We respect your privacy. Your info won’t be shared.</p>
+      <p class="success-message" id="successMsg">Thank you! We’ll get back to you in 1–2 business days.</p>
+    </form>
+
+    <div class="button-row">
+      <a href="volunteer.html" class="btn-volunteer">Volunteer</a>
+      <a href="donate.html" class="btn-donate">Donate</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Our Impact Matters | Together We Can Change the World ❤️
+</footer>
 
 <script>
   function toggleNav(toggle) {
     toggle.classList.toggle("open");
     document.querySelector(".nav-links").classList.toggle("show");
   }
+
+  const msgInput = document.getElementById('message');
+  const countSpan = document.getElementById('charCount');
+  msgInput.addEventListener('input', () => {
+    countSpan.textContent = msgInput.value.length;
+  });
+
+  const form = document.getElementById('contactForm');
+  const spinner = document.getElementById('spinner');
+  const successMsg = document.getElementById('successMsg');
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    spinner.style.display = 'inline-block';
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    });
+    spinner.style.display = 'none';
+    if (res.ok) {
+      successMsg.style.display = 'block';
+      form.reset();
+      countSpan.textContent = 0;
+    } else {
+      successMsg.textContent = 'Oops! Something went wrong.';
+      successMsg.style.display = 'block';
+    }
+  });
 </script>
 
-
-  <div class="container">
-    <div class="contact-section">
-      <form class="contact-form" id="contactForm" action="https://formspree.io/f/xyzjygve" method="POST">
-        <h2>Contact Us</h2>
-
-        <div class="form-group">
-          <input type="text" id="name" name="name" placeholder=" " required />
-          <label for="name">Full Name</label>
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" name="email" placeholder=" " required />
-          <label for="email">Email</label>
-        </div>
-        <div class="form-group">
-          <textarea id="message" name="message" placeholder=" " rows="5" maxlength="300" required></textarea>
-          <label for="message">Message</label>
-          <div class="char-count"><span id="charCount">0</span>/300</div>
-        </div>
-
-        <button type="submit">
-          Send Message
-          <span class="spinner" id="spinner"></span>
-        </button>
-
-        <p class="privacy-note">🔒 We respect your privacy. Your info won’t be shared.</p>
-        <p class="success-message" id="successMsg">Thank you! We’ll get back to you in 1–2 business days.</p>
-      </form>
-
-      <div class="button-row">
-        <a href="volunteer.html" class="btn-volunteer">Volunteer</a>
-        <a href="donate.html" class="btn-donate">Donate</a>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 Our Impact Matters | Together We Can Change the World ❤️
-  </footer>
-
-  <script>
-    // Character counter
-    const msgInput = document.getElementById('message');
-    const countSpan = document.getElementById('charCount');
-    msgInput.addEventListener('input', () => {
-      countSpan.textContent = msgInput.value.length;
-    });
-
-    // Form submission
-    const form = document.getElementById('contactForm');
-    const spinner = document.getElementById('spinner');
-    const successMsg = document.getElementById('successMsg');
-    form.addEventListener('submit', async e => {
-      e.preventDefault();
-      spinner.style.display = 'inline-block';
-      const res = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      });
-      spinner.style.display = 'none';
-      if (res.ok) {
-        successMsg.style.display = 'block';
-        form.reset();
-        countSpan.textContent = 0;
-      } else {
-        successMsg.textContent = 'Oops! Something went wrong.';
-        successMsg.style.display = 'block';
-      }
-    });
-  </script>
 </body>
 </html>
