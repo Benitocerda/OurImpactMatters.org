@@ -13,13 +13,13 @@
   <title>Our Impact Matters</title>
 </head>
 <body>
-
 <header>
-  <a href="index.html" class="logo-container">
-    <img src="OIM_logo.png" alt="Our Impact Matters Logo">
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="OIM_logo.png" alt="Our Impact Matters Logo">
+    </a>
     <span class="logo-text">Our Impact Matters</span>
-  </a>
-
+  </div>
   <div class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </div>
@@ -30,8 +30,9 @@
       <li><a href="#partners">Our Partners</a></li>
       <li><a href="board.html">Our Board</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <a href="https://buy.stripe.com/aFa8wPg8J5Rq0Uz1kS2VG01" class="donate-button" target="_blank">Donate</a>
-
+      <li>
+        <a href="https://buy.stripe.com/aFa8wPg8J5Rq0Uz1kS2VG01" class="donate-header-button" target="_blank">Donate</a>
+      </li>
     </ul>
   </nav>
 </header>
@@ -47,38 +48,17 @@
 </div>
 
 <section id="programs" class="programs-poverty-container">
-  <div class="programs-info">
-    <div class="programs-text">
-      <h2>Our Programs</h2>
-      <div class="program-cards-alt">
-  <div class="program-card">
-    <div class="icon">🍎</div>
-    <h4>Food Pantry</h4>
-    <p>We provide weekly groceries and essentials to families in need.</p>
+  <div class="programs-text">
+    <h2>Our Programs</h2>
+    <div class="program-cards-alt">
+      <div class="program-card" data-tooltip="We provide weekly groceries and essentials to families in need.">🍎 Food Pantry</div>
+      <div class="program-card" data-tooltip="Our tutoring and scholarship initiatives help students succeed academically.">🎓 Educational</div>
+      <div class="program-card" data-tooltip="We focus on football athletes by providing gear, training, and support.">🏈 Sports</div>
+      <div class="program-card" data-tooltip="We organize drives to collect and distribute clothing to the community.">👕 Clothing Drives</div>
+      <div class="program-card" data-tooltip="Mentors guide youth in decision-making, education, and career readiness.">🧑‍🏫 Youth Guidance Mentorship</div>
+    </div>
   </div>
-  <div class="program-card">
-    <div class="icon">🎓</div>
-    <h4>Educational</h4>
-    <p>Our tutoring and scholarship initiatives help students succeed academically.</p>
-  </div>
-  <div class="program-card">
-    <div class="icon">🏈</div>
-    <h4>Sports</h4>
-    <p>We focus on football athletes by providing gear, training, and support.</p>
-  </div>
-  <div class="program-card">
-    <div class="icon">👕</div>
-    <h4>Clothing Drives</h4>
-    <p>We organize drives to collect and distribute clothing to the community.</p>
-  </div>
-  <div class="program-card">
-    <div class="icon">🧑‍🏫</div>
-    <h4>Youth Guidance Mentorship</h4>
-    <p>Mentors guide youth in decision-making, education, and career readiness.</p>
-  </div>
-</div>
 
-  </div>
   <div class="poverty-fact">
     <div class="counter-container">
       <span class="counter" data-target="16.8">0</span><span class="percent-sign">%</span>
@@ -88,26 +68,22 @@
 </section>
 
 <section class="mission">
+  <div class="mission-text">
+    <h3>Our Mission</h3>
+    <p>
+      We are a dedicated nonprofit organization committed to uplifting underserved communities by providing access to resources, support, and opportunity. Our goal is to create lasting impact through compassion, action, and unity.
+    </p>
+  </div>
   <div class="mission-photo">
     <img src="contact_page_picture.jpeg" alt="Our Impact Matters volunteer cleanup effort">
   </div>
-  <div class="mission-content">
-    <div class="mission-text">
-      <h3>Our Mission</h3>
-      <p>
-        We are a dedicated nonprofit organization committed to uplifting underserved communities by providing access to resources, support, and opportunity.
-        Our goal is to create lasting impact through compassion, action, and unity.
-      </p>
-    </div>
-    <div class="mission-buttons">
-      <a href="https://www.instagram.com/our_impact_matters" class="btn-follow" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i> Follow on Instagram
-      </a>
-      <a href="contact.html" class="btn-contact">Contact Us</a>
-    </div>
+  <div class="mission-buttons">
+    <a href="https://www.instagram.com/our_impact_matters" target="_blank" rel="noopener noreferrer" class="btn-follow">
+      <i class="fab fa-instagram"></i> Follow on Instagram
+    </a>
+    <a href="contact.html" class="btn-contact">Contact Us</a>
   </div>
 </section>
-
 
 <section class="donate">
   <h2>Support Our Mission</h2>
@@ -119,141 +95,165 @@
   </div>
 </section>
 
-<!-- Other sections omitted for brevity, keep your blog, impact, interest, and partner sections here -->
+<section class="impact-blog" id="blog">
+  <h2 class="styled-blog-title">
+    <img src="OIM_logo.png" alt="OIM Logo" class="logo-icon" />
+    Stay Connected with Our Impact
+  </h2>
+  <div class="blog-impact-container">
+    <div class="blog-left">
+      <p class="blog-intro">
+        Get monthly updates about the difference we’re making in our communities. Hear stories of change, new programs, and ways you can get involved.
+      </p>
+      <form class="blog-signup">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+    <div class="impact-stat fade-in">
+      <i class="fas fa-handshake stat-icon"></i>
+      <h3 class="counter" data-target="10">0</h3>
+      <p>Local Partnerships Formed</p>
+    </div>
+    <div class="impact-stat featured-stat fade-in">
+      <i class="fas fa-utensils stat-icon"></i>
+      <h3 class="counter" data-target="3200">0</h3>
+      <p>Meals Served</p>
+    </div>
+    <div class="impact-stat fade-in">
+      <i class="fas fa-tshirt stat-icon"></i>
+      <h3 class="counter" data-target="500">0</h3>
+      <p>Clothing Items Donated</p>
+    </div>
+  </div>
+</section>
+
+<section class="impact-highlights">
+  <h2 class="impact-title">Our Recent Impact</h2>
+  <div class="impact-grid">
+    <div class="impact-post fade-in">
+      <img src="box_of_adidas.png" alt="Box of Adidas cleats">
+      <div class="post-content">
+        <h3>Over 50 Adidas Cleats Donated</h3>
+        <p>In May 2025, we donated over 50 brand new Adidas cleats to student-athletes in our community.</p>
+      </div>
+    </div>
+    <div class="impact-post fade-in">
+      <img src="blonde_ladies.png" alt="Teachers with gifts">
+      <div class="post-content">
+        <h3>Teacher Appreciation: Gifts & Food</h3>
+        <p>We celebrated Teacher Appreciation Week in May 2025 by giving custom gift cards and lunch to all faculty.</p>
+      </div>
+    </div>
+    <div class="impact-post fade-in">
+      <img src="nutrition_drink.jpeg" alt="Serving protein to the youth">
+      <div class="post-content">
+        <h3>Serving Our Youth</h3>
+        <p>Volunteers handed out 300 Premier Protein shakes, providing nutritious support and smiles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="interested-section">
+  <h2>
+    Help aid the cause 
+    <img src="donation_box_icon.jpg" alt="Donation Box Icon" style="width: 50px; height: auto; vertical-align: middle; margin-left: 10px;">
+  </h2>
+  <div class="interested-container">
+    <div class="interest-box">
+      <h3>Volunteer With Us</h3>
+      <p>Join our community of change-makers by giving your time and skills. Whether it's an hour or a day, your efforts go a long way.</p>
+      <a href="#contact" class="volunteer-link">Get notified!</a>
+    </div>
+    <div class="interest-box">
+      <h3>Make a Donation</h3>
+      <p>Your contribution helps fund essential services for underserved families and youth. Every dollar makes a difference.</p>
+      <a href="https://buy.stripe.com/aFa8wPg8J5Rq0Uz1kS2VG01" class="donate-link" target="_blank" rel="noopener noreferrer">Donate Now</a>
+    </div>
+  </div>
+</section>
+
+<section id="partners" class="partnerships-carousel">
+  <h2>Our Partners</h2>
+  <div class="carousel-wrapper">
+    <div class="carousel-track">
+      <img src="partner_transparent_1.png" alt="Partner 1">
+      <img src="partner_transparent_2.png" alt="Partner 2">
+      <img src="partner_transparent_3.png" alt="Partner 3">
+      <!-- Additional duplicated logos here -->
+    </div>
+  </div>
+</section>
 
 <footer>
   &copy; 2025 Our Impact Matters | Together We Can Change the World ❤️
 </footer>
 
-<!-- Stripe Checkout Script -->
+<!-- Stripe Scripts -->
 <script src="https://js.stripe.com/v3/"></script>
 <script>
   const stripe = Stripe("pk_live_51Rkcd3DVfGGNr4pmAG7GTzsnpFYmTBmyQA6Mdcj7B4AtSsNAcPId2dAV5fSFjDWp5OtfHEsvQVC26lqvvrr7x1EN00CXjSaCLN");
 
-  document.getElementById("monthly").addEventListener("click", () => {
+  document.getElementById("monthly").onclick = () => {
     stripe.redirectToCheckout({
-      lineItems: [{ price: 'price_1RlE58DVfGGNr4pmHiGbjYxd', quantity: 1 }],
-      mode: 'subscription',
-      successUrl: 'https://ourimpactmatters.org/success.html',
-      cancelUrl: 'https://ourimpactmatters.org/index.html',
+      lineItems: [{ price: "price_1RlE58DVfGGNr4pmHiGbjYxd", quantity: 1 }],
+      mode: "subscription",
+      successUrl: "https://ourimpactmatters.org/success.html",
+      cancelUrl: "https://ourimpactmatters.org/index.html"
     });
-  });
+  };
 
-  document.getElementById("yearly").addEventListener("click", () => {
+  document.getElementById("yearly").onclick = () => {
     stripe.redirectToCheckout({
-      lineItems: [{ price: 'price_1RlheLDVfGGNr4pmn9omjz5k', quantity: 1 }],
-      mode: 'subscription',
-      successUrl: 'https://ourimpactmatters.org/success.html',
-      cancelUrl: 'https://ourimpactmatters.org/index.html',
+      lineItems: [{ price: "price_1RlheLDVfGGNr4pmn9omjz5k", quantity: 1 }],
+      mode: "subscription",
+      successUrl: "https://ourimpactmatters.org/success.html",
+      cancelUrl: "https://ourimpactmatters.org/index.html"
     });
-  });
+  };
 
-  document.getElementById("oneoff").addEventListener("click", () => {
+  document.getElementById("oneoff").onclick = () => {
     stripe.redirectToCheckout({
-      lineItems: [{ price: 'price_1RlE85DVfGGNr4pmJMnzByQD', quantity: 1 }],
-      mode: 'payment',
-      successUrl: 'https://ourimpactmatters.org/success.html',
-      cancelUrl: 'https://ourimpactmatters.org/index.html',
+      lineItems: [{ price: "price_1RlE85DVfGGNr4pmJMnzByQD", quantity: 1 }],
+      mode: "payment",
+      successUrl: "https://ourimpactmatters.org/success.html",
+      cancelUrl: "https://ourimpactmatters.org/index.html"
     });
-  });
+  };
 </script>
 
-<!-- Nav toggle script -->
+<!-- Navigation Toggle -->
 <script>
-  const toggleBtn = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  toggleBtn.addEventListener('click', () => {
-    const isOpen = toggleBtn.classList.toggle('open');
-    navLinks.classList.toggle('show');
-    toggleBtn.setAttribute('aria-expanded', isOpen);
+  const toggleBtn = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  toggleBtn.addEventListener("click", () => {
+    const isOpen = toggleBtn.classList.toggle("open");
+    navLinks.classList.toggle("show");
+    toggleBtn.setAttribute("aria-expanded", isOpen);
   });
 </script>
 
-<script src="https://js.stripe.com/v3/"></script>
-<script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const stripe = Stripe("pk_live_51Rkcd3DVfGGNr4pmAG7GTzsnpFYmTBmyQA6Mdcj7B4AtSsNAcPId2dAV5fSFjDWp5OtfHEsvQVC26lqvvrr7x1EN00CXjSaCLN");
-
-    // Monthly Subscription Button
-    const monthlyBtn = document.getElementById("monthly");
-    if (monthlyBtn) {
-      monthlyBtn.addEventListener("click", () => {
-        stripe.redirectToCheckout({
-          lineItems: [{ price: 'price_1RlE58DVfGGNr4pmHiGbjYxd', quantity: 1 }],
-          mode: 'subscription',
-          successUrl: 'https://ourimpactmatters.org/success.html',
-          cancelUrl: 'https://ourimpactmatters.org/index.html',
-        });
-      });
-    }
-
-    // Yearly Subscription Button
-    const yearlyBtn = document.getElementById("yearly");
-    if (yearlyBtn) {
-      yearlyBtn.addEventListener("click", () => {
-        stripe.redirectToCheckout({
-          lineItems: [{ price: 'price_1RlheLDVfGGNr4pmn9omjz5k', quantity: 1 }],
-          mode: 'subscription',
-          successUrl: 'https://ourimpactmatters.org/success.html',
-          cancelUrl: 'https://ourimpactmatters.org/index.html',
-        });
-      });
-    }
-
-    // One-Time Donation Button
-    const oneOffBtn = document.getElementById("oneoff");
-    if (oneOffBtn) {
-      oneOffBtn.addEventListener("click", () => {
-        stripe.redirectToCheckout({
-          lineItems: [{ price: 'price_1RlE85DVfGGNr4pmJMnzByQD', quantity: 1 }],
-          mode: 'payment',
-          successUrl: 'https://ourimpactmatters.org/success.html',
-          cancelUrl: 'https://ourimpactmatters.org/index.html',
-        });
-      });
-    }
-  });
-</script>
+<!-- Counter Animation -->
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".program-card");
+    const counters = document.querySelectorAll(".counter");
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute("data-target");
+        const count = +counter.innerText;
+        const increment = target / 200;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = "running";
-          observer.unobserve(entry.target);
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 10);
+        } else {
+          counter.innerText = target;
         }
-      });
-    }, { threshold: 0.1 });
-
-    cards.forEach(card => {
-      card.style.animationPlayState = "paused";
-      observer.observe(card);
+      };
+      updateCount();
     });
   });
 </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".program-card");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = "running";
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    cards.forEach(card => observer.observe(card));
-  });
-</script>
-
-  
 </body>
 </html>
