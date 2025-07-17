@@ -6,15 +6,10 @@
   <title>Our Board – Our Impact Matters</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="mobile.css" media="(max-width: 768px)" />
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     /* RESET & VARIABLES */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
       --clr-primary: #5cbf7b;
       --clr-secondary: #2f855a;
@@ -41,11 +36,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem var(--spacing-lg);  /* Slightly increased padding for more breathing room */
+      padding: 1.5rem var(--spacing-lg);
       flex-wrap: wrap;
       border-bottom: 4px solid #45a56a;
     }
-
 
     .logo-container {
       display: flex;
@@ -53,24 +47,34 @@
       gap: var(--spacing-sm);
     }
 
-    .logo-container img {
-      height: 50px;
+    .logo-container img { height: 50px; }
+    .logo-text { font-size: 1.8rem; font-weight: 700; }
+
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
     }
 
-    .logo-text {
-      font-size: 1.8rem;
-      font-weight: 700;
+    .nav-toggle span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      display: block;
+      transition: 0.3s ease;
     }
 
     nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  padding-left: 0;
-  margin: 0;
-  align-items: center;     /* NEW: aligns items vertically */
-  transform: translateY(4px); /* NEW: shifts them down slightly */
-  }
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      padding-left: 0;
+      margin: 0;
+      align-items: center;
+      transform: translateY(4px);
+    }
 
     nav a {
       text-decoration: none;
@@ -90,25 +94,34 @@
     }
 
     @media (max-width: 768px) {
+      .nav-toggle { display: flex; }
       nav ul {
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        gap: 1rem;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--clr-primary);
+        padding-top: 1rem;
       }
-
-      .logo-text {
-        font-size: 1.4rem;
-      }
+      .nav-links.show { display: flex; }
+      .logo-text { font-size: 1.4rem; }
     }
 
-    /* MAIN WRAPPER */
+    .donate-header-button {
+      background-color: #FFD700;
+      color: #333;
+      font-weight: bold;
+      border-radius: 999px;
+      padding: 0.6rem 1.4rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+    }
+
     main {
       max-width: 1200px;
       margin: auto;
       padding: var(--spacing-lg) var(--spacing-md);
     }
 
-    /* BOARD INTRO */
     .board-intro {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -143,7 +156,6 @@
       box-shadow: var(--shadow-light);
     }
 
-    /* BOARD MEMBERS */
     .board-members {
       margin-top: var(--spacing-lg);
     }
@@ -202,7 +214,41 @@
       border-radius: 4px;
     }
 
-    /* FOOTER */
+    .partnerships-carousel {
+      padding: 2rem 1rem;
+      background: #f4fdf7;
+      text-align: center;
+    }
+
+    .partnerships-carousel h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #2f855a;
+    }
+
+    .carousel-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carousel-track {
+      display: inline-flex;
+      gap: 1rem;
+      animation: scrollLoop 25s linear infinite;
+    }
+
+    .carousel-track img {
+      height: 60px;
+      width: auto;
+      scroll-snap-align: start;
+    }
+
+    @keyframes scrollLoop {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     footer {
       background: var(--clr-primary);
       color: white;
@@ -215,42 +261,28 @@
 </head>
 
 <body>
-  
-<header>
-  <div class="logo-container">
-    <img src="OIM_logo.png" alt="Our Impact Matters Logo">
-    <span class="logo-text">Our Impact Matters</span>
-  </div>
-
-  <!-- Hamburger toggle for mobile -->
-  <div class="nav-toggle" onclick="toggleNav(this)">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <nav class="main-nav">
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#partners">Our Partners</a></li>
-      <li><a href="board.html">Our Board</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
-      <li>
-        <a href="https://buy.stripe.com/aFa8wPg8J5Rq0Uz1kS2VG01" class="donate-header-button" target="_blank">
-          Donate
-        </a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<script>
-  function toggleNav(toggle) {
-    toggle.classList.toggle("open");
-    document.querySelector(".nav-links").classList.toggle("show");
-  }
-</script>
-
+  <header>
+    <div class="logo-container">
+      <img src="OIM_logo.png" alt="Our Impact Matters Logo">
+      <span class="logo-text">Our Impact Matters</span>
+    </div>
+    <div class="nav-toggle" onclick="toggleMenu(this)">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#partners">Our Partners</a></li>
+        <li><a href="board.html" class="active">Our Board</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="https://buy.stripe.com/aFa8wPg8J5Rq0Uz1kS2VG01" class="donate-header-button" target="_blank">Donate</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
     <section class="board-intro">
@@ -282,7 +314,7 @@
         <div class="member-card"><img src="member4.jpg" alt="Frank Di Leo"><div class="member-name-box"><h3>FRANK DI LEO</h3><span class="badge">Board Member</span></div></div>
         <div class="member-card"><img src="member5.jpg" alt="Nick Turner"><div class="member-name-box"><h3>NICK TURNER</h3><span class="badge">Board Member</span></div></div>
         <div class="member-card"><img src="member6.jpeg" alt="Kevin Cerda"><div class="member-name-box"><h3>KEVIN CERDA</h3><span class="badge">Board Member</span></div></div>
-        <div class="member-card"><img src="christie_newBoard.jpeg" alt="Christie Smith"><div class="member-name-box"><h3>CHRISTIE PAICH</h3><span class="badge">Board Member</span></div></div>
+        <div class="member-card"><img src="christie_newBoard.jpeg" alt="Christie Paich"><div class="member-name-box"><h3>CHRISTIE PAICH</h3><span class="badge">Board Member</span></div></div>
       </div>
     </section>
   </main>
@@ -299,30 +331,23 @@
         <img src="partner_transparent_6.png" alt="Partner 6">
         <img src="partner_transparent_7.png" alt="Partner 7">
         <img src="partner_transparent_8.png" alt="Partner 8">
-        <!-- duplicate for infinite loop effect -->
-        <img src="partner_transparent_1.png" alt="Partner 1 Duplicate">
-        <img src="partner_transparent_2.png" alt="Partner 2 Duplicate">
-        <img src="partner_transparent_3.png" alt="Partner 3 Duplicate">
-        <img src="partner_transparent_4.png" alt="Partner 4 Duplicate">
-        <img src="partner_transparent_5.png" alt="Partner 5 Duplicate">
-        <img src="partner_transparent_6.png" alt="Partner 6 Duplicate">
-        <img src="partner_transparent_7.png" alt="Partner 7 Duplicate">
-        <img src="partner_transparent_8.png" alt="Partner 8 Duplicate">
+        <!-- Duplicate for loop -->
+        <img src="partner_transparent_1.png" alt="Partner 1">
+        <img src="partner_transparent_2.png" alt="Partner 2">
+        <img src="partner_transparent_3.png" alt="Partner 3">
       </div>
     </div>
   </section>
-  
+
   <footer>
     &copy; 2025 Our Impact Matters | Together We Can Change the World ❤️
   </footer>
 
-<script>
-  function toggleMenu(el) {
-    el.classList.toggle("open");
-    document.querySelector('.nav-links').classList.toggle("show");
-  }
-</script>
-
-  
+  <script>
+    function toggleMenu(el) {
+      el.classList.toggle("open");
+      document.querySelector('.nav-links').classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
