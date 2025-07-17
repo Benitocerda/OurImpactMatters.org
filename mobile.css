@@ -37,6 +37,36 @@
   }
 
   /* === Navigation === */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    list-style: none;
+    width: 100%;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    display: block;
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: white;
+  }
+
   .nav-toggle {
     display: block;
     position: absolute;
@@ -69,36 +99,7 @@
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-    padding: 0.5rem 0;
-    text-align: center;
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    list-style: none;
-    width: 100%;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    display: block;
-    padding: 0.75rem 1.5rem;
-    border-top: 1px solid rgba(255,255,255,0.2);
-    color: white;
-  }
-
+  /* === Donate Button === */
   .nav-links a.donate-header-button {
     background-color: #FFD700 !important;
     color: #333 !important;
@@ -108,11 +109,9 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     font-size: 1.1rem;
     display: inline-block;
-    transform: scale(1.05);
-    margin: 0.5rem auto;
   }
 
-  /* === About Section Centering === */
+  /* === About Section === */
   .about-background {
     background: url('homepage_background_chi.png') no-repeat center center;
     background-size: cover;
@@ -121,29 +120,64 @@
     position: relative;
     z-index: 1;
     animation: fadeIn 1s ease-in-out;
+    text-align: center;
   }
 
   .about-section {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
+    padding: 2rem 1rem;
     border-radius: 10px;
     color: white;
-    width: 100%;
     max-width: 600px;
     margin: 0 auto;
     box-sizing: border-box;
     z-index: 2;
     position: relative;
-    text-align: center;
+  }
+
+  .about-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   .about-section img.about-icon {
     display: block;
-    margin: 1rem auto 0 auto;
-    max-width: 80px;
+    margin: 1.5rem auto;
+    max-width: 120px;
+    height: auto;
   }
 
-  /* === Stats Section === */
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .action-buttons a {
+    background-color: #5cbf7b;
+    color: white;
+    padding: 0.8rem 1.6rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    transition: background 0.3s;
+  }
+
+  .action-buttons a:hover {
+    background-color: #4ca86a;
+  }
+
+  /* === Stats === */
   .impact-stat {
     text-align: center;
     margin-bottom: 2rem;
@@ -172,36 +206,7 @@
     color: #5cbf7b;
   }
 
-  /* === Tooltip Fix === */
-  .program-card {
-    position: relative;
-    z-index: 100;
-  }
-
-  .program-card::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #2f855a;
-    color: white;
-    padding: 0.5rem 0.75rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
-    white-space: normal;
-    max-width: 250px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
-    z-index: 9999;
-  }
-
-  .program-card:hover::after {
-    opacity: 1;
-  }
-
-  /* === Center Poverty Fact === */
+  /* === Poverty Fact === */
   .poverty-fact {
     text-align: center;
     padding: 1rem;
