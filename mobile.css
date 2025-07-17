@@ -133,23 +133,28 @@
   }
 
   .program-card::after {
-    white-space: normal;
-    max-width: 250px;
-    word-wrap: break-word;
-    top: auto;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 0.5rem;
-    z-index: 9999;
-    position: absolute;
-    opacity: 1;
-    background-color: #2f855a;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 6px;
-    font-size: 0.85rem;
-  }
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2f855a;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: normal;
+  max-width: 250px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.program-card:hover::after {
+  opacity: 1;
+}
+
 
   /* Ensure tooltips appear above all overlapping content */
   .program-card {
@@ -189,6 +194,14 @@
   z-index: 2;
   position: relative;
   text-align: center;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.about-background {
+  animation: fadeIn 1s ease-in-out;
 }
 
   /* === Buttons === */
