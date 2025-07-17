@@ -352,3 +352,52 @@
     font-size: 0.9rem;
   }
 }
+
+/* === Desktop Mission Layout === */
+.mission {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.mission-photo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mission-photo img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+}
+
+.mission-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.mission-text h3 {
+  font-size: 2rem;
+  color: #2f855a;
+  margin-bottom: 1rem;
+}
+
+.mission-text p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 90%;
+}
+
+.mission-buttons {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
