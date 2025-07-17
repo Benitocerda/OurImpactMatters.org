@@ -1007,3 +1007,23 @@ nav ul li a.donate-header-button {
   color: #333 !important;
 }
 
+.donate-button {
+  background-color: #FFD700;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.donate-button:hover {
+  background-color: #e6c200;
+  color: #222;
+}
+
+
