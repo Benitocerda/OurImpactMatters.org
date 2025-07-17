@@ -37,6 +37,38 @@
   }
 
   /* === Navigation === */
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    width: 28px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .nav-toggle span {
+    display: block;
+    height: 4px;
+    margin-bottom: 4px;
+    background: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -58,42 +90,16 @@
   }
 
   .nav-links a {
-    color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
     display: block;
     padding: 0.75rem 1.5rem;
     border-top: 1px solid rgba(255,255,255,0.2);
+    color: white;
   }
 
-  /* Hamburger icon */
-  .nav-toggle {
-    display: block;
-    position: absolute;
-    top: 1.25rem;
-    right: 1.5rem;
-    width: 28px;
-    height: 22px;
-    cursor: pointer;
-    z-index: 1100;
-  }
-
-  .nav-toggle span {
-    display: block;
-    height: 4px;
-    margin-bottom: 4px;
-    background: white;
-    border-radius: 2px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-
-  .nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-  .nav-toggle.open span:nth-child(2) { opacity: 0; }
-  .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-  /* === Donate Button in Header === */
-  nav ul li a.donate-header-button {
+  .nav-links a.donate-header-button {
     background-color: #FFD700 !important;
     color: #333 !important;
     font-weight: bold;
@@ -102,6 +108,8 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     font-size: 1.1rem;
     display: inline-block;
+    transform: scale(1.05);
+    margin: 0.5rem auto;
   }
 
   /* === About Section Centering === */
@@ -109,7 +117,6 @@
     background: url('homepage_background_chi.png') no-repeat center center;
     background-size: cover;
     background-position: center;
-    height: auto;
     padding: 2rem 1rem;
     position: relative;
     z-index: 1;
@@ -117,19 +124,18 @@
   }
 
   .about-section {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
-  border-radius: 10px;
-  color: white;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto; /* ✅ ensures horizontal centering */
-  box-sizing: border-box;
-  z-index: 2;
-  position: relative;
-  text-align: center;
-}
-
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+  }
 
   .about-section img.about-icon {
     display: block;
