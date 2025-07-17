@@ -1008,4 +1008,39 @@ nav ul li a.donate-header-button {
   color: #222;
 }
 
+.merged-support {
+  padding: 3rem 2rem;
+  background-color: #eef6f2;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.donation-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stay-connected {
+  max-width: 600px;
+  margin: auto;
+}
+
+.stay-connected h3 {
+  font-size: 1.5rem;
+  color: #2f855a;
+  margin-bottom: 0.5rem;
+}
+
+.stay-connected p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
 
