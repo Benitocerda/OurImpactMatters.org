@@ -179,6 +179,17 @@
     position: relative;
     z-index: 1;
   }
+   .about-section {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 10px;
+  color: white;
+  max-width: 95%;
+  margin: 0 auto;
+  z-index: 2;
+  position: relative;
+  text-align: center;
+}
 
   /* === Buttons === */
   .donate-button,
