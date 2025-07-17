@@ -93,14 +93,21 @@
   .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
   /* === Donate Button in Header === */
-  nav ul li a.donate-header-button {
-    background-color: #FFD700 !important;
-    color: #333 !important;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
+nav ul li a.donate-header-button {
+  background-color: #FFD700 !important;
+  color: #333 !important;
+  font-weight: bold;
+  border-radius: 25px; /* more rounded bubble */
+  padding: 0.7rem 1.4rem; /* larger size */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  font-size: 1.05rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a.donate-header-button:hover {
+  transform: scale(1.05);
+}
+
 
   /* === Impact Posts === */
   .impact-grid {
