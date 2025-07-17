@@ -1,4 +1,27 @@
 @media (max-width: 768px) {
+  /* === Animations === */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+    animation-play-state: paused;
+  }
+
   /* === General Reset === */
   body, html {
     overflow-x: hidden;
@@ -113,9 +136,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensures full screen on mobile */
+    min-height: 100vh;
     position: relative;
-    
+  }
+
   .about-background::before {
     content: "";
     position: absolute;
@@ -123,17 +147,12 @@
     background: rgba(0,0,0,0.4);
     z-index: 0;
   }
+
   .about-section {
     position: relative;
     z-index: 1;
-  }
-
-  }
-
-  .about-section {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 1.5rem;
-    min-height: 300px; /* or adjust based on your content */
     border-radius: 10px;
     color: white;
     width: 90%;
@@ -157,9 +176,10 @@
     background-color: #f4fdf7;
     text-align: center;
   }
+
   .mission-text {
     order: 0;
-    margin-bottom: 1rem; /* Add this */
+    margin-bottom: 1rem;
   }
 
   .mission-text h3 {
@@ -174,18 +194,18 @@
     margin: 0 auto;
   }
 
+  .mission-photo {
+    order: 1;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
   .mission-photo img {
     width: 90%;
     max-width: 400px;
     border-radius: 12px;
   }
-
-  .mission-photo {
-  order: 1;
-  margin-bottom: 1rem; /* ADD THIS */
-  display: flex;
-  justify-content: center;
-}
 
   .mission-buttons {
     display: flex;
@@ -205,125 +225,52 @@
     color: #333;
   }
 
- /* === Programs Section === */
-.programs-poverty-container {
-  padding: 2rem 1rem;
-}
-
-.program-cards-alt {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
-
-.program-card {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
-  font-size: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  max-width: 300px;
-  min-height: 180px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  position: relative;
-}
-
-.program-card:hover {
-  transform: translateY(-4px);
-}
-
-.program-card h4 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #2f855a;
-  margin-bottom: 0.75rem;
-}
-
-.program-card p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-/* Optional: Add icon support if needed */
-.program-card .icon {
-  font-size: 2rem;
-  color: #5cbf7b;
-  margin-bottom: 0.75rem;
-}
-
-/* Tooltip improvements */
-.program-card::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #2f855a;
-  color: white;
-  padding: 0.6rem 0.9rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  white-space: normal;
-  max-width: 250px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 10;
-}
-
-.program-card:hover::after {
-  opacity: 1;
-}
-
-  /* === Donation Buttons === */
-  .donate {
-    text-align: center;
+  /* === Programs Section === */
+  .programs-poverty-container {
     padding: 2rem 1rem;
   }
 
-  .donate-button {
-    background-color: #5cbf7b;
-    color: white;
-    padding: 1rem;
-    border-radius: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    width: 90%;
-    max-width: 300px;
-    margin-bottom: 1rem;
-    border: none;
-  }
-
-  /* === Blog / Newsletter === */
-  .impact-blog {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .blog-impact-container {
+  .program-cards-alt {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem;
   }
 
-  .blog-signup input[type="email"] {
-    padding: 0.8rem;
-    font-size: 1rem;
+  .program-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
     width: 90%;
-    max-width: 300px;
-    margin-bottom: 1rem;
+    max-width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease;
   }
 
-  .blog-signup button {
-    padding: 0.8rem 1.5rem;
+  .program-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .program-card .icon {
+    font-size: 2rem;
+    color: #5cbf7b;
+    margin-bottom: 0.75rem;
+    animation: float 2.5s ease-in-out infinite;
+  }
+
+  .program-card h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2f855a;
+    margin-bottom: 0.5rem;
+  }
+
+  .program-card p {
     font-size: 1rem;
-    background: #5cbf7b;
-    color: white;
-    border: none;
-    border-radius: 10px;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
   }
 
   /* === Impact Grid === */
@@ -331,6 +278,11 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .impact-post {
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   .impact-post img {
@@ -357,7 +309,7 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
 
-  /* === Partners Carousel === */
+  /* === Partnerships Carousel === */
   .partnerships-carousel .carousel-track {
     display: flex;
     overflow-x: auto;
@@ -372,6 +324,25 @@
     scroll-snap-align: center;
   }
 
+  /* === Donation Buttons === */
+  .donate {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .donate-button {
+    background-color: #5cbf7b;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 90%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+    border: none;
+  }
+
   /* === Footer === */
   footer {
     background: #2f855a;
@@ -379,20 +350,5 @@
     padding: 1rem;
     text-align: center;
     font-size: 0.9rem;
-  }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
