@@ -235,3 +235,22 @@
     transform: translateY(0);
   }
 }
+
+.mission {
+  flex-direction: column;
+}
+.mission-photo {
+  order: 1;
+}
+.mission-text {
+  order: 0;  /* Text above photo if needed, or swap order */
+}
+.mission-buttons {
+  order: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
