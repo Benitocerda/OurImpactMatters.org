@@ -302,6 +302,11 @@ nav ul li a:hover::after {
   z-index: 5;             /* Above .poverty-fact background */
 }
 
+.logo-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* === Tooltip on hover */
 .program-card {
   position: relative;
