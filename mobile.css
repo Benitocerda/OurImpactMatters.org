@@ -108,8 +108,9 @@
   /* === About Section === */
   .about-background {
     background: url('homepage_background_chi.png') no-repeat center top;
-    background-size: contain;
-    padding: 1rem 0;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 1rem; /* ensure enough vertical padding */
     display: flex;
     justify-content: center;
   }
@@ -117,6 +118,7 @@
   .about-section {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 1.5rem;
+    min-height: 300px; /* or adjust based on your content */
     border-radius: 10px;
     color: white;
     width: 90%;
@@ -136,9 +138,13 @@
     flex-direction: column;
     align-items: center;
     padding: 1.5rem 1rem;
-    gap: 1rem;
+    gap: 2rem;
     background-color: #f4fdf7;
     text-align: center;
+  }
+  .mission-text {
+    order: 0;
+    margin-bottom: 1rem; /* Add this */
   }
 
   .mission-text h3 {
