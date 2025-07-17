@@ -107,12 +107,27 @@
 
   /* === About Section === */
   .about-background {
-    background: url('homepage_background_chi.png') no-repeat center top;
+    background: url('homepage_background_chi.png') no-repeat center center;
     background-size: cover;
-    background-position: center;
-    padding: 3rem 1rem; /* ensure enough vertical padding */
+    padding: 3rem 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures full screen on mobile */
+    position: relative;
+    
+  .about-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+  }
+  .about-section {
+    position: relative;
+    z-index: 1;
+  }
+
   }
 
   .about-section {
@@ -165,6 +180,13 @@
     border-radius: 12px;
   }
 
+  .mission-photo {
+  order: 1;
+  margin-bottom: 1rem; /* ADD THIS */
+  display: flex;
+  justify-content: center;
+}
+
   .mission-buttons {
     display: flex;
     flex-direction: column;
@@ -183,39 +205,78 @@
     color: #333;
   }
 
-  /* === Programs Section === */
-  .programs-poverty-container {
-    padding: 2rem 1rem;
-  }
+ /* === Programs Section === */
+.programs-poverty-container {
+  padding: 2rem 1rem;
+}
 
-  .program-cards-alt {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
+.program-cards-alt {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
 
-  .program-card {
-    background: #fff;
-    border-radius: 10px;
-    padding: 1rem;
-    font-size: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    max-width: 150px;
-    text-align: center;
-  }
+.program-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  max-width: 300px;
+  min-height: 180px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
 
-  /* === Poverty Fact === */
-  .poverty-fact {
-    text-align: center;
-    padding: 1rem;
-  }
+.program-card:hover {
+  transform: translateY(-4px);
+}
 
-  .poverty-fact .counter-container {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #5cbf7b;
-  }
+.program-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2f855a;
+  margin-bottom: 0.75rem;
+}
+
+.program-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Optional: Add icon support if needed */
+.program-card .icon {
+  font-size: 2rem;
+  color: #5cbf7b;
+  margin-bottom: 0.75rem;
+}
+
+/* Tooltip improvements */
+.program-card::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2f855a;
+  color: white;
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: normal;
+  max-width: 250px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.program-card:hover::after {
+  opacity: 1;
+}
 
   /* === Donation Buttons === */
   .donate {
