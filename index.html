@@ -223,41 +223,52 @@
 </section>
 
 <footer>
-  &copy; 2025 Our Impact Matters | Together We Can Change the World ❤️
+  &copy; 2025 Our Impact Matters | Together We Can Change the World ❤️🌎
 </footer>
 
-<!-- Stripe Scripts -->
-<script src="https://js.stripe.com/v3/"></script>
+  
+  <!-- Script logic -->
 <script>
   const stripe = Stripe("pk_live_51Rkcd3DVfGGNr4pmAG7GTzsnpFYmTBmyQA6Mdcj7B4AtSsNAcPId2dAV5fSFjDWp5OtfHEsvQVC26lqvvrr7x1EN00CXjSaCLN");
 
-  document.getElementById("monthly").onclick = () => {
-    stripe.redirectToCheckout({
-      lineItems: [{ price: "price_1RlE58DVfGGNr4pmHiGbjYxd", quantity: 1 }],
-      mode: "subscription",
-      successUrl: "https://ourimpactmatters.org/success.html",
-      cancelUrl: "https://ourimpactmatters.org/index.html"
-    });
-  };
+  document.getElementById("donation-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  document.getElementById("yearly").onclick = () => {
-    stripe.redirectToCheckout({
-      lineItems: [{ price: "price_1RlheLDVfGGNr4pmn9omjz5k", quantity: 1 }],
-      mode: "subscription",
-      successUrl: "https://ourimpactmatters.org/success.html",
-      cancelUrl: "https://ourimpactmatters.org/index.html"
-    });
-  };
+    const type = document.querySelector('input[name="type"]:checked').value;
+    const selected = document.querySelector('input[name="amount"]:checked');
+    const custom = document.querySelector('input[name="custom_amount"]');
+    const amount = selected.value === 'custom' ? custom.value : selected.value;
 
-  document.getElementById("oneoff").onclick = () => {
-    stripe.redirectToCheckout({
-      lineItems: [{ price: "price_1RlE85DVfGGNr4pmJMnzByQD", quantity: 1 }],
-      mode: "payment",
+    if (!amount || amount < 1) {
+      alert("Please select a valid donation amount.");
+      return;
+    }
+
+    const priceMap = {
+      "10_one_time": "price_1RlE85DVfGGNr4pmJMnzByQD",
+      "25_monthly": "price_1RlE58DVfGGNr4pmHiGbjYxd",
+      "50_one_time": "price_1RlX10DVfGGNr4pmA5g7yz9Q",
+      "100_monthly": "price_1Rlhq5DVfGGNr4pmT5m8ABCX",
+      "150_one_time": "price_1RlzZzDVfGGNr4pmTIGy5De1",
+      "500_monthly": "price_1Rm3LmDVfGGNr4pmT7LkeWqU"
+    };
+
+    const priceId = priceMap[`${amount}_${type}`];
+
+    if (!priceId) {
+      alert("This donation option is not available yet. Please select another.");
+      return;
+    }
+
+    await stripe.redirectToCheckout({
+      lineItems: [{ price: priceId, quantity: 1 }],
+      mode: type === "monthly" ? "subscription" : "payment",
       successUrl: "https://ourimpactmatters.org/success.html",
       cancelUrl: "https://ourimpactmatters.org/index.html"
     });
-  };
+  });
 </script>
+
 
 <!-- Navigation Toggle -->
 <script>
