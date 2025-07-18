@@ -92,20 +92,14 @@
 <!-- === DONATION + SIGNUP SECTION START === -->
 <section class="support-section">
   <div class="support-container">
-
     <!-- Left: Donation Widget -->
     <div class="donation-widget">
       <h3 class="donation-title">Support Our Mission</h3>
-
-    <form id="donation-form">
-        <input type="text" name="name" placeholder="Full Name" required class="donor-input">
-        <input type="email" name="email" placeholder="Email for receipt" required class="donor-input">
-
+      <form id="donation-form">
         <div class="donation-type">
           <label><input type="radio" name="type" value="one_time" checked> One‑time</label>
           <label><input type="radio" name="type" value="monthly"> Monthly</label>
         </div>
-
         <div class="donation-amounts">
           <label><input type="radio" name="amount" value="10"> $10</label>
           <label><input type="radio" name="amount" value="25"> $25</label>
@@ -118,8 +112,7 @@
             <input type="number" name="custom_amount" min="1" step="1" disabled>
           </label>
         </div>
-
-        <button type="submit" class="donate-btn">Donate</button>
+        <button type="submit" class="donate-btn" id="donateBtn">Donate</button>
       </form>
     </div>
 
