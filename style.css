@@ -337,6 +337,8 @@ nav ul li a:hover::after {
 }
 
 /* === Poverty Fact Section === */
+
+
 .poverty-fact {
   flex: 1 1 48%;
   display: flex;
@@ -348,9 +350,10 @@ nav ul li a:hover::after {
   background-size: cover;
   padding: 4rem 2rem;
   position: relative;
-  overflow: visible;     /* Allow children and tooltips to be visible */
-  z-index: 1;            /* Ensure it's not above tooltips */
+  overflow: hidden;
+  z-index: 1;
   color: #2f855a;
+  border-radius: 10px;
 }
 
 .poverty-fact::before {
@@ -359,24 +362,27 @@ nav ul li a:hover::after {
   top: 0; left: 0;
   width: 100%; height: 100%;
   background-color: rgba(255, 255, 255, 0.6);
-  z-index: -1;
+  z-index: 0;
 }
 
 .counter-container {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 900;
-  color: red;
+  color: #1E4E79;
   margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
 }
 
 .percent-sign {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-left: 0.3rem;
   color: #2f855a;
 }
 
 .poverty-fact p {
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #2f855a;
   background-color: rgba(255, 255, 255, 0.85);
   padding: 0.75rem 1rem;
