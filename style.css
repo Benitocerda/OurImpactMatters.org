@@ -593,6 +593,39 @@ nav ul li a:hover::after {
 .blog-signup button:hover {
   background-color: #48a96b;
 }
+.support-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.stay-connected, .donation-widget {
+  flex: 1 1 45%;
+  max-width: 500px;
+}
+
+.donation-widget {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.donation-widget h3 {
+  margin-top: 0;
+}
+
+.donation-type,
+.donation-amounts {
+  margin-bottom: 20px;
+}
+
+.donation-amounts label {
+  display: inline-block;
+  margin: 5px;
+}
 
 /* === Carousel === */
 .partnerships-carousel {
