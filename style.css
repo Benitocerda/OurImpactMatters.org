@@ -499,6 +499,14 @@ nav ul li a:hover::after {
   font-size: 1rem;
   transition: background-color 0.3s ease;
 }
+.donor-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
 
 .donate-button:hover {
   background-color: #4aa76b;
