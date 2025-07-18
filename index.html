@@ -235,46 +235,65 @@
 
   
   <!-- Script logic -->
+<script src="https://js.stripe.com/v3/"></script>
 <script>
   const stripe = Stripe("pk_live_51Rkcd3DVfGGNr4pmAG7GTzsnpFYmTBmyQA6Mdcj7B4AtSsNAcPId2dAV5fSFjDWp5OtfHEsvQVC26lqvvrr7x1EN00CXjSaCLN");
+
 
   document.getElementById("donation-form").addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const btn = document.getElementById("donateBtn");
+    btn.disabled = true;
+    btn.textContent = "Processing...";
+
+    const name = document.querySelector('input[name="name"]').value.trim();
+    const email = document.querySelector('input[name="email"]').value.trim();
     const type = document.querySelector('input[name="type"]:checked').value;
     const selected = document.querySelector('input[name="amount"]:checked');
     const custom = document.querySelector('input[name="custom_amount"]');
     const amount = selected.value === 'custom' ? custom.value : selected.value;
 
-    if (!amount || amount < 1) {
-      alert("Please select a valid donation amount.");
+    if (!amount || amount < 1 || !email || !name) {
+      alert("Please complete all fields and enter a valid amount.");
+      btn.disabled = false;
+      btn.textContent = "Donate";
       return;
     }
 
-    const priceMap = {
-      "10_one_time": "price_1RlE85DVfGGNr4pmJMnzByQD",
-      "25_monthly": "price_1RlE58DVfGGNr4pmHiGbjYxd",
-      "50_one_time": "price_1RlX10DVfGGNr4pmA5g7yz9Q",
-      "100_monthly": "price_1Rlhq5DVfGGNr4pmT5m8ABCX",
-      "150_one_time": "price_1RlzZzDVfGGNr4pmTIGy5De1",
-      "500_monthly": "price_1Rm3LmDVfGGNr4pmT7LkeWqU"
-    };
+    try {
+      const res = await fetch("https://your-backend-url.com/create-checkout-session", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ amount, type, email, name })
+      });
 
-    const priceId = priceMap[`${amount}_${type}`];
+      const session = await res.json();
 
-    if (!priceId) {
-      alert("This donation option is not available yet. Please select another.");
-      return;
+      if (session.id) {
+        await stripe.redirectToCheckout({ sessionId: session.id });
+      } else {
+        alert("Failed to start donation session.");
+        btn.disabled = false;
+        btn.textContent = "Donate";
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again.");
+      console.error(error);
+      btn.disabled = false;
+      btn.textContent = "Donate";
     }
+  });
 
-    await stripe.redirectToCheckout({
-      lineItems: [{ price: priceId, quantity: 1 }],
-      mode: type === "monthly" ? "subscription" : "payment",
-      successUrl: "https://ourimpactmatters.org/success.html",
-      cancelUrl: "https://ourimpactmatters.org/index.html"
+  // Enable custom amount
+  document.querySelectorAll('input[name="amount"]').forEach(radio => {
+    radio.addEventListener("change", () => {
+      const customInput = document.querySelector('input[name="custom_amount"]');
+      customInput.disabled = document.querySelector('input[name="amount"]:checked').value !== "custom";
     });
   });
 </script>
+
 
 
 <!-- Navigation Toggle -->
