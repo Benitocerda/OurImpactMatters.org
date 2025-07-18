@@ -89,36 +89,50 @@
   </div>
 </section>
 
+<section class="support-section">
+  <div class="support-container">
 
-<section class="impact-blog" id="blog">
-  <h2 class="styled-blog-title">
-    <img src="OIM_logo.png" alt="OIM Logo" class="logo-icon" />
-    Stay Connected with Our Impact
-  </h2>
-
-  <div class="blog-impact-container">
-    <!-- Left: Donation Buttons Only -->
-    <div class="donate-side">
-      <div class="donation-options">
-        <button id="monthly" class="donate-button">Subscribe Monthly</button>
-        <button id="yearly" class="donate-button">Subscribe Yearly</button>
-        <button id="oneoff" class="donate-button">One-Time Donation</button>
-      </div>
-    </div>
-
-    <!-- Right: Email Signup -->
+    <!-- Left: Email Signup -->
     <div class="stay-connected">
-      <p>Get monthly updates about the difference we’re making in our communities. Hear stories of change, new programs, and ways you can get involved.</p>
+      <p>
+        Get monthly updates about the difference we’re making in our communities.
+        Hear stories of change, new programs, and ways you can get involved.
+      </p>
       <form class="blog-signup">
         <input type="email" placeholder="Enter your email" required>
         <button type="submit">Subscribe</button>
       </form>
     </div>
+
+    <!-- Right: Donation Widget -->
+    <div class="donation-widget">
+      <h3>Support Our Mission</h3>
+
+      <form id="donation-form">
+        <div class="donation-type">
+          <label><input type="radio" name="type" value="one_time" checked> One‑time</label>
+          <label><input type="radio" name="type" value="monthly"> Monthly</label>
+        </div>
+
+        <div class="donation-amounts">
+          <label><input type="radio" name="amount" value="10"> $10</label>
+          <label><input type="radio" name="amount" value="25"> $25</label>
+          <label><input type="radio" name="amount" value="50"> $50</label>
+          <label><input type="radio" name="amount" value="75"> $75</label>
+          <label><input type="radio" name="amount" value="100"> $100</label>
+          <label><input type="radio" name="amount" value="500"> $500</label>
+          <label>
+            <input type="radio" name="amount" value="custom">
+            Custom: $<input type="number" name="custom_amount" min="1" step="1" disabled>
+          </label>
+        </div>
+
+        <button type="submit">Donate</button>
+      </form>
+    </div>
+
   </div>
 </section>
-
-
- 
 
     <div class="impact-stat fade-in">
       <i class="fas fa-handshake stat-icon"></i>
@@ -301,5 +315,19 @@
     });
   });
 </script>
+
+<script>
+  const customRadio = document.querySelector('input[name="amount"][value="custom"]');
+  const customInput = document.querySelector('input[name="custom_amount"]');
+
+  if (customRadio && customInput) {
+    document.querySelectorAll('input[name="amount"]').forEach(radio => {
+      radio.addEventListener('change', () => {
+        customInput.disabled = !customRadio.checked;
+      });
+    });
+  }
+</script>
+
 </body>
 </html>
