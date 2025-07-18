@@ -255,7 +255,8 @@
     }
 
     try {
-      const res = await fetch("https://your-backend-url.com/create-checkout-session", {
+      const res = await fetch("https://stripe-donations-backend.onrender.com/create-checkout-session", {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ amount, type, email, name })
