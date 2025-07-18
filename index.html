@@ -256,6 +256,29 @@
     toggleBtn.setAttribute("aria-expanded", isOpen);
   });
 </script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const speed = 150; // lower is faster
+        const increment = target / speed;
+        let current = +counter.innerText;
+
+        if (current < target) {
+          counter.innerText = (current + increment).toFixed(1);
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.innerText = target.toFixed(1);
+        }
+      };
+
+      updateCounter();
+    });
+  });
+</script>
 
 <!-- Counter Animation -->
 <script>
