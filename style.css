@@ -1180,4 +1180,49 @@ nav ul li a.donate-header-button {
   margin-bottom: 1rem;
 }
 
+.impact-stats-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.impact-stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.impact-stat {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.impact-stat:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: #5cbf7b;
+  margin-bottom: 10px;
+}
+
+.impact-stat h3 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #222;
+}
+
+.impact-stat p {
+  margin: 10px 0 0;
+  font-weight: 500;
+  color: #444;
+}
 
