@@ -89,10 +89,38 @@
   </div>
 </section>
 
+<!-- === DONATION + SIGNUP SECTION START === -->
 <section class="support-section">
   <div class="support-container">
 
-    <!-- Left: Email Signup -->
+    <!-- Left: Donation Widget -->
+    <div class="donation-widget">
+      <h3 class="donation-title">Support Our Mission</h3>
+
+      <form id="donation-form">
+        <div class="donation-type">
+          <label><input type="radio" name="type" value="one_time" checked> One‑time</label>
+          <label><input type="radio" name="type" value="monthly"> Monthly</label>
+        </div>
+
+        <div class="donation-amounts">
+          <label><input type="radio" name="amount" value="10"> $10</label>
+          <label><input type="radio" name="amount" value="25"> $25</label>
+          <label><input type="radio" name="amount" value="50"> $50</label>
+          <label><input type="radio" name="amount" value="100"> $100</label>
+          <label><input type="radio" name="amount" value="150"> $150</label>
+          <label><input type="radio" name="amount" value="500"> $500</label>
+          <label class="custom-amount">
+            <input type="radio" name="amount" value="custom"> Custom: $
+            <input type="number" name="custom_amount" min="1" step="1" disabled>
+          </label>
+        </div>
+
+        <button type="submit" class="donate-btn">Donate</button>
+      </form>
+    </div>
+
+    <!-- Right: Email Signup -->
     <div class="stay-connected">
       <p>
         Get monthly updates about the difference we’re making in our communities.
@@ -104,35 +132,11 @@
       </form>
     </div>
 
-    <!-- Right: Donation Widget -->
-   
-    <div class="donation-widget">
-  <h3 class="donation-title">Support Our Mission</h3>
+  </div>
+</section>
 
-  <form id="donation-form">
-    <div class="donation-type">
-      <label><input type="radio" name="type" value="one_time" checked> One‑time</label>
-      <label><input type="radio" name="type" value="monthly"> Monthly</label>
-    </div>
-
-    <div class="donation-amounts">
-      <label><input type="radio" name="amount" value="10"> $10</label>
-      <label><input type="radio" name="amount" value="25"> $25</label>
-      <label><input type="radio" name="amount" value="50"> $50</label>
-      <label><input type="radio" name="amount" value="100"> $100</label>
-      <label><input type="radio" name="amount" value="150"> $150</label>
-      <label><input type="radio" name="amount" value="500"> $500</label>
-      <label class="custom-amount">
-        <input type="radio" name="amount" value="custom"> Custom: $
-        <input type="number" name="custom_amount" min="1" step="1" disabled>
-      </label>
-    </div>
-
-    <button type="submit" class="donate-btn">Donate</button>
-  </form>
-</div>
-
-
+  
+<section> 
     <div class="impact-stat fade-in">
       <i class="fas fa-handshake stat-icon"></i>
       <h3 class="counter" data-target="10">0</h3>
