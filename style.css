@@ -552,14 +552,7 @@ nav ul li a:hover::after {
   border-color: #ffc107;
 }
 
-.custom-amount input[type="number"] {
-  width: 80px;
-  margin-left: 5px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  padding: 5px;
-  font-size: 15px;
-}
+
 
 .donate-btn {
   width: 100%;
@@ -842,19 +835,6 @@ footer {
   animation: pulse 0.6s ease-in-out;
 }
 
-.custom-amount {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px; /* adds spacing between input and button */
-}
-
-.custom-amount input[type="number"] {
-  width: 120px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
 
 /* === Donate Button in Header (Yellow Bubble Style) === */
 .donate-header-button {
@@ -1110,6 +1090,23 @@ footer {
   color: #2f855a;
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
+}
+
+.custom-amount-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* adds space between input and button */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.custom-amount input[type="number"] {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
 }
 
 .post-content p {
