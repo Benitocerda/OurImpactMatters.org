@@ -133,6 +133,8 @@ nav ul li a:hover::after {
   font-size: 2rem;
   color: #2f855a;
   margin-bottom: 1rem;
+  text-align: center;
+  
 }
 .program-cards-alt {
   display: flex;
@@ -199,12 +201,6 @@ nav ul li a:hover::after {
 
 
 /* === Programs Info === */
-
-.programs-text h2 {
-  font-size: 2rem;
-  color: #2f855a;
-  margin-bottom: 1rem;
-}
 
 .programs-text p {
   font-size: 1rem;
