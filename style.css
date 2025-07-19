@@ -1269,4 +1269,51 @@ nav ul li a.donate-header-button {
   padding: 0 1rem;
 }
 
+.stay-connected-section {
+  padding: 2rem 1rem;
+  background: #f7f7f7;
+}
+
+.stay-connected-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.email-logo {
+  width: 120px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.stay-connected {
+  max-width: 600px;
+}
+
+.blog-signup {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.blog-signup input[type="email"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.blog-signup button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: #5cbf7b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
