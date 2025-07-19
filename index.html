@@ -240,11 +240,7 @@
       body: JSON.stringify({ priceId })
     });
 
-    const cors = require('cors');
-    app.use(cors({
-    origin: 'https://www.ourimpactmatters.org' // or "*" for testing only
-    }));
-
+   
       const data = await res.json();
 
       if (data.url) {
