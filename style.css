@@ -1334,4 +1334,78 @@ nav ul li a.donate-header-button {
   border-radius: 4px;
   cursor: pointer;
 }
+.support-section {
+  padding: 3rem 1rem;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+.support-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.support-icon {
+  width: 60px;
+  height: auto;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.donation-widget,
+.interest-box {
+  background: #fff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.donation-widget h3,
+.interest-box h3 {
+  margin-top: 0;
+  color: #222;
+}
+
+.donation-type,
+.donation-amount {
+  margin-bottom: 1rem;
+}
+
+.donate-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #5cbf7b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.volunteer-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #5cbf7b;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.volunteer-link:hover {
+  background-color: #45a56a;
+}
 
