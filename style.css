@@ -1352,7 +1352,13 @@ nav ul li a.donate-header-button {
 }
 
 .support-icon {
-  width: 60px;
+  width: 40px;
+  height: auto;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+img {
+  max-width: 100%;
   height: auto;
 }
 
