@@ -858,6 +858,9 @@ footer {
 .donate-header-button:hover {
   background-color: #e6c200;
   transform: scale(1.05);
+  align-self: center; /* NEW */
+  line-height: 1;      /* Optional tweak */
+}
 }
 
 @media (max-width: 768px) {
