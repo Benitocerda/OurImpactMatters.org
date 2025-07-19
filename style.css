@@ -1200,17 +1200,16 @@ nav ul li a.donate-header-button {
   padding: 0 1rem;
 }
 <!-- footer -->
+
 .footer-email {
   font-weight: bold;
-  color: #ffffff;
   text-decoration: underline;
-  transition: color 0.3s ease;
+  color: white;
 }
 
 .footer-email:hover {
-  color: #FFD700; /* gold on hover */
+  color: #FFD700;
 }
-
 
 
 
