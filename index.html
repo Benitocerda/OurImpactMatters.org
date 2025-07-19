@@ -234,11 +234,16 @@
       : "price_1RlE85DVfGGNr4pmJMnzByQD"; // one-time
 
     try {
-      const res = await fetch("https://stripe-donations-backend.onrender.com/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ priceId })
-      });
+      const res = await fetch("https://stripe-donations-backend-76k2.onrender.com/create-checkout-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ priceId })
+    });
+
+    const cors = require('cors');
+    app.use(cors({
+    origin: 'https://www.ourimpactmatters.org' // or "*" for testing only
+    }));
 
       const data = await res.json();
 
