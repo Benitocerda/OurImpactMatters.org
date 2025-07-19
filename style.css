@@ -1214,5 +1214,10 @@ nav ul li a.donate-header-button {
   color: #000;
 }
 
+.programs-inner-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
 
