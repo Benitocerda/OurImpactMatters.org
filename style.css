@@ -1348,7 +1348,7 @@ nav ul li a.donate-header-button {
 }
 
 .support-icon {
-  width: 30px; /* or 20px for a smaller icon */
+  width: 40px; /* or 20px for a smaller icon */
   height: auto;
   margin-left: 0.5rem;
   vertical-align: middle;
