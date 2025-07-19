@@ -928,10 +928,6 @@ footer {
 }
 
 
-
-
-
-
 .about-background {
   background: url('homepage_background_chi.png') no-repeat center center;
   background-size: cover;
@@ -1352,11 +1348,12 @@ nav ul li a.donate-header-button {
 }
 
 .support-icon {
-  width: 40px;
+  width: 30px; /* or 20px for a smaller icon */
   height: auto;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
+
 img {
   max-width: 100%;
   height: auto;
