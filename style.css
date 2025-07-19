@@ -26,12 +26,19 @@ input, textarea, select {
 /* === Header === */
 header {
   display: flex;
-  align-items: center;           /* Vertically center all children */
-  justify-content: space-between; /* Space out logo and nav */
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem 2rem;
   background: #5cbf7b;
   border-bottom: 4px solid #45a56a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional: adds subtle depth */
 }
+
 .logo-container {
   display: flex;
   align-items: center;
