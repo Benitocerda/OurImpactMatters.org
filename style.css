@@ -44,7 +44,7 @@ header {
 }
 
 .logo-text {
-  font-size: 2rem; /* Increase for bigger header text */
+  font-size: 1.2rem; /* Increase for bigger header text */
   font-weight: bold;
   color: white;
 }
