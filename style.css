@@ -37,15 +37,18 @@ header {
   align-items: center;
   gap: 1rem;
 }
+
 .logo-container img {
-  height: 90px;
+  height: 70px; /* Or 90px if you want a larger logo */
   width: auto;
 }
+
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 2rem; /* Increase for bigger header text */
+  font-weight: bold;
   color: white;
 }
+
 
 /* === Navigation (Desktop) === */
 nav ul {
