@@ -110,26 +110,24 @@
 </section>
 
   
-<!-- === DONATION + SIGNUP SECTION START === -->
-<section class="support-section">
-  <div class="support-container">
-    <!-- Left: Donation Widget -->
-    <div class="donation-widget">
-      <h3 class="donation-title">Support Our Impact</h3>
-      <form id="donation-form">
-        <div class="donation-type">
-          <label><input type="radio" name="type" value="one_time" checked> One‑time</label>
-          <label><input type="radio" name="type" value="monthly"> Monthly</label>
-        </div>
-        <div class="donation-amount">
-          <label>
-            Enter Amount: $
-            <input type="number" name="custom_amount" min="1" step="1" required>
-          </label>
-        </div>
-        <button type="submit" class="donate-btn" id="donateBtn">Donate</button>
-      </form>
-    </div>
+<form id="donation-form">
+  <div class="donation-type">
+    <label><input type="radio" name="type" value="one_time" checked> One‑time</label>
+    <label><input type="radio" name="type" value="monthly"> Monthly</label>
+  </div>
+
+  <div class="donation-amount">
+    <label>
+      Enter Amount: $
+      <input type="number" name="custom_amount" min="1" step="1" required>
+    </label>
+  </div>
+
+  <div class="donation-button-wrapper">
+    <button type="submit" class="donate-btn" id="donateBtn">Donate</button>
+  </div>
+</form>
+
 
     <!-- Right: Email Signup -->
     <div class="stay-connected">
