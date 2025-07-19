@@ -841,6 +841,21 @@ footer {
 .donate-button:hover {
   animation: pulse 0.6s ease-in-out;
 }
+
+.custom-amount {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* adds spacing between input and button */
+}
+
+.custom-amount input[type="number"] {
+  width: 120px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
 /* === Donate Button in Header (Yellow Bubble Style) === */
 .donate-header-button {
   background-color: #FFD700; /* Bright yellow */
