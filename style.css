@@ -1095,7 +1095,7 @@ footer {
 .custom-amount-group {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* adds space between input and button */
+  gap: 25px; /* adds space between input and button */
   align-items: center;
   margin-bottom: 20px;
 }
