@@ -80,20 +80,7 @@ nav ul li a:hover::after {
   transform-origin: left;
 }
 /* === Background (Desktop) === */
-.about-background {
-  background: url('homepage_background_chi.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  position: relative;
-  text-align: center;
-  color: white;
-}
+
 
 .about-section {
   background: rgba(0, 0, 0, 0.6); /* Dark translucent overlay */
@@ -131,14 +118,14 @@ nav ul li a:hover::after {
 
 /* === Programs Section === */
 .programs-info {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  max-width: 1000px;
-  margin: auto;
+  flex: 1 1 60%;
+  background-color: #f4fdf7;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 100%; /* Ensure it's not constrained */
 }
+
 .programs-text {
   flex: 1 1 50%;
 }
@@ -193,10 +180,6 @@ nav ul li a:hover::after {
   z-index: 10;
 }
 
-.program-card:hover::after {
-  opacity: 1;
-}
-
 
 /* === Programs & Poverty Side by Side Wrapper === */
 .programs-poverty-wrapper {
@@ -206,17 +189,16 @@ nav ul li a:hover::after {
   padding: 3rem 2rem;
   max-width: 1200px;
   margin: auto;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.poverty-fact, .programs-info {
+  flex: 1 1 48%;
+  min-width: 300px;
 }
 
+
 /* === Programs Info === */
-.programs-info {
-  flex: 1 1 60%;
-  background-color: #f4fdf7;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
 
 .programs-text h2 {
   font-size: 2rem;
@@ -280,26 +262,28 @@ nav ul li a:hover::after {
 }
 
 /* === Programs + Poverty Container === */
-.programs-poverty-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  max-width: 1200px;
-  margin: auto;
-  justify-content: space-between;
-  align-items: flex-start;
-  position: relative;
-  overflow: visible;  /* Ensure children (tooltips) can overflow */
-  z-index: 0;
-}
+@media (max-width: 900px) {
+  .programs-poverty-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
 
-/* === Programs Info Section === */
-.programs-info {
-  flex: 1 1 48%;
-  box-sizing: border-box;
-  position: relative;     /* Allow tooltips to position inside */
-  z-index: 5;             /* Above .poverty-fact background */
+  
+
+  .poverty-fact {
+    padding: 2rem 1rem;
+    background-attachment: scroll;
+  }
+
+  .counter-container {
+    font-size: 2.5rem;
+  }
+
+  .poverty-fact p {
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
 
 .logo-container a {
@@ -898,7 +882,7 @@ footer {
 }
 
 
-}
+
 
 
 
@@ -915,16 +899,6 @@ footer {
   position: relative;
   text-align: center;
   color: white;
-}
-
-
-.about-section {
-  background: rgba(0, 0, 0, 0.6); /* Slightly darker for better readability */
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 800px;
-  width: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .about-section h1 {
@@ -1218,6 +1192,12 @@ nav ul li a.donate-header-button {
   font-weight: 500;
   color: #444;
   margin-top: 8px;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 
