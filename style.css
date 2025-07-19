@@ -402,24 +402,42 @@ nav ul li a:hover::after {
   justify-content: center;
 }
 .interest-box {
-  background-color: #fff;
-  border: 1px solid #c0e8d8;
-  padding: 2rem;
+  background: #fff; /* clean white background */
+  border: 1px solid #ddd; /* subtle border */
   border-radius: 8px;
-  flex: 1 1 300px;
-  max-width: 400px;
-  text-align: left;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* soft shadow */
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
 }
+
 .interest-box h3 {
-  color: #2f855a;
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #333;
 }
+
 .interest-box p {
-  color: #444;
+  color: #555;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.volunteer-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #5cbf7b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.volunteer-link:hover {
+  background-color: #45a56a;
 }
 
 /* === Mission Section === */
