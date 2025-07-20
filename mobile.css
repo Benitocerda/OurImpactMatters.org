@@ -77,48 +77,29 @@
     text-decoration: none;
   }
 
-  /* === HERO / ABOUT WITH CHICAGO BACKGROUND === */
   .about-background {
-    background: url('homepage_background_chi.png') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    padding: 4rem 1rem;
-    color: white;
-    overflow: hidden;
-  }
+  background: url('homepage_background_chi.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll; /* Or 'fixed' for parallax */
+  position: relative;
+  padding: 3rem 1rem;
+  color: white;
+  overflow: hidden;
+}
 
-  .about-background::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
+.about-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* Optional dark overlay */
+  z-index: 1;
+}
 
-  .about-section {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    animation: zoomBg 20s infinite alternate ease-in-out;
-  }
-
-  @keyframes zoomBg {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.05);
-    }
-  }
-
-  .about-section h1 {
-    font-size: 1.75rem;
-  }
-
-  .about-section p {
-    font-size: 1rem;
-  }
+.about-section {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
 
   /* === MISSION SECTION === */
   .mission {
