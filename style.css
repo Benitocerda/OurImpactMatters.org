@@ -1461,15 +1461,14 @@ img {
   text-align: right;
 }
 
-
 .cta-stats-section {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 2rem;
   padding: 3rem 2rem;
   background: #f8f8f5;
-  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .cta-left, .cta-right {
@@ -1482,13 +1481,13 @@ img {
 
 .cta-image {
   width: 100%;
-  max-width: 320px;
+  max-width: 300px;
   border-radius: 12px;
 }
 
 .poverty-card {
   margin-top: 1rem;
-  background: #fff;
+  background: #ffffff;
   padding: 1.2rem;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -1496,20 +1495,8 @@ img {
   text-align: left;
 }
 
-.poverty-card h4 {
-  color: #5cbf7b;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.poverty-card p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.4;
-}
-
 .cta-logo {
-  max-width: 100px;
+  max-width: 120px;
   margin-bottom: 1rem;
 }
 
@@ -1546,6 +1533,7 @@ img {
 .blog-signup button:hover {
   background: #48a96b;
 }
+
 
 
 
