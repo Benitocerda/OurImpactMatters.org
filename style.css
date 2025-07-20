@@ -1602,4 +1602,14 @@ footer {
   color: #45a56a;
 }
 
+.logo-container a,
+.logo-container a:visited {
+  text-decoration: none;
+  color: inherit; /* Inherit from parent (e.g. white or black) */
+}
 
+.logo-text {
+  color: #333; /* Or white, depending on your background */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
