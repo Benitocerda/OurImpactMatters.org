@@ -46,12 +46,12 @@ header {
 }
 
 .logo-container img {
-  height: 100px; /* Or 90px if you want a larger logo */
+  height: 80px; /* Or 90px if you want a larger logo */
   width: auto;
 }
 
 .logo-text {
-  font-size: 1.5rem; /* Increase for bigger header text */
+  font-size: 1.2rem; /* Increase for bigger header text */
   font-weight: bold;
   color: white;
 }
