@@ -1537,5 +1537,26 @@ img {
 }
 
 
+.poverty-card {
+  margin-top: 1rem;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: 300px;
+  text-align: left;
+}
+
+.poverty-card h4 {
+  color: #5cbf7b;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.poverty-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
 
 
