@@ -1461,3 +1461,81 @@ img {
   text-align: right;
 }
 
+.cta-stats-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background: #f8f8f5;
+  flex-wrap: wrap;
+}
+
+.cta-left, .cta-right {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+.poverty-fact {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+.poverty-fact .counter {
+  font-size: 2.5rem;
+  color: #e74c3c;
+}
+
+.cta-right .cta-logo {
+  max-width: 120px;
+  margin-bottom: 1rem;
+}
+
+.cta-right .cta-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blog-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.blog-signup input[type="email"] {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.blog-signup button {
+  padding: 0.7rem;
+  font-size: 1rem;
+  background: #5cbf7b;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.blog-signup button:hover {
+  background: #48a96b;
+}
+
+
+
+
