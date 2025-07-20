@@ -13,6 +13,11 @@
   <title>Our Impact Matters</title>
 </head>
 <body>
+  <!-- Preloader -->
+<div id="preloader">
+  <img src="OIM_logo.png" alt="Loading..." class="preloader-logo">
+</div>
+
 <header>
   <div class="logo-container">
     <a href="index.html">
@@ -433,7 +438,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
 
-
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.opacity = "0";
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 500);
+  });
+</script>
 
   
 </body>
