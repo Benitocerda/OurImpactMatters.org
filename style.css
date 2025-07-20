@@ -1312,30 +1312,38 @@ nav ul li a.donate-header-button {
   max-width: 600px;
 }
 
+
 .blog-signup {
-  margin-top: 1rem;
   display: flex;
+  flex-direction: row;
   gap: 0.5rem;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 420px;
 }
 
 .blog-signup input[type="email"] {
-  padding: 0.6rem;
+  flex: 1;
+  padding: 0.7rem;
   font-size: 1rem;
   border: 1px solid #ccc;
-  border-radius: 4px;
-  flex: 1;
+  border-radius: 6px;
 }
 
 .blog-signup button {
-  padding: 0.6rem 1rem;
+  padding: 0.7rem 1.2rem;
   font-size: 1rem;
-  background-color: #5cbf7b;
-  color: white;
+  background: #5cbf7b;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  color: white;
   cursor: pointer;
+  white-space: nowrap;
 }
+
+.blog-signup button:hover {
+  background: #48a96b;
+}
+
 .support-section {
   padding: 3rem 1rem;
   background: #f8f8f8;
