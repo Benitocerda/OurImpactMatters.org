@@ -1411,4 +1411,47 @@ img {
 .volunteer-link:hover {
   background-color: #45a56a;
 }
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+}
+
+.stat-box {
+  flex: 1;
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  color: #FF7F50; /* Coral (statistically attention-grabbing) */
+  margin-bottom: 0.5rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.stat-box p {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  color: #666;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
 
