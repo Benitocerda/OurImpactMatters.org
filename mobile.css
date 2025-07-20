@@ -247,3 +247,15 @@
     padding: 1rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+}
