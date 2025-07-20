@@ -1563,6 +1563,43 @@ img {
   background: #48a96b;
 }
 
+footer {
+  background-color: #f5f5f5;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  margin: 0;
+  flex: 1;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-right i {
+  color: #5cbf7b;
+}
+
+.footer-email {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-email:hover {
+  color: #45a56a;
+}
 
 
