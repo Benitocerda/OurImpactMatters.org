@@ -1461,18 +1461,19 @@ img {
   text-align: right;
 }
 
+
 .cta-stats-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-start;
   padding: 3rem 2rem;
   background: #f8f8f5;
-  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .cta-left, .cta-right {
-  flex: 1 1 50%;
+  flex: 1 1 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1481,28 +1482,38 @@ img {
 
 .cta-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   border-radius: 12px;
 }
 
-.poverty-fact {
+.poverty-card {
   margin-top: 1rem;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #e74c3c;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: 320px;
+  text-align: left;
 }
 
-.poverty-fact .counter {
-  font-size: 2.5rem;
-  color: #e74c3c;
+.poverty-card h4 {
+  color: #5cbf7b;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
-.cta-right .cta-logo {
-  max-width: 120px;
+.poverty-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.cta-logo {
+  max-width: 100px;
   margin-bottom: 1rem;
 }
 
-.cta-right .cta-text {
+.cta-text {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -1536,27 +1547,5 @@ img {
   background: #48a96b;
 }
 
-
-.poverty-card {
-  margin-top: 1rem;
-  background: #fff;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  max-width: 300px;
-  text-align: left;
-}
-
-.poverty-card h4 {
-  color: #5cbf7b;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.poverty-card p {
-  font-size: 1rem;
-  color: #444;
-  line-height: 1.4;
-}
 
 
