@@ -10,19 +10,29 @@
   }
 
   .logo-container {
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  .logo-container img {
-    height: 60px;
-  }
+.logo-container img {
+  height: 60px;
+}
 
-  .logo-text {
-    font-size: 1.25rem;
-  }
+.logo-text {
+  font-size: 1.5rem;
+  color: white; /* or your brand color */
+}
+/* Remove blue color and underline from logo and site name */
+.logo-container a {
+  text-decoration: none;
+  color: inherit; /* inherits from parent, like white or black */
+}
 
+.logo-container a:hover {
+  text-decoration: none;
+  color: inherit;
+}
   .nav-toggle {
     display: flex;
     flex-direction: column;
