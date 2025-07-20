@@ -105,10 +105,10 @@
   z-index: 1;
 }
 
-.about-section {
-  position: relative;
-  z-index: 2;
-  text-align: center;
+ .about-section {
+  background: rgba(255, 255, 255, 0.8); /* makes it see-through */
+  padding: 1rem;
+  border-radius: 8px;
 }
 
   /* === MISSION SECTION === */
