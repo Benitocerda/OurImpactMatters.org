@@ -497,5 +497,73 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
   
+  <!-- Calls for LocalStorage! it keeos the toggle button within bounds -->
+  <script>
+  const toggle = document.querySelector('.nav-toggle');
+  let isDragging = false;
+  let offset = { x: 0, y: 0 };
+
+  // Load saved position
+  window.addEventListener('load', () => {
+    const savedPos = JSON.parse(localStorage.getItem('togglePos'));
+    if (savedPos) {
+      toggle.style.left = `${savedPos.left}px`;
+      toggle.style.top = `${savedPos.top}px`;
+    }
+  });
+
+  function moveToggle(x, y) {
+    const toggleRect = toggle.getBoundingClientRect();
+    const maxX = window.innerWidth - toggleRect.width;
+    const maxY = window.innerHeight - toggleRect.height;
+
+    // Clamp values to stay within viewport
+    const left = Math.max(0, Math.min(x - offset.x, maxX));
+    const top = Math.max(0, Math.min(y - offset.y, maxY));
+
+    toggle.style.left = `${left}px`;
+    toggle.style.top = `${top}px`;
+
+    // Save position
+    localStorage.setItem('togglePos', JSON.stringify({ left, top }));
+  }
+
+  // Touch events
+  toggle.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    const touch = e.touches[0];
+    const rect = toggle.getBoundingClientRect();
+    offset.x = touch.clientX - rect.left;
+    offset.y = touch.clientY - rect.top;
+  });
+
+  window.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault(); // Prevent scrolling while dragging
+    const touch = e.touches[0];
+    moveToggle(touch.clientX, touch.clientY);
+  });
+
+  window.addEventListener('touchend', () => {
+    isDragging = false;
+  });
+
+  // Mouse events (optional for desktop testing)
+  toggle.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    const rect = toggle.getBoundingClientRect();
+    offset.x = e.clientX - rect.left;
+    offset.y = e.clientY - rect.top;
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    moveToggle(e.clientX, e.clientY);
+  });
+
+  window.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+</script>
 </body>
 </html>
