@@ -80,6 +80,7 @@
   transform: translateX(100%);
   border-bottom-left-radius: 10px; /* Round the bottom corner */
   max-height: fit-content; /* Makes it shrink-wrap the content */
+  margin-bottom: 1rem;
 }
 
   .nav-links.show {
