@@ -496,7 +496,14 @@ nav ul li a:hover::after {
 .volunteer-link:hover {
   background-color: #45a56a;
 }
-
+.support-title {
+  color: #5cbf7b; /* Match your site’s green */
+  font-weight: 700;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between icon and text */
+}
 /* === Mission Section === */
 .mission {
   display: flex;
