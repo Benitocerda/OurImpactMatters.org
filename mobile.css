@@ -34,16 +34,16 @@
   color: inherit;
 }
   .nav-toggle {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    position: absolute;
-    top: 1.2rem;
-    right: 1.2rem;
-    z-index: 1001;
-  }
-
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: grab; /* Hand icon */
+  position: fixed; /* Changed from absolute */
+  top: 1.2rem;
+  right: 1.2rem;
+  z-index: 1001;
+  touch-action: none; /* Prevents scrolling interference while dragging */
+}
   .nav-toggle span {
     width: 26px;
     height: 3px;
