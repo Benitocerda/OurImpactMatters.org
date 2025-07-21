@@ -158,24 +158,19 @@
       <a href="contact.html" class="btn-contact">Get notified!</a>
     </div>
     
-    <!-- Left: Donation Widget -->
-    <div class="donation-widget">
-      <h3 class="donation-title">Support Our Impact</h3>
-      <form id="donation-form">
-        <div class="donation-type">
-          <label><input type="radio" name="type" value="one_time" checked> One‑time</label>
-          <label><input type="radio" name="type" value="monthly"> Monthly</label>
-        </div>
-        <div class="donation-amount">
-          <label>
-            Enter Amount: $
-            <input type="number" name="custom_amount" min="1" step="1" required>
-          </label>
-        </div>
-        <button type="submit" class="donate-btn" id="donateBtn">Donate</button>
-      </form>
-    </div>
-
+<!-- Left: Tiered Donation Widget -->
+<div class="donation-widget">
+  <h3 class="donation-title">Support Our Impact</h3>
+  <div class="donation-options">
+    <button onclick="window.location.href='https://checkout.stripe.com/c/pay/cs_test_25tier';" class="donate-btn">$25</button>
+    <button onclick="window.location.href='https://checkout.stripe.com/c/pay/cs_test_100tier';" class="donate-btn">$100</button>
+    <button onclick="window.location.href='https://checkout.stripe.com/c/pay/cs_test_250tier';" class="donate-btn">$250</button>
+    <button onclick="window.location.href='https://checkout.stripe.com/c/pay/cs_test_500tier';" class="donate-btn">$500</button>
+    <button onclick="window.location.href='https://checkout.stripe.com/c/pay/cs_test_1000tier';" class="donate-btn">$1,000</button>
+    <button onclick="window.location.href='https://checkout.stripe.com/c/pay/cs_test_5000tier';" class="donate-btn">$5,000</button>
+    <button onclick="window.location.href='https://checkout.stripe.com/c/pay/cs_test_10000tier';" class="donate-btn">$10,000</button>
+  </div>
+</div>
 
   </div>
 </section>
