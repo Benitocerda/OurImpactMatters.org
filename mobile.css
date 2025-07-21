@@ -116,6 +116,7 @@
 
  .about-section {
   position: relative;
+  top: -40px;
   z-index: 2;
   background: rgba(255, 255, 255, 0.65); /* Light transparency */
   padding: 1.5rem 1rem;
