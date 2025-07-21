@@ -66,16 +66,25 @@
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #5cbf7b;
-    margin-top: 10px;
-  }
+  position: fixed;
+  top: 70px; /* Adjust to match your header height */
+  right: 0;
+  width: 75%; /* or 100% if you want full screen */
+  height: calc(100% - 70px);
+  background-color: #5cbf7b;
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+}
 
   .nav-links.show {
-    display: flex;
-  }
+  display: flex;
+  transform: translateX(0);
+}
 
   .nav-links li a {
     padding: 0.75rem 1rem;
