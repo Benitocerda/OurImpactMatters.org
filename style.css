@@ -65,7 +65,11 @@ header {
   align-items: center;
   gap: 1rem;
 }
-
+.nav-toggle {
+  top: 1.2rem;
+  right: 1.2rem;
+  left: auto;
+}
 .logo-container img {
   height: 80px; /* Or 90px if you want a larger logo */
   width: auto;
