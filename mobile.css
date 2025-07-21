@@ -86,15 +86,17 @@
   transform: translateX(0);
 }
 
-  .nav-links li a {
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    color: white;
-    background-color: rgba(92, 191, 123, 0.9);
-    border-radius: 6px;
-    margin: 4px 0;
-    text-decoration: none;
-  }
+ .nav-links li a {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(92, 191, 123, 0.9);
+  border-top: 2px solid white; /* Line between items */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
 
   .about-background {
   background: url('homepage_background_chi.png') no-repeat center center;
