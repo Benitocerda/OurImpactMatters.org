@@ -304,22 +304,35 @@
 
 /* === MOBILE STYLES: VOLUNTEER & INTEREST SECTIONS === */
 @media (max-width: 768px) {
-  /* Volunteer button: remove padding/styling */
+  /* Volunteer button - mobile-friendly styling */
   .btn-volunteer {
-    padding: 0 !important;
-    margin: 0 !important;
-    background: none !important;
-    box-shadow: none !important;
-    color: inherit !important;
+    background-color: #5cbf7b;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    margin: 1rem auto 0;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    max-width: 90%;
   }
 
-  /* Hide tooltip completely on mobile */
+  .btn-volunteer:hover {
+    background-color: #45a56a;
+    transform: scale(1.03);
+  }
+
+  /* Tooltip - still hidden on mobile */
   .tooltip,
   .tooltip::after,
   .tooltip::before {
     display: none !important;
   }
-
+}
   @media only screen and (max-width: 768px) {
   .volunteer-box {
     background: #f9f9f9; /* Soft background */
