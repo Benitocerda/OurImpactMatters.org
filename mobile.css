@@ -385,29 +385,35 @@
   text-align: center;
 }
 
-.poverty-overlay {
-  background: rgba(0, 0, 0, 0.6); /* semi-dark overlay for contrast */
-  padding: 2rem 1rem;
-  border-radius: 12px;
-}
+@media only screen and (max-width: 768px) {
+  .poverty-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.8rem;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 90%;
+    margin: 0 auto;
+  }
 
-.poverty-card h4 {
-  color: #fff; /* Optional: make the heading white too */
-  font-size: 1rem;
-  font-weight: bold;
-}
+  .poverty-card {
+    background: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    text-align: center;
+  }
 
-.poverty-card p,
-.poverty-text,
-.counter,
-.percent-sign {
-  color: #fff !important;
-  font-size: 1rem;
-  font-weight: bold;
-}
+  .poverty-card p,
+  .counter,
+  .percent-sign {
+    color: #fff !important;
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
-.counter {
-  font-size: 2rem;
+  .counter {
+    font-size: 2rem;
+  }
 }
 
 .donation-type label {
