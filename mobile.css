@@ -325,3 +325,13 @@
     align-items: center;
   }
 }
+
+@media (max-width: 768px) {
+  .btn-volunteer {
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none;
+    box-shadow: none;
+    color: inherit;
+  }
+}
