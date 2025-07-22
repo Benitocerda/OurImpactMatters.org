@@ -147,27 +147,28 @@
     <img src="donation_box_icon.jpg" alt="Donation Box Icon" class="support-icon" />
     Help aid the cause
   </h2>
-</section>
 
   <div class="support-grid">
-    
-    
-<div class="donation-widget">
-  <h3 class="donation-title">Support Our Impact</h3>
-  <form id="donationRedirectForm">
-    <div class="donation-type">
-      <label><input type="radio" name="donationType" value="one_time" checked> One-time</label>
-      <label><input type="radio" name="donationType" value="monthly"> Monthly</label>
+    <div class="donation-widget">
+      <!-- Removed duplicate <h3 class="donation-title"> -->
+      
+      <form id="donationRedirectForm">
+        <div class="donation-type">
+          <label><input type="radio" name="donationType" value="one_time" checked> One-time</label>
+          <label><input type="radio" name="donationType" value="monthly"> Monthly</label>
+        </div>
+
+        <button type="submit" class="donate-btn">Donate</button>
+
+        <!-- Disclaimer message -->
+        <p class="donation-disclaimer">
+          ⚠️ After clicking "Donate," remove any extra amounts in the Stripe checkout and keep only the one you wish to give.
+          <br><strong>Example:</strong> Click on the "Details" at top right of the checkout page. If you want to donate $100/month, remove any others before continuing. 🗑️
+        </p>
+      </form>
     </div>
-    <button type="submit" class="donate-btn">Donate</button>
-    
-    <!-- Disclaimer message -->
-    <p class="donation-disclaimer">
-      ⚠️ After clicking "Donate," remove any extra amounts in the Stripe checkout and keep only the one you wish to give.
-      <br><strong>Example:</strong> Click on the "Details" at top right of the checkout page. If you want to donate $100/month, remove any others before continuing. 🗑️
-    </p>
-  </form>
-</div>
+  </div>
+</section>
     <!-- Right: Volunteer Box -->
     <div class="interest-box">
       <h3>Volunteer With Us</h3>
