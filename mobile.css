@@ -350,3 +350,11 @@
     display: none !important;
   }
 }
+
+.volunteer-box {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 auto;
+  box-shadow: none !important;
+}
