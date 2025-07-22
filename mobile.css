@@ -395,11 +395,17 @@
   border-radius: 12px;
 }
 
-.poverty-card h4,
+.poverty-card h4 {
+  color: #fff; /* Optional: make the heading white too */
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .poverty-card p,
+.poverty-text,
 .counter,
 .percent-sign {
-  color: red !important;
+  color: #fff !important;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -409,7 +415,7 @@
 }
 
 .donation-type label {
-  color: #111; /* or another visible color */
+  color: #111;
   font-size: 1rem;
   display: block;
   margin-bottom: 0.5rem;
