@@ -320,15 +320,46 @@
     display: none !important;
   }
 
-  /* Volunteer box cleanup */
+  @media only screen and (max-width: 768px) {
   .volunteer-box {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 auto !important;
-    box-shadow: none !important;
+    background: #f9f9f9; /* Soft background */
+    border-radius: 12px;
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 95%;
   }
 
+  .volunteer-box h2 {
+    font-size: 1.5rem;
+    color: #111;
+    margin-bottom: 1rem;
+  }
+
+  .volunteer-box p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .btn-volunteer {
+    background-color: #5cbf7b;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .btn-volunteer:hover {
+    background-color: #45a56a;
+  }
+}
   /* Interest box styling */
   .interest-box {
     background: none !important;
