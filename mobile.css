@@ -395,3 +395,31 @@
   font-size: 1rem;
   font-weight: 500;
 }
+
+.cta-left {
+  position: relative;
+  background: url('Chicago-CTA-USA-Resize.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 3rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.poverty-overlay {
+  background: rgba(0, 0, 0, 0.6); /* semi-dark overlay for contrast */
+  padding: 2rem 1rem;
+  border-radius: 12px;
+}
+
+.poverty-card h4,
+.poverty-card p,
+.counter,
+.percent-sign {
+  color: red !important;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.counter {
+  font-size: 2rem;
+}
