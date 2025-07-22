@@ -358,3 +358,48 @@
   margin: 0 auto;
   box-shadow: none !important;
 }
+
+/* === VOLUNTEER BOX - Clean style on mobile === */
+.interest-box {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 1rem auto !important;
+  box-shadow: none !important;
+  text-align: center;
+}
+
+.interest-box h3,
+.interest-box p,
+.interest-box a {
+  color: #111 !important;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Remove special button styles */
+.interest-box .btn-contact {
+  background: none !important;
+  color: #5cbf7b !important;
+  padding: 0 !important;
+  margin-top: 0.5rem;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* === POVERTY CARD (inside CTA LEFT) - Clean style on mobile === */
+.poverty-card {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.poverty-card h4,
+.poverty-card p {
+  color: #111 !important;
+  font-size: 1rem;
+  font-weight: 500;
+}
