@@ -538,5 +538,40 @@ document.addEventListener("DOMContentLoaded", () => {
     isDragging = false;
   });
 </script>
+
+<script>
+  const counters = document.querySelectorAll('.counter');
+  let hasAnimated = false;
+
+  function runCounterAnimation() {
+    if (hasAnimated) return;
+    hasAnimated = true;
+
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      const update = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 100;
+
+        if (current < target) {
+          counter.innerText = (current + increment).toFixed(1);
+          setTimeout(update, 50); // slower count
+        } else {
+          counter.innerText = target.toFixed(1);
+        }
+      };
+      update();
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('.cta-left');
+    const position = section.getBoundingClientRect().top;
+    if (position < window.innerHeight - 100) {
+      runCounterAnimation();
+    }
+  });
+</script>
 </body>
 </html>
