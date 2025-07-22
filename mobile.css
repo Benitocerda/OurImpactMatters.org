@@ -407,3 +407,10 @@
 .counter {
   font-size: 2rem;
 }
+
+.donation-type label {
+  color: #111; /* or another visible color */
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
