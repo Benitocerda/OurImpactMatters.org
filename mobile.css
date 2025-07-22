@@ -223,14 +223,10 @@
   
 /* === CLEANER SUPPORT SECTION === */
  .support-section {
-  background: #f0fdf4; /* light mint green */
-  color: #111;
-  padding: 2rem 1rem;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  margin: 1rem auto;
-  max-width: 95%;
+  background: transparent; /* no background color */
+  padding: 1rem 0;
+  border-radius: 0;
+  box-shadow: none;
 }
   /* === CTA SECTION === */
   .cta-stats-section {
