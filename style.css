@@ -778,14 +778,32 @@ nav ul li a:hover::after {
   background-color: #eef6f2;
 }
 
-.support-container {
+.support-section {
+  background: linear-gradient(to right, #5cbf7b, #45a56a); /* smooth green gradient */
+  color: white;
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 2rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.support-title {
+  font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  max-width: 1000px;
-  margin: auto;
+  gap: 1rem;
+  margin-bottom: 0;
+}
+
+.support-icon {
+  width: 50px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .donation-widget {
