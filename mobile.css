@@ -202,32 +202,25 @@
     font-size: 1.2rem;
   }
 
-  /* === STATS SECTION === */
-  .stats-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
+  @media only screen and (max-width: 768px) {
+  .support-section {
+    padding: 1rem 0; /* reduce vertical padding */
   }
 
-  .stat-box {
-    width: 100%;
+  .support-title {
+    font-size: 1.2rem; /* decrease font size */
+    margin: 0.5rem 0;
   }
 
-  /* === SUPPORT SECTION === */
-  .support-grid {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+  .support-icon {
+    width: 50px; /* make icon smaller */
+    height: auto;
+    vertical-align: middle;
   }
-  
-  
-/* === CLEANER SUPPORT SECTION === */
- .support-section {
-  background: transparent; /* no background color */
-  padding: 1rem 0;
-  border-radius: 0;
-  box-shadow: none;
 }
+  
+  
+
   /* === CTA SECTION === */
   .cta-stats-section {
   background: transparent;
