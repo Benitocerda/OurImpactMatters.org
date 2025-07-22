@@ -221,26 +221,6 @@
   
   
 
-  /* === CTA SECTION === */
-  .cta-stats-section {
-  background: transparent;
-  padding: 1rem 0;
-  box-shadow: none;
-  border: none;
-}
-
-  .cta-left,
-  .cta-right {
-  background: transparent;
-  padding: 0;
-  box-shadow: none;
-}
-
-  .cta-image {
-    width: 100%;
-    height: auto;
-  }
-
   /* === SIGNUP FORM === */
   .blog-signup {
     flex-direction: column;
