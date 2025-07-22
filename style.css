@@ -1565,48 +1565,46 @@ img {
   text-align: right;
 }
 
-.cta-stats-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 3rem 2rem;
-  background: #f8f8f5;
-  flex-wrap: wrap;
-}
 
-.cta-left, .cta-right {
-  flex: 1 1 48%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.cta-image {
-  width: 100%;
-  max-width: 300px;
+.cta-left {
+  position: relative;
+  background: url('Chicago-CTA-USA-Resize.jpg') no-repeat center center;
+  background-size: cover;
   border-radius: 12px;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+}
+
+.poverty-overlay {
+  background: rgba(0, 0, 0, 0.6); /* for contrast */
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
 }
 
 .poverty-card {
-  margin-top: 1rem;
-  background: #ffffff;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  max-width: 320px;
-  text-align: left;
+  margin: 0;
+  background: none;
+  padding: 0;
+  box-shadow: none;
+  text-align: center;
 }
 
-.cta-logo {
-  max-width: 120px;
-  margin-bottom: 1rem;
+.poverty-card h4,
+.poverty-card p,
+.counter,
+.percent-sign {
+  color: red !important;
+  font-weight: bold;
 }
 
-.cta-text {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+.counter {
+  font-size: 2rem;
 }
 
 .blog-signup {
