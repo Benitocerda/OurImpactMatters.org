@@ -302,61 +302,60 @@
   }
 }
 
+/* === MOBILE STYLES: VOLUNTEER & INTEREST SECTIONS === */
 @media (max-width: 768px) {
+  /* Volunteer button: remove padding/styling */
   .btn-volunteer {
     padding: 0 !important;
     margin: 0 !important;
-    background: none;
-    box-shadow: none;
-    color: inherit;
-  }
-}
-
-@media (max-width: 768px) {
-  .tooltip {
-    display: none !important; /* Fully hides tooltip container */
+    background: none !important;
+    box-shadow: none !important;
+    color: inherit !important;
   }
 
+  /* Hide tooltip completely on mobile */
+  .tooltip,
   .tooltip::after,
   .tooltip::before {
     display: none !important;
   }
-}
 
-.volunteer-box {
-  background: none !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 auto;
-  box-shadow: none !important;
-}
+  /* Volunteer box cleanup */
+  .volunteer-box {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+  }
 
-/* === VOLUNTEER BOX - Clean style on mobile === */
-.interest-box {
-  background: none !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 1rem auto !important;
-  box-shadow: none !important;
-  text-align: center;
-}
+  /* Interest box styling */
+  .interest-box {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 1rem auto !important;
+    box-shadow: none !important;
+    text-align: center;
+  }
 
-.interest-box h3,
-.interest-box p,
-.interest-box a {
-  color: #111 !important;
-  font-size: 1rem;
-  font-weight: 500;
-}
+  .interest-box h3,
+  .interest-box p,
+  .interest-box a {
+    color: #111 !important;
+    font-size: 1rem;
+    font-weight: 500;
+  }
 
-/* Remove special button styles */
-.interest-box .btn-contact {
-  background: none !important;
-  color: #5cbf7b !important;
-  padding: 0 !important;
-  margin-top: 0.5rem;
-  text-decoration: underline;
-  font-weight: 600;
+  /* Contact button style cleanup */
+  .interest-box .btn-contact {
+    background: none !important;
+    color: #5cbf7b !important;
+    padding: 0 !important;
+    margin-top: 0.5rem;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+  }
 }
 
 /* === POVERTY CARD (inside CTA LEFT) - Clean style on mobile === */
