@@ -545,7 +545,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const current = parseFloat(counter.innerText);
       if (current < target) {
         counter.innerText = Math.min(current + increment, target).toFixed(1);
-        setTimeout(update, 50); // adjust for slower/faster
+        setTimeout(update, 50);
       } else {
         counter.innerText = target.toFixed(1);
       }
@@ -554,20 +554,21 @@ document.addEventListener("DOMContentLoaded", () => {
     update();
   }
 
+  const povertySection = document.querySelector('.cta-left');
+  const counter = povertySection?.querySelector('.counter');
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const counter = entry.target.querySelector('.counter');
-        if (counter && counter.innerText === '0') {
-          runCounterAnimation(counter);
-        }
+      if (entry.isIntersecting && counter) {
+        runCounterAnimation(counter);
+      } else if (!entry.isIntersecting && counter) {
+        counter.innerText = '0'; // Reset when leaving view
       }
     });
   }, {
-    threshold: 0.6 // triggers when 60% of section is in view
+    threshold: 0.6 // 60% of element must be in view to trigger
   });
 
-  const povertySection = document.querySelector('.cta-left');
   if (povertySection) {
     observer.observe(povertySection);
   }
