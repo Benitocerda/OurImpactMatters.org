@@ -1122,17 +1122,18 @@ footer {
   font-size: 1rem;
   font-weight: 500;
 }
-@keyframes floatBounce {
+@keyframes gentleBounce {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-4px);
   }
 }
 
 .stat-box {
-  animation: floatBounce 3s ease-in-out infinite;
+  animation: gentleBounce 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
 }
 /* Scroll-in Animation */
 .fade-in {
