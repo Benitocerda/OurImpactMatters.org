@@ -215,7 +215,17 @@
     gap: 2rem;
     padding: 1rem;
   }
-
+/* === CLEANER SUPPORT SECTION === */
+ .support-section {
+  background: #f9f9f9;
+  color: #111;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin: 1rem auto;
+  max-width: 95%;
+}
   /* === CTA SECTION === */
   .cta-stats-section {
     flex-direction: column;
