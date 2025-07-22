@@ -204,21 +204,25 @@
 
   @media only screen and (max-width: 768px) {
   .support-section {
-    padding: 1rem 0; /* reduce vertical padding */
+    padding: 1rem 0; /* Reduce vertical padding */
   }
 
   .support-title {
-    font-size: 1.2rem; /* decrease font size */
+    font-size: 1.2rem; /* Smaller font on mobile */
     margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
   }
 
   .support-icon {
-    width: 50px; /* make icon smaller */
+    width: 28px; /* Scales better on mobile */
     height: auto;
     vertical-align: middle;
   }
 }
-  
   
 
   /* === SIGNUP FORM === */
