@@ -90,23 +90,81 @@ header {
   background-color: #45a56a;
 }
 
-/* Optional: Make it visible on small screens too */
 @media only screen and (max-width: 768px) {
+  /* your existing back-to-top rule */
   .back-to-top {
     display: block;
   }
-}
-.logo-container img {
-  height: 80px; /* Or 90px if you want a larger logo */
-  width: auto;
-}
 
-.logo-text {
-  font-size: 1.2rem; /* Increase for bigger header text */
-  font-weight: bold;
-  color: white;
-}
+  /* hamburger button */
+  .nav-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 1100;
+  }
+  .nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
 
+  /* slide-in menu */
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 70px;          /* adjust to your header height */
+    right: 0;
+    width: 75%;
+    background: white;
+    padding: 1rem 0;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    border-bottom-left-radius: 10px;
+  }
+  .nav-links.show {
+    display: flex;
+    transform: translateX(0);
+  }
+  .nav-links li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #eee;
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nav-links li a:hover {
+    background: #f0f0f0;
+  }
+
+  /* shrink the header on mobile */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .logo-container {
+    margin-bottom: 0.5rem;
+  }
+  .logo-container img {
+    height: 60px;
+  }
+  .logo-text {
+    font-size: 1.25rem;
+  }
+}
 
 /* === Navigation (Desktop) === */
 nav ul {
