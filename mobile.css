@@ -65,45 +65,43 @@
     transform: rotate(-45deg) translate(5px, -5px);
   }
 
-  .nav-links {
+/* Mobile Slide-In Dropdown Menu */
+.nav-links {
   position: fixed;
-  top: 70px; /* Adjust this based on header height */
+  top: 70px;
   right: 0;
   width: 75%;
-  background-color: #5cbf7b;
+  background-color: white;
   display: none;
   flex-direction: column;
   padding: 1rem 0;
   z-index: 1000;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   transform: translateX(100%);
-  border-bottom-left-radius: 10px; /* Round the bottom corner */
-  max-height: fit-content; /* Makes it shrink-wrap the content */
+  border-bottom-left-radius: 10px;
+  max-height: fit-content;
   margin-bottom: 1rem;
 }
 
-  .nav-links.show {
+.nav-links.show {
   display: flex;
   transform: translateX(0);
 }
 
-/* Desktop + Mobile Header Links */
-nav a,
 .nav-links li a {
-  font-family: 'Poppins', sans-serif;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
   font-weight: 600;
   color: #333;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  background-color: transparent;
+  border-top: 1px solid #eee;
   text-decoration: none;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-nav a:hover,
 .nav-links li a:hover {
-  color: var(--clr-primary); /* #5cbf7b */
+  background-color: #f0f0f0;
 }
 
 nav a.active,
