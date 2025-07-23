@@ -125,8 +125,18 @@ nav a.active,
   transition: background-color 0.3s ease;
 }
 
-.nav-links li .donate-header-button:hover {
-  background-color: #e6c200;
+.nav-links li .donate-header-button {
+  background-color: #FFD700;
+  color: #333 !important;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
   .about-background {
   background: url('homepage_background_chi.png') no-repeat center center;
