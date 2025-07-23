@@ -282,13 +282,13 @@
 </head>
 <body>
 
-  <header>
+<header>
   <a href="index.html" class="logo-container">
     <img src="OIM_logo.png" alt="Our Impact Matters Logo">
     <span class="logo-text">Our Impact Matters</span>
   </a>
 
-  <div class="nav-toggle" onclick="toggleMenu(this)">
+  <div class="nav-toggle" onclick="toggleNav(this)" aria-expanded="false">
     <span></span>
     <span></span>
     <span></span>
@@ -372,16 +372,12 @@
   </footer>
 
   <script>
-    function toggleMenu(el) {
-      el.classList.toggle("open");
-      document.querySelector('.nav-links').classList.toggle("show");
-    }
-  </script>
-  <script>
-   function toggleMenu(el) {
-    el.classList.toggle("open");
-    document.querySelector('.nav-links').classList.toggle("show");
-    }
+  function toggleNav(toggle) {
+    const navLinks = document.querySelector('.nav-links');
+    toggle.classList.toggle("open");
+    navLinks.classList.toggle("show");
+    toggle.setAttribute("aria-expanded", toggle.classList.contains("open"));
+  }
 </script>
 </body>
 </html>
