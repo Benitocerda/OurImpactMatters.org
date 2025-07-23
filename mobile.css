@@ -542,3 +542,15 @@
   background-color: #45a56a;
   transform: scale(1.02);
 }
+
+@media only screen and (max-width: 768px) {
+  .program-card::after,
+  .program-card::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  .program-card[data-tooltip] {
+    position: static !important;
+  }
+}
