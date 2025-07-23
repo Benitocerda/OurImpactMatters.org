@@ -257,8 +257,8 @@
     e.preventDefault();
     const selectedType = document.querySelector('input[name="donationType"]:checked').value;
     const links = {
-      one_time: "https://buy.stripe.com/4gM9ATg8J4NmfPt8Nk2VG06",
-      monthly: "https://buy.stripe.com/dRm28r6y92Fe8n1aVs2VG08"
+      one_time:"https://buy.stripe.com/dRm28r6y92Fe8n1aVs2VG08",
+      monthly: "https://buy.stripe.com/4gM9ATg8J4NmfPt8Nk2VG06"
     };
     window.location.href = links[selectedType];
   });
