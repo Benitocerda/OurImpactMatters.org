@@ -129,24 +129,30 @@ header {
 }
 
 /* === About Section === */
+
 .about-background {
-  background: url('chicago_background.jpg') no-repeat center center / cover;
+  background: url('homepage_background_chi.png') no-repeat center center / cover;
   padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .about-section {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9); /* White with slight transparency */
   border-radius: 12px;
-  max-width: 800px;
-  margin: 0 auto;
   padding: 2rem;
+  max-width: 800px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
+
 .about-icon {
   display: block;
   margin: 1rem auto 0;
-  width: 50px;
+  width: 60px;
 }
+
 
 /* === Mission Section === */
 .mission {
