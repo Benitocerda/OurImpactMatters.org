@@ -281,11 +281,13 @@ header {
   background: #fdfdfd;
   text-align: center;
 }
+/* Center donation icon */
 .support-icon {
-  width: 40px;
-  vertical-align: middle;
-  margin-right: 10px;
+  display: block;
+  margin: 0 auto 1rem;
+  width: 60px;
 }
+
 .donation-widget {
   max-width: 500px;
   margin: 0 auto;
