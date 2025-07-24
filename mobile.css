@@ -133,6 +133,27 @@
     width: 100%;
     border-radius: 10px;
   }
+ .mission-buttons {
+  display: flex;
+  flex-direction: column;  /* Ensures vertical stacking */
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  }
+
+  .mission-buttons a {
+  display: inline-block;
+  width: 90%;              /* Increased width to ensure it doesn't cut off */
+  max-width: 320px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+  }
 
   .impact-grid {
     flex-direction: column;
