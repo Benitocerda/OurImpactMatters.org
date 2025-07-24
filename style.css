@@ -51,26 +51,7 @@ input, textarea {
   --gap: 1.5rem;
   --transition: 0.3s ease-in-out;
 }
-/* === General Reset & Base === */
-* {
-  box-sizing: border-box;
-}
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-  background: #fff;
-  color: #333;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
+
 
 /* === Preloader === */
 #preloader {
