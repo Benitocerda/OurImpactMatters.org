@@ -348,26 +348,41 @@ header {
   text-align: center;
 }
 
-/* === CTA Poverty Card === */
+/* === CTA Poverty Card with Chicago Background === */
 .cta-stats-section {
-  background: url('cta_train.jpg') center/cover no-repeat;
+  background: url('Chicago-CTA-USA-Resize.jpg') center/cover no-repeat;
   color: white;
   padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .poverty-overlay {
   background: rgba(0, 0, 0, 0.65);
   padding: 2rem;
   border-radius: 12px;
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+
 .counter-container {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
+
 .percent-sign {
   font-size: 1.5rem;
   margin-left: 5px;
+}
+
+.poverty-card p {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 1rem;
+  line-height: 1.6;
 }
 
 /* === Email Signup === */
