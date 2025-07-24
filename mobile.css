@@ -131,9 +131,8 @@
   }
 
   .about-section {
-    padding: 1rem;
-    font-size: 0.95rem;
-  }
+    display: none;
+  } 
 
   .mission {
     flex-direction: column;
