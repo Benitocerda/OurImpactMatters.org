@@ -1,0 +1,251 @@
+:root {
+  --clr-primary: #5cbf7b;
+  --clr-light-bg: #f8f8f5;
+  --clr-card-bg: #fff;
+  --clr-donate: #FFD700;
+  --gap-md: 2rem;
+  --gap-lg: 3rem;
+  --shadow-light: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--clr-light-bg);
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: var(--clr-primary);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  border-bottom: 4px solid #45a56a;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-container img {
+  height: 90px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.donate-header-button {
+  background-color: var(--clr-donate);
+  color: #333 !important;
+  font-weight: bold;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.donate-header-button:hover {
+  background-color: #f5c400;
+  transform: scale(1.05);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.nav-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  display: block;
+  border-radius: 2px;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.container {
+  max-width: 600px;
+  margin: var(--gap-lg) auto;
+  padding: 0 var(--gap-md);
+}
+
+.contact-section {
+  background: var(--clr-card-bg);
+  color: #5cbf7b;
+  border: 1px solid #ddd;
+  padding: var(--gap-md);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+}
+
+.contact-form h2 {
+  color: #222;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--clr-card-bg);
+  padding: 0 4px;
+  color: #999;
+  font-size: .85rem;
+  pointer-events: none;
+  transition: .2s;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown)+label {
+  top: -8px;
+  left: 8px;
+  color: var(--clr-primary);
+  font-size: .75rem;
+}
+
+.contact-form button {
+  background: var(--clr-primary);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.contact-form button:hover {
+  background: #48a96b;
+}
+
+.privacy-note {
+  font-size: .85rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.success-message {
+  display: none;
+  color: #388e3c;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.char-count {
+  font-size: .75rem;
+  color: #777;
+  text-align: right;
+  margin-top: 4px;
+}
+
+.mission-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-follow {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e1306c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-follow i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.btn-follow:hover {
+  background-color: #c72b63;
+  transform: scale(1.05);
+}
+
+footer {
+  background: var(--clr-primary);
+  color: white;
+  text-align: center;
+  padding: var(--gap-md) 0;
+  font-size: .85rem;
+  margin-top: var(--gap-lg);
+}
