@@ -281,6 +281,7 @@ header {
   background: #fdfdfd;
   text-align: center;
 }
+
 /* Center donation icon */
 .support-icon {
   display: block;
@@ -288,15 +289,33 @@ header {
   width: 60px;
 }
 
+/* Boxed container styling */
 .donation-widget {
+  background: #ffffff;
+  border: 2px solid #5cbf7b;
+  border-radius: 16px;
+  padding: 2rem;
   max-width: 500px;
   margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
 }
+
+/* Donation type radio options */
 .donation-type {
   display: flex;
-  justify-content: space-around;
-  margin: 1rem 0;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  font-weight: 600;
 }
+
+.donation-type input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: #5cbf7b;
+}
+
+/* Donate button */
 .donate-btn {
   background: #ffcc00;
   border: none;
@@ -305,11 +324,19 @@ header {
   font-weight: bold;
   cursor: pointer;
   color: #111;
+  transition: background 0.3s ease;
 }
+
+.donate-btn:hover {
+  background: #e6b800;
+}
+
+/* Disclaimer */
 .donation-disclaimer {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-size: 0.9rem;
   color: #666;
+  line-height: 1.5;
 }
 
 /* === Volunteer Interest Box === */
