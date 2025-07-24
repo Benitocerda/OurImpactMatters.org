@@ -139,7 +139,7 @@ header {
 }
 
 .about-section {
-  background: rgba(255, 255, 255, 0.4); /* White with more transparency */
+  background: rgba(255, 255, 255, 0.2); /* White with more transparency */
   border-radius: 12px;
   padding: 2rem;
   max-width: 800px;
