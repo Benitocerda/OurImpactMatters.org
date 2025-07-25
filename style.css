@@ -203,16 +203,18 @@ header {
 }
 
 .mission-paragraph strong {
-  color: #5cbf7b;
+  color: #5cbf7b; /* Primary green */
   font-weight: 700;
 }
 
 .mission-paragraph .highlight {
-  background-color: #e8f9ef;
+  background-color: #e8f9ef; /* Light green background for readability */
   padding: 0.15rem 0.35rem;
   border-radius: 4px;
   font-weight: 500;
+  color: #45a56a; /* Accent green text */
 }
+
 
 
 /* === Impact Highlights === */
