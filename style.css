@@ -192,6 +192,29 @@ header {
   background-color: #45a56a;
 }
 
+.mission-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #333;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+}
+
+.mission-paragraph strong {
+  color: #5cbf7b;
+  font-weight: 700;
+}
+
+.mission-paragraph .highlight {
+  background-color: #e8f9ef;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+
 /* === Impact Highlights === */
 .impact-highlights {
   padding: 3rem 1rem;
