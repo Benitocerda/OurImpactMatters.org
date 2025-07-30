@@ -178,35 +178,6 @@
   margin: 2rem auto;
 }
 
-  /* === Floating Cloud Mobile Title Style === */
- .section-title {
-  display: block;
-  margin: 2rem auto 1.5rem; /* centers the box horizontally */
-  text-align: center;
-  padding: 1rem 2rem;
-  background-color: white;
-  border: 3px solid #5cbf7b;
-  border-radius: 12px;
-  font-size: 2rem;
-  font-weight: 800;
-  color: #333;
-  width: fit-content;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #5cbf7b;
-  margin: 0.75rem auto 0;
-  border-radius: 4px;
-}
-
-
-
-
   .mission-text h3 {
     display: none;
   }
