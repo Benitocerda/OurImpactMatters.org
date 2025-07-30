@@ -364,3 +364,12 @@
 }
 
 
+
+
+.skyline-title.section-title {
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
