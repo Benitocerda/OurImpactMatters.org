@@ -159,6 +159,32 @@
 }
 
 
+  /* === Floating Cloud Mobile Title Style === */
+  .section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #333;
+  position: relative;
+  margin: 2rem auto 1.5rem;
+  padding: 1rem 2rem;
+  border: 3px solid #5cbf7b; /* green border box */
+  border-radius: 12px;
+  background-color: white;
+  width: fit-content;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* soft shadow */
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #5cbf7b;
+  margin: 0.75rem auto 0;
+  border-radius: 4px;
+}
 
   .mission-text h3 {
     display: none;
@@ -345,30 +371,4 @@
   }
 }
 
-  /* === Floating Cloud Mobile Title Style === */
-  .section-title {
-  font-size: 2rem;
-  font-weight: 800;
-  text-align: center;
-  color: #333;
-  position: relative;
-  margin: 2rem auto 1.5rem;
-  padding: 1rem 2rem;
-  border: 3px solid #5cbf7b; /* green border box */
-  border-radius: 12px;
-  background-color: white;
-  width: fit-content;
-  z-index: 2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* soft shadow */
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #5cbf7b;
-  margin: 0.75rem auto 0;
-  border-radius: 4px;
-}
 
