@@ -201,6 +201,16 @@
     box-sizing: border-box;
   }
 }
+
+.instagram-button i {
+  color: #C13584; /* Instagram purple-pink theme */
+  margin-right: 0.5rem; /* spacing between icon and text */
+  font-size: 1.2rem;
+}
+.instagram-button:hover {
+  background-color: #f8f8f8;
+}
+
   .impact-grid {
     flex-direction: column;
   }
