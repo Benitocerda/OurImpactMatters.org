@@ -138,14 +138,15 @@
   }
 
 .about-background {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column; /* ← you can switch to column if needed */
+  padding-top: 3rem;
   position: relative;
-  min-height: 500px;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: flex-start; /* Top-align children */
-  justify-content: center; /* Center horizontally */
-  padding-top: 3rem; /* Controls vertical position */
+  min-height: 500px;
 }
 
 .skyline-title.section-title {
@@ -163,6 +164,7 @@
   max-width: 90%;
   z-index: 10;
   position: relative;
+  display: block;
 }
 
 
