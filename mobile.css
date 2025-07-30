@@ -138,19 +138,19 @@
   }
 
 .about-background {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column; /* ← you can switch to column if needed */
-  padding-top: 3rem;
   position: relative;
+  min-height: 500px;
   background-size: cover;
   background-position: center;
-  min-height: 500px;
+  display: flex;
+  align-items: center;      /* centers children horizontally */
+  justify-content: flex-start;  /* change if needed */
+  flex-direction: column;
+  padding-top: 1.5rem;
 }
 
 .skyline-title.section-title {
-  margin: 1rem auto;
+  margin: 0 auto;
   padding: 1rem 2rem;
   background-color: white;
   border: 3px solid #5cbf7b;
@@ -165,7 +165,6 @@
   z-index: 10;
   position: relative;
   display: block;
-  transform: translateY(-40px); /* raises into clouds */
 }
 
 
