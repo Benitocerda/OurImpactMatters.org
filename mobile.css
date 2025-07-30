@@ -131,12 +131,12 @@
   }
   
   
-  .about-background {
-    position: relative;
-    min-height: 500px;
-    background-size: cover;
-    background-position: center;
-  }
+ .about-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
   .about-section {
     display: none;
@@ -153,20 +153,19 @@
 }
 
   /* === Floating Cloud Mobile Title Style === */
-  .section-title {
+ .section-title {
+  display: block;
+  margin: 2rem auto 1.5rem; /* centers the box horizontally */
+  text-align: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border: 3px solid #5cbf7b;
+  border-radius: 12px;
   font-size: 2rem;
   font-weight: 800;
-  text-align: center;
   color: #333;
-  position: relative;
-  margin: 2rem auto 1.5rem;
-  padding: 1rem 2rem;
-  border: 3px solid #5cbf7b; /* green border box */
-  border-radius: 12px;
-  background-color: white;
   width: fit-content;
-  z-index: 2;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* soft shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .section-title::after {
