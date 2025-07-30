@@ -139,9 +139,9 @@
 
 .about-background {
   display: flex;
-  justify-content: center;       /* center horizontally */
-  align-items: center;           /* center vertically */
-  flex-direction: row;           /* important: lays out children left to right */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;   /* ✅ Center content vertically AND horizontally */
   padding-top: 3rem;
   position: relative;
   background-size: cover;
@@ -166,6 +166,8 @@
   width: max-content;
   position: relative;
   z-index: 10;
+  display: block; 
+  
 }
 
  .mission-overlay-title {
