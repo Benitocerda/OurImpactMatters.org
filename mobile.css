@@ -286,15 +286,27 @@
   }
 
   footer {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.2rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centers child elements horizontally */
+  text-align: center;
+  padding: 1.2rem;
+}
 
-  .footer-left,
-  .footer-right {
-    margin-bottom: 0.5rem;
-  }
+.footer-left,
+.footer-right {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+
+.email-link {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #5cbf7b; /* or whatever your green is */
+}
+
 
 .back-to-top {
   position: fixed;
