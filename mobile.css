@@ -131,16 +131,33 @@
   }
   
   
- .about-background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 
   .about-section {
     display: none;
   }
+
+.about-background {
+  position: relative;
+  min-height: 400px; /* Adjust this if needed */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;  /* ✅ Vertically center children */
+  justify-content: center; /* ✅ Horizontally center children */
+}
+
+.skyline-title.section-title {
+  margin: 0;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  background: rgba(92, 191, 123, 0.8); /* green box with transparency */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
  .mission-overlay-title {
   position: relative;
@@ -179,10 +196,7 @@
 }
 
 
-.skyline-title.section-title {
-  margin: 1rem auto 1.5rem;
-  text-align: center;
-}
+
 
   .mission-text h3 {
     display: none;
