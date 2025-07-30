@@ -137,12 +137,13 @@
     display: none;
   }
 
+
 .about-background {
   display: flex;
-  justify-content: center;
-  align-items: center;       /* ✅ This centers the title horizontally */
+  justify-content: center;    /* horizontally center */
+  align-items: flex-start;    /* align to top */
   flex-direction: column;
-  padding-top: 3rem;
+  padding-top: 2.5rem;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -151,7 +152,7 @@
 }
 
 .skyline-title.section-title {
-  margin: 0 auto;              /* Horizontally center the box */
+  margin: 0 auto;
   padding: 1rem 2rem;
   background-color: white;
   border: 3px solid #5cbf7b;
@@ -161,13 +162,10 @@
   font-weight: 800;
   color: #333;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  width: fit-content;
   max-width: 90%;
   z-index: 10;
   position: relative;
-  display: block;
 }
-
 
 
  .mission-overlay-title {
