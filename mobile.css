@@ -138,19 +138,20 @@
   }
 
 .about-background {
+  display: flex;
+  justify-content: center;     /* Horizontally center content */
+  align-items: flex-start;     /* Align children at the top */
+  flex-direction: column;
+  padding-top: 3rem;
   position: relative;
-  min-height: 500px;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;      /* centers children horizontally */
-  justify-content: flex-start;  /* change if needed */
-  flex-direction: column;
-  padding-top: 1.5rem;
+  min-height: 500px;
+  text-align: center;          /* Align text inside */
 }
 
 .skyline-title.section-title {
-  margin: 0 auto;
+  margin: 0 auto;              /* Horizontally center the box */
   padding: 1rem 2rem;
   background-color: white;
   border: 3px solid #5cbf7b;
@@ -166,6 +167,7 @@
   position: relative;
   display: block;
 }
+
 
 
  .mission-overlay-title {
