@@ -292,13 +292,23 @@
     margin-bottom: 0.5rem;
   }
 
-  .back-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  background-color: #5cbf7b; /* or your preferred color */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  text-decoration: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
   .container {
     padding: 1rem;
