@@ -142,19 +142,23 @@
     display: none;
   }
 
-  .mission-overlay-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 2rem;
-    font-weight: 700;
-    text-align: center;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
-    z-index: 2;
-    padding: 0 1rem;
-  }
+ .mission-overlay-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  padding: 0 1rem;
+  line-height: 1.4;
+  width: max-content; /* Ensures the block fits the content only */
+}
+
+
 
   .mission-text h3 {
     display: none;
