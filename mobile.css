@@ -137,13 +137,12 @@
     display: none;
   }
 
-
 .about-background {
   display: flex;
-  justify-content: center;    /* horizontally center */
-  align-items: flex-start;    /* align to top */
-  flex-direction: column;
-  padding-top: 2.5rem;
+  justify-content: center;       /* Horizontally center content */
+  align-items: flex-start;
+  flex-direction: row;           /* IMPORTANT: set to row to prevent stacking left */
+  padding-top: 3rem;
   position: relative;
   background-size: cover;
   background-position: center;
@@ -163,10 +162,10 @@
   color: #333;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   max-width: 90%;
-  z-index: 10;
+  width: max-content;           /* Helps ensure box size fits content */
   position: relative;
+  z-index: 10;
 }
-
 
  .mission-overlay-title {
   position: relative;
