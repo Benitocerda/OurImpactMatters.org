@@ -347,59 +347,28 @@
 
   /* === Floating Cloud Mobile Title Style === */
   .section-title {
-    font-size: 2rem;
-    font-weight: 800;
-    text-align: center;
-    color: #5cbf7b;
-    position: relative;
-    margin: 2rem auto 1.5rem;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    background: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    width: fit-content;
-    animation: floatCloud 4s ease-in-out infinite, fadeInUp 1s ease both;
-    z-index: 2;
-  }
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  color: #333;
+  position: relative;
+  margin: 2rem auto 1.5rem;
+  padding: 1rem 2rem;
+  border: 3px solid #5cbf7b; /* green border box */
+  border-radius: 12px;
+  background-color: white;
+  width: fit-content;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* soft shadow */
+}
 
-  .section-title::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #5cbf7b;
-    margin: 0.75rem auto 0;
-    border-radius: 4px;
-    animation: slideIn 1s ease;
-  }
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #5cbf7b;
+  margin: 0.75rem auto 0;
+  border-radius: 4px;
+}
 
-  @keyframes floatCloud {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-6px);
-    }
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes slideIn {
-    from {
-      width: 0;
-      opacity: 0;
-    }
-    to {
-      width: 60px;
-      opacity: 1;
-    }
-  }
