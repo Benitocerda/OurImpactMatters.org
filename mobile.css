@@ -151,42 +151,18 @@
 .skyline-title.section-title {
   margin: 1rem auto;
   padding: 1rem 2rem;
-  background: rgba(255, 255, 255, 0.8); /* transparent white */
-  border-radius: 50% / 30%; /* cloud-like shape */
+  background-color: white;
+  border: 3px solid #5cbf7b;
+  border-radius: 12px;
   text-align: center;
   font-size: 2rem;
   font-weight: 800;
   color: #333;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   width: fit-content;
   max-width: 90%;
-  transform: translateY(-30px); /* raises it into the sky area */
   z-index: 10;
   position: relative;
-}
-
-/* Create cloud bumps with pseudo-elements */
-.skyline-title.section-title::before,
-.skyline-title.section-title::after {
-  content: '';
-  position: absolute;
-  background: #fff;
-  border-radius: 50%;
-  z-index: -1;
-}
-
-.skyline-title.section-title::before {
-  width: 40px;
-  height: 40px;
-  top: -20px;
-  left: 10%;
-}
-
-.skyline-title.section-title::after {
-  width: 60px;
-  height: 60px;
-  top: -30px;
-  right: 10%;
 }
 
 
