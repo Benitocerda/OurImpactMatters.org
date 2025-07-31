@@ -138,28 +138,25 @@
   }
 
 .about-background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;   /* ✅ Center content vertically AND horizontally */
-  padding-top: 1rem;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 300px;  /* edited this from 500px to 300px */
-  text-align: center;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
+  text-align: center !important;
+  width: 100% !important;
+  padding: 2rem 1rem !important;
+  box-sizing: border-box !important;
 }
 
+
 .skyline-title.section-title {
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  float: none !important;
-  position: relative !important;
-  left: 0 !important;
-  transform: none !important;
+  margin: 0 auto !important;
   text-align: center !important;
+  left: 0 !important;
+  right: 0 !important;
+  position: relative !important;
+  transform: none !important;
+  float: none !important;
 }
 
 .mission-overlay-title {
