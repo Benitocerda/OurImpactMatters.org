@@ -147,7 +147,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 500px;
+  min-height: 300px;  /* edited this from 500px to 300px */
   text-align: center;
 }
 
