@@ -162,14 +162,15 @@
   text-align: center !important;
 }
 
- .mission-overlay-title {
-  position: relative;
-  top: auto;
-  left: auto;
-  transform: none;
-  color: #333;
-  text-shadow: none;
-  margin: 2rem auto;
+.mission-overlay-title {
+  position: relative !important;
+  top: -2rem !important; /* Adjust as needed to raise */
+  left: 0 !important;
+  transform: none !important;
+  color: #333 !important;
+  text-shadow: none !important;
+  margin: 0 auto 2rem !important; /* removes extra top margin */
+  text-align: center !important;
 }
 
   .mission-text h3 {
