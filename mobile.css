@@ -161,7 +161,7 @@
 
 .mission-overlay-title {
   position: relative !important;
-  top: -4rem !important; /* Adjust as needed to raise */
+  top: -2rem !important; /* Adjust as needed to raise */
   left: 0 !important;
   transform: none !important;
   color: #333 !important;
