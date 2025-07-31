@@ -130,46 +130,44 @@
     background-color: #f0f0f0;
   }
   
-
 .about-background {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  flex-direction: column !important;
-  text-align: center !important;
-  width: 100% !important;
-  padding: 1.5rem 1rem !important;
-  box-sizing: border-box !important;
-  margin-bottom: 2rem; !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
 }
 
-
 .skyline-title.section-title {
-  margin: 0 auto !important;
-  text-align: center !important;
-  left: 0 !important;
-  right: 0 !important;
-  position: relative !important;
-  transform: none !important;
-  float: none !important;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  left: 0;
+  right: 0;
+  transform: none;
+  float: none;
 }
 
 .mission-overlay-title {
-  position: relative !important;
-  left: 0 !important;
-  transform: none !important;
-  color: #333 !important;
-  text-shadow: none !important;
-  margin: 0 auto 2rem !important; /* removes extra top margin */
-  text-align: center !important;
-  top: 0 !important;
+  position: relative;
+  top: 0;
+  left: 0;
+  transform: none;
+  text-align: center;
+  margin: 0 auto 2rem;
+  color: #333;
+  text-shadow: none;
 }
 
-  .mission-text h3 {
-    display: none;
-  }
+.mission-text h3 {
+  display: none;
+}
 
- .mission {
+.mission {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -178,15 +176,15 @@
   margin-top: 2rem;
 }
 
-  .mission-text {
-    text-align: center;
-  }
+.mission-text {
+  text-align: center;
+}
 
-  .mission-photo img {
-    width: 100%;
-    border-radius: 10px;
-    
-  }
+.mission-photo img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
 
   .mission-buttons {
     display: flex;
