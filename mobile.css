@@ -132,7 +132,7 @@
   
 .about-background {
   position: relative;
-  background-image: url("your_chicago_skyline_image.jpg"); /* Make sure image path is correct */
+  background-image: url("homepage_background_chi.png"); /* Make sure image path is correct */
   background-size: cover;
   background-position: center bottom;
   height: 350px; /* Adjust height as needed */
