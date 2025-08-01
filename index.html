@@ -164,17 +164,20 @@
 
   <!-- === DONATION + SIGNUP SECTION START === -->
 
-  
-<section class="support-section">
+  <section class="support-section">
   <h2 class="support-title">
     <img src="helping_hand.png" alt="Donation Box Icon" class="support-icon" />
     Help aid the cause
+    <span class="info-icon" tabindex="0">
+      <i class="fas fa-info-circle"></i>
+      <span class="tooltip-text">
+        Upon clicking the donation box, you will be sent to Stripe.com — a secure platform where you can complete your transaction.
+      </span>
+    </span>
   </h2>
 
   <div class="support-grid">
     <div class="donation-widget">
-      <!-- Removed duplicate <h3 class="donation-title"> -->
-      
       <form id="donationRedirectForm">
         <div class="donation-type">
           <label><input type="radio" name="donationType" value="one_time" checked> One-time</label>
@@ -183,7 +186,6 @@
 
         <button type="submit" class="donate-btn">Donate</button>
 
-        <!-- Disclaimer message -->
         <p class="donation-disclaimer">
           ♻️ All donations are tax-deductible to the extent allowed by law and go directly toward supporting our programs and community initiatives.
         </p>
@@ -191,6 +193,9 @@
     </div>
   </div>
 </section>
+
+
+
     <!-- Right: Volunteer Box -->
     <div class="interest-box">
       <h3>Volunteer With Us</h3>
