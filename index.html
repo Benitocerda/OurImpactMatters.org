@@ -677,6 +677,35 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
 
+<script>
+  function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= window.innerHeight * 0.85 &&
+      rect.bottom >= window.innerHeight * 0.15
+    );
+  }
+
+  function animateStatsOnScroll() {
+    document.querySelectorAll('.stat-box').forEach((box, i) => {
+      if (isInViewport(box)) {
+        if (i === 0 || i === 2) {
+          box.classList.add('animate-left');
+        } else {
+          box.classList.add('animate-right');
+        }
+        if (i === 2) {
+          box.classList.add('animate-delay');
+        }
+      } else {
+        box.classList.remove('animate-left', 'animate-right', 'animate-delay');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', animateStatsOnScroll);
+  window.addEventListener('load', animateStatsOnScroll);
+</script>
 
 </body>
 </html>
