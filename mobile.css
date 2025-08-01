@@ -1,19 +1,20 @@
 /* === MOBILE OVERRIDES FOR Our Impact Matters === */
 @media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     font-size: 15px;
     padding: 0;
+    overflow-x: hidden;
   }
-html {
-  scroll-behavior: smooth;
-}
-body {
-  overflow-x: hidden;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -62,21 +63,21 @@ img {
     transition: 0.3s ease;
   }
 
-.donate-nav-btn {
-  background-color: #FFD700;
-  color: #111;
-  padding: 0.75rem 1rem;
-  margin: 0.5rem 1rem;
-  border-radius: 8px;
-  font-weight: 700;
-  text-align: center;
-  display: block;
-  transition: background-color 0.3s ease;
-}
+  .donate-nav-btn {
+    background-color: #FFD700;
+    color: #111;
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
 
-.donate-nav-btn:hover {
-  background-color: #e6b800;
-}
+  .donate-nav-btn:hover {
+    background-color: #e6b800;
+  }
 
   .nav-toggle.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
@@ -138,71 +139,55 @@ img {
   .nav-links li a:hover {
     background-color: #f0f0f0;
   }
-  
+
   section {
-  padding: 2rem 1rem;
-}
-  
-.about-background {
-  position: relative;
-  background-image: url("homepage_background_chi.png"); /* Make sure image path is correct */
-  background-size: cover;
-  background-position: center bottom;
-  height: 350px; /* Adjust height as needed */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* 👈 Moves text to the top */
-  padding-top: 2rem;
-  text-align: center;
-}
+    padding: 2rem 1rem;
+  }
 
-.skyline-title.section-title {
- 
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-  z-index: 2;
-  margin-top: 0; /* Remove unnecessary spacing */
-  text-align: center;
-}
+  .about-background {
+    position: relative;
+    background-image: url("homepage_background_chi.png");
+    background-size: cover;
+    background-position: center bottom;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+    text-align: center;
+  }
 
-.mission-overlay-title {
-  position: relative;
-  top: 0;
-  left: 0;
-  transform: none;
-  text-align: center;
-  margin: 0 auto 2rem;
-  color: #333;
-  text-shadow: none;
-}
+  .skyline-title.section-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    margin-top: 0;
+    text-align: center;
+  }
 
-.mission-text h3 {
-  display: none;
-}
+  .mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
 
-.mission {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem 1rem;
-  gap: 1rem;
-  margin-top: 2rem;
-}
+  .mission-text {
+    text-align: center;
+  }
 
-.mission-text {
-  text-align: center;
-}
-
-.mission-photo img {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 1rem;
-}
+  .mission-photo img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
 
   .mission-buttons {
     display: flex;
-    flex-direction: column;  /* Ensures vertical stacking */
+    flex-direction: column;
     align-items: center;
     gap: 1rem;
     margin-top: 1.5rem;
@@ -210,7 +195,7 @@ img {
 
   .mission-buttons a {
     display: inline-block;
-    width: 90%;              /* Increased width to ensure it doesn't cut off */
+    width: 90%;
     max-width: 320px;
     padding: 0.75rem 1rem;
     font-weight: 600;
@@ -221,29 +206,17 @@ img {
     transition: background-color 0.3s ease;
     box-sizing: border-box;
   }
-}
-button:active,
-a:active {
-  transform: scale(0.97);
-  transition: transform 0.1s ease;
-}
-.instagram-button i {
-  color: #C13584; /* Instagram purple-pink theme */
-  margin-right: 0.5rem; /* spacing between icon and text */
-  font-size: 1.2rem;
-}
-.instagram-button:hover {
-  background-color: #e1306c; 
-}
+
+  button:active,
+  a:active {
+    transform: scale(0.97);
+    transition: transform 0.1s ease;
+  }
 
   .impact-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-  .impact-post {
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .impact-post img {
@@ -275,8 +248,8 @@ a:active {
     flex-direction: column;
     align-items: center;
   }
-  
-.info-icon {
+
+  .info-icon {
     position: relative;
     display: inline-block;
     margin-left: 0.5rem;
@@ -286,17 +259,6 @@ a:active {
     z-index: 1000;
   }
 
-  .info-icon i {
-    font-size: 1.1rem;
-    color: #5cbf7b;
-    transition: color 0.2s;
-  }
-
-  .info-icon:focus i,
-  .info-icon:hover i {
-    color: #3ca96c;
-  }
-
   .tooltip-text {
     position: absolute;
     bottom: 125%;
@@ -304,10 +266,10 @@ a:active {
     transform: translateX(-50%);
     width: 280px;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.92); /* frosted feel */
+    background-color: rgba(255, 255, 255, 0.92);
     border-radius: 12px;
     color: #333;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     line-height: 1.5;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -318,6 +280,7 @@ a:active {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    word-wrap: break-word;
   }
 
   .tooltip-text::after {
@@ -336,58 +299,27 @@ a:active {
     opacity: 1;
     pointer-events: auto;
   }
-}
-
-  .tooltip-text {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-input[type="email"] {
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
 
   .donation-widget {
     width: 100%;
     max-width: 90%;
   }
 
-  .interest-box {
-    padding: 1.5rem;
-    text-align: center;
-  }
-
-  .cta-stats-section {
-    flex-direction: column;
-  }
-
-  .poverty-overlay {
-    padding: 1rem;
-  }
-
-  .email-signup {
-    padding: 1.5rem 1rem;
-  }
-
   .signup-container {
+    display: flex;
     flex-direction: column;
     text-align: center;
   }
 
   .signup-form {
+    display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
 
-  .signup-form input {
-    width: 100%;
-    padding: 0.75rem;
-  }
-
+  .signup-form input,
   .signup-form button {
+    width: 100%;
     padding: 0.75rem;
   }
 
@@ -396,59 +328,36 @@ input[type="email"] {
     margin: 0 8px;
   }
 
-
-
-
   footer {
-  font-size: 0.9rem;
-  padding: 2rem 1rem;
-}
-.footer-left,
-.footer-right {
-  text-align: center;
-}
-
-.footer-left,
-.footer-right {
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
-
-.email-link {
-  display: inline-block;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
-  color: #5cbf7b; /* or whatever your green is */
-}
-
-
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  background-color: #5cbf7b; /* or your preferred color */
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  text-decoration: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-  .container {
-    padding: 1rem;
+    font-size: 0.9rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  .contact-form h2 {
-    font-size: 1.5rem;
+  .footer-left,
+  .footer-right {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    background-color: #5cbf7b;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-decoration: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 }
-
-
-
