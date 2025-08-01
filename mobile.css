@@ -337,6 +337,15 @@
   animation-delay: 0.3s;
 }
 
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
 
   .support-grid {
     flex-direction: column;
