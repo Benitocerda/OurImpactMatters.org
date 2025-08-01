@@ -347,10 +347,7 @@ header {
   padding: 3rem 1rem;
   flex-wrap: wrap;
 }
-.stat-box {
-  text-align: center;
-  margin: 1rem;
-}
+
 .stat-icon {
   font-size: 2rem;
   color: #5cbf7b;
@@ -363,6 +360,27 @@ header {
   font-size: 1.5rem;
 }
 
+.stat-box {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.stat-box.animate-left {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInLeft 0.8s forwards;
+}
+
+.stat-box.animate-right {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInRight 0.8s forwards;
+}
+
+.stat-box.animate-delay {
+  animation-delay: 0.3s;
+}
 /* === Donation Widget === */
 .support-section {
   padding: 3rem 1rem;
