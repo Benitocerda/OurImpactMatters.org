@@ -127,30 +127,30 @@
 <section id="programs" class="programs-section">
   <div class="programs-inner">
     <h2 class="section-title">Our Programs</h2>
+    <div class="flip-overlay">Tap to flip</div> <!-- Only here -->
     <div class="programs-grid">
 
-      <div class="program-card" tabindex="0" onclick="this.classList.toggle('flip')">
+     <div class="program-card" tabindex="0">
         <div class="card-front">
           <img src="IMG_1647.jpeg" alt="Food Pantry" class="program-photo" />
           <h3>Food Pantry</h3>
-          <div class="flip-overlay">Tap to flip</div> <!-- Only here -->
         </div>
         <div class="card-back">
           <p>We provide weekly groceries and essentials to families in need.</p>
         </div>
       </div>
 
-      <div class="program-card" tabindex="0" onclick="this.classList.toggle('flip')">
+      <div class="program-card" tabindex="0">
         <div class="card-front">
           <img src="IMG_1648.webp" alt="Educational Support" class="program-photo" />
           <h3>Educational Support</h3>
         </div>
         <div class="card-back">
-          <p>Our tutoring and scholarship initiatives help students succeed academically.</p>
+          <p>Our tutoring and scholarship initiatives help students succeed academically. </p>
         </div>
       </div>
 
-      <div class="program-card" tabindex="0" onclick="this.classList.toggle('flip')">
+      <div class="program-card" tabindex="0">
         <div class="card-front">
           <img src="IMG_1650.jpeg" alt="Sports Program" class="program-photo" />
           <h3>Sports</h3>
@@ -160,7 +160,7 @@
         </div>
       </div>
 
-      <div class="program-card" tabindex="0" onclick="this.classList.toggle('flip')">
+       <div class="program-card" tabindex="0">
         <div class="card-front">
           <img src="IMG_1651.jpeg" alt="Clothing Drives" class="program-photo" />
           <h3>Clothing Drives</h3>
@@ -170,7 +170,7 @@
         </div>
       </div>
 
-      <div class="program-card" tabindex="0" onclick="this.classList.toggle('flip')">
+       <div class="program-card" tabindex="0">
         <div class="card-front">
           <img src="IMG_1652.jpeg" alt="Mentorship Program" class="program-photo" />
           <h3>Mentorship</h3>
@@ -213,12 +213,13 @@
   <h2 class="support-title">
     <img src="helping_hand.png" alt="Donation Box Icon" class="support-icon" />
     Help aid the cause
-    <span class="info-icon" tabindex="0">
-      <i class="fas fa-info-circle"></i>
-      <span class="tooltip-text">
-        Upon clicking the donation box, you will be sent to Stripe.com — a secure platform where you can complete your transaction.
-      </span>
-    </span>
+  <span class="info-icon" id="infoIcon">
+  <i class="fas fa-info-circle"></i>
+  <span class="tooltip-text" id="tooltipText">
+    Upon clicking the donation box, you will be sent to Stripe.com — a secure platform where you can complete your transaction.
+  </span>
+</span>
+
   </h2>
 
   <div class="support-grid">
@@ -694,14 +695,21 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', animateStatsOnScroll);
   window.addEventListener('load', animateStatsOnScroll);
 </script>
-
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('.program-card').forEach(card => {
     card.addEventListener('click', () => {
-      card.classList.toggle('flip'); // FIXED from 'flipped' to 'flip'
+      card.classList.toggle('flip');
+    });
+    
+    // Optional: Add touch event to improve reliability on mobile
+    card.addEventListener('touchstart', () => {
+      card.classList.toggle('flip');
     });
   });
+});
 </script>
 
 </body>
 </html>
+
