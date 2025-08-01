@@ -256,6 +256,46 @@
     flex-direction: column;
     align-items: center;
   }
+  
+  .info-icon {
+    display: inline-block;
+    position: relative;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    color: #5cbf7b;
+    cursor: pointer;
+  }
+
+  .info-icon .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 260px;
+    background-color: #333;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 0.75rem;
+    position: absolute;
+    bottom: 125%; /* Show above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .info-icon:focus .tooltip-text,
+  .info-icon:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .info-icon i {
+    font-size: 1rem;
+  }
+}
+  
 
   .donation-widget {
     width: 100%;
@@ -302,6 +342,9 @@
     height: 40px;
     margin: 0 8px;
   }
+
+
+
 
   footer {
   display: flex;
