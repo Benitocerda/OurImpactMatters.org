@@ -473,24 +473,28 @@
   }
 }
 
-@keyframes slideInLeft {
+@keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes slideInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.stat-box {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.stat-box.animate-up {
+  opacity: 1;
+  animation: fadeInUp 0.8s forwards;
+}
+
+.stat-box.animate-delay {
+  animation-delay: 0.3s;
 }
