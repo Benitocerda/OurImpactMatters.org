@@ -256,15 +256,14 @@ header {
 }
 
 /* Container Style */
-.program-card {
-  perspective: 1000px;
-  width: 100%;
-  max-width: 280px;
-  height: 280px;
-  position: relative;
-  margin: 1rem auto;
-  cursor: pointer;
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 2rem;
 }
+
 
 /* Shared Card Face Styles */
 .program-card .card-front,
@@ -584,5 +583,6 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
