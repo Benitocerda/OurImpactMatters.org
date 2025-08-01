@@ -324,6 +324,21 @@ header {
   transform: rotateY(360deg);
 }
 
+.flip-overlay {
+  position: absolute;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.card-front {
+  position: relative; /* Needed for .flip-overlay positioning */
+}
+
 /* === Stats Section === */
 .stats-section {
   display: flex;
