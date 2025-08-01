@@ -4,7 +4,16 @@
     font-size: 15px;
     padding: 0;
   }
-
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -130,6 +139,10 @@
     background-color: #f0f0f0;
   }
   
+  section {
+  padding: 2rem 1rem;
+}
+  
 .about-background {
   position: relative;
   background-image: url("homepage_background_chi.png"); /* Make sure image path is correct */
@@ -209,7 +222,11 @@
     box-sizing: border-box;
   }
 }
-
+button:active,
+a:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
 .instagram-button i {
   color: #C13584; /* Instagram purple-pink theme */
   margin-right: 0.5rem; /* spacing between icon and text */
@@ -220,8 +237,10 @@
 }
 
   .impact-grid {
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
   .impact-post {
     margin-bottom: 2rem;
@@ -324,6 +343,11 @@
     opacity: 0;
     transition: opacity 0.3s ease;
   }
+
+input[type="email"] {
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
   .donation-widget {
