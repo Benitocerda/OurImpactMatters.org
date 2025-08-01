@@ -298,6 +298,23 @@
   transform: rotateY(360deg);
 }
 
+.flip-overlay {
+  position: absolute;
+  bottom: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.program-card .card-front {
+  position: relative;
+}
+
+
   .stat-box {
     width: 100%;
     margin-bottom: 1rem;
