@@ -254,25 +254,71 @@ header {
 .programs-text {
   text-align: center;
 }
-.program-cards-alt {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
+
+/* === Redesigned Flip Cards for Our Programs === */
 .program-card {
-  padding: 1rem 2rem;
-  background: white;
-  border: 2px solid #5cbf7b;
-  border-radius: 10px;
-  cursor: default;
-  font-weight: 600;
+  perspective: 1000px;
+  width: 220px;
+  height: 140px;
   position: relative;
-  transition: transform 0.3s;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  margin: 1rem;
 }
-.program-card:hover {
-  transform: scale(1.05);
+
+.program-card .card-front,
+.program-card .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.card-front {
+  background: white;
+  border: 2px solid var(--clr-primary);
+}
+
+.card-back {
+  background-color: var(--clr-light-bg);
+  transform: rotateY(180deg);
+  color: #333;
+  border: 2px solid var(--clr-primary);
+}
+
+
+/* Optional Tooltip Fallback (for accessibility on tap) */
+.program-card[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.program-card:hover[data-tooltip]::after {
+  opacity: 1;
 }
 
 /* === Stats Section === */
