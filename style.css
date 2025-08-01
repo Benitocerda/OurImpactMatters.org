@@ -264,6 +264,12 @@ header {
   padding: 2rem;
 }
 
+.program-card {
+  position: relative;
+  width: 300px;
+  height: 260px;
+  perspective: 1000px;
+}
 
 /* Shared Card Face Styles */
 .program-card .card-front,
@@ -602,6 +608,7 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
