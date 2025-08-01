@@ -593,5 +593,37 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(povertySection);
   }
 </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const infoIcon = document.getElementById('mobileInfoIcon');
+    const tooltip = document.getElementById('mobileTooltip');
+
+    function hideTooltip(e) {
+      if (!infoIcon.contains(e.target)) {
+        tooltip.style.opacity = '0';
+        tooltip.style.visibility = 'hidden';
+      }
+    }
+
+    // Show tooltip when icon is tapped
+    infoIcon.addEventListener('click', function () {
+      tooltip.style.opacity = '1';
+      tooltip.style.visibility = 'visible';
+
+      // Wait a moment to avoid instant close
+      setTimeout(() => {
+        document.addEventListener('click', hideTooltip);
+      }, 50);
+    });
+
+    // Stop hiding tooltip if click is inside the icon
+    infoIcon.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+  });
+</script>
+
+
 </body>
 </html>
