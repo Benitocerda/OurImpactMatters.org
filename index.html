@@ -670,15 +670,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
-  // Flip cards on click
-  document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".program-card");
-    cards.forEach(card => {
-      card.addEventListener("click", () => {
-        card.classList.toggle("flip");
-      });
-    });
-
+  
     // Viewport check utility
     function isInViewport(el) {
       const rect = el.getBoundingClientRect();
@@ -706,6 +698,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Trigger on scroll and load
     window.addEventListener("scroll", animateStatsOnScroll);
     animateStatsOnScroll(); // initial load
+  });
+</script>
+
+<script>
+  document.querySelectorAll('.program-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flip'); // FIXED from 'flipped' to 'flip'
+    });
   });
 </script>
 
