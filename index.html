@@ -670,41 +670,43 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <script>
-  document.querySelectorAll('.program-card').forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('flipped');
+  // Flip cards on click
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".program-card");
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        card.classList.toggle("flip");
+      });
     });
-  });
-</script>
 
-<script>
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top <= window.innerHeight * 0.85 &&
-      rect.bottom >= window.innerHeight * 0.15
-    );
-  }
+    // Viewport check utility
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= window.innerHeight * 0.85 &&
+        rect.bottom >= window.innerHeight * 0.15
+      );
+    }
 
-  function animateStatsOnScroll() {
-    document.querySelectorAll('.stat-box').forEach((box, i) => {
-      if (isInViewport(box)) {
-        if (i === 0 || i === 2) {
-          box.classList.add('animate-left');
+    // Animate stat boxes when in view
+    function animateStatsOnScroll() {
+      const statBoxes = document.querySelectorAll(".stat-box");
+      statBoxes.forEach((box, i) => {
+        if (isInViewport(box)) {
+          box.classList.add(i === 0 || i === 2 ? "animate-left" : "animate-right");
+          if (i === 2) {
+            box.classList.add("animate-delay");
+          }
         } else {
-          box.classList.add('animate-right');
+          box.classList.remove("animate-left", "animate-right", "animate-delay");
         }
-        if (i === 2) {
-          box.classList.add('animate-delay');
-        }
-      } else {
-        box.classList.remove('animate-left', 'animate-right', 'animate-delay');
-      }
-    });
-  }
+      });
+    }
 
-  window.addEventListener('scroll', animateStatsOnScroll);
-  window.addEventListener('load', animateStatsOnScroll);
+    // Trigger on scroll and load
+    window.addEventListener("scroll", animateStatsOnScroll);
+    animateStatsOnScroll(); // initial load
+  });
 </script>
 
 </body>
