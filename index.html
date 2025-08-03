@@ -695,20 +695,26 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener('scroll', animateStatsOnScroll);
   window.addEventListener('load', animateStatsOnScroll);
 </script>
+
+
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.program-card').forEach(card => {
-    card.addEventListener('click', () => {
-      card.classList.toggle('flip');
-    });
-    
-    // Optional: Add touch event to improve reliability on mobile
-    card.addEventListener('touchstart', () => {
-      card.classList.toggle('flip');
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.program-card');
+
+    cards.forEach(card => {
+      let isFlipped = false;
+
+      const toggleFlip = () => {
+        isFlipped = !isFlipped;
+        card.classList.toggle('flip', isFlipped);
+      };
+
+      // Use only click for most devices; touchstart can cause duplicate fires
+      card.addEventListener('click', toggleFlip);
     });
   });
-});
 </script>
+
 
 </body>
 </html>
