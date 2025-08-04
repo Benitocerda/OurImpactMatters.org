@@ -290,6 +290,22 @@ header {
   padding: 1rem;
 }
 
+/* === Scrollable Back Card for Long Content === */
+.program-card .card-back {
+  overflow-y: auto;
+  max-height: 260px; /* Matches card height */
+  padding-right: 0.5rem;
+}
+
+/* Optional: Clean scrollbar styling */
+.program-card .card-back::-webkit-scrollbar {
+  width: 6px;
+}
+.program-card .card-back::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 /* Front Face */
 .program-card .card-front {
   background: #fff;
