@@ -294,6 +294,25 @@
   font-size: 0.95rem;
   text-align: center;
 }
+ /* NEW ADDITION */
+  overflow-y: auto;
+  max-height: 260px;
+  padding-right: 0.5rem;
+}
+.card-back {
+  overflow-y: auto;
+  max-height: 260px; /* Same as card height */
+  padding-right: 0.5rem;
+}
+
+/* Optional smooth scrollbar for mobile WebKit */
+.card-back::-webkit-scrollbar {
+  width: 5px;
+}
+.card-back::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
 
 /* Enable tap-to-flip for mobile */
 .program-card.flip .card-front {
