@@ -442,23 +442,32 @@
     max-width: 90%;
   }
 
-  .signup-container {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
+ /* Center email input box in mobile view */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  justify-content: center; /* Centers vertically if height allows */
+  text-align: center;
+  margin: 1rem auto;
+}
 
-  .signup-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 320px; /* Prevents stretching too wide */
+}
 
-  .signup-form input,
-  .signup-form button {
-    width: 100%;
-    padding: 0.75rem;
-  }
+.signup-form input,
+.signup-form button {
+  width: 100%;
+  padding: 0.75rem;
+  text-align: center; /* Centers placeholder & text inside */
+}
+
 
   .partnerships-carousel img {
     height: 40px;
